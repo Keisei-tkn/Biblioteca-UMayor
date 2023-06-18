@@ -46,13 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Administrador.cs" />
     <Compile Include="Classes\Audiovisual.cs" />
+    <Compile Include="Classes\Departamento.cs" />
+    <Compile Include="Classes\Externos.cs" />
     <Compile Include="Classes\Libro.cs" />
     <Compile Include="Classes\Material.cs" />
     <Compile Include="Classes\MaterialDB.cs" />
     <Compile Include="Classes\Otro.cs" />
+    <Compile Include="Classes\Profesores.cs" />
     <Compile Include="Classes\Revista.cs" />
+    <Compile Include="Classes\Sistema.cs" />
     <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="Classes\UsuariosUM.cs" />
     <Compile Include="ConnectionDB\ConnectionDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
