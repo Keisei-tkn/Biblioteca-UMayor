@@ -68,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +96,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\minimazar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\maxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\Logo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

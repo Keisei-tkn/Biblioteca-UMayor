@@ -9,6 +9,6 @@ namespace wfBiblioteca.Classes
     class Libro: Material
     {
         public int Isbn { get; set; }
-        public int NumPag { get;set }
+        public int NumPag { get; set; }
     }
 }
