@@ -131,10 +131,7 @@ namespace wfBiblioteca
             //AbrirFormEnPanel(new Home());
         }
 
-        private void btnPelis_Click(object sender, EventArgs e)
-        {
-            //AbrirFormEnPanel(new Peliculas(Cli));
-        }
+        
 
         private void btnComida_Click(object sender, EventArgs e)
         {
@@ -149,7 +146,7 @@ namespace wfBiblioteca
 
         private void btnEditF_Click(object sender, EventArgs e)
         {
-            //this.pSubMenu.Visible = true;
+            this.pSubMenu.Visible = true;
         }
 
         private void btnCartelera_Click(object sender, EventArgs e)
