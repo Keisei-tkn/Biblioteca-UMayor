@@ -1,7 +1,7 @@
 ﻿
 namespace wfBiblioteca
 {
-    partial class Inicio
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.

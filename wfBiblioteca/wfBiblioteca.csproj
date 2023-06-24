@@ -66,19 +66,64 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="Ventanas\AgregarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="Ventanas\AgregarDatos.Designer.cs">
+      <DependentUpon>AgregarDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\AgregarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\AgregarM.Designer.cs">
+      <DependentUpon>AgregarM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\AgregarU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\AgregarU.Designer.cs">
+      <DependentUpon>AgregarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\EditarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\EditarM.Designer.cs">
+      <DependentUpon>EditarM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\AgregarDatos.resx">
+      <DependentUpon>AgregarDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\AgregarM.resx">
+      <DependentUpon>AgregarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\AgregarU.resx">
+      <DependentUpon>AgregarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\EditarM.resx">
+      <DependentUpon>EditarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

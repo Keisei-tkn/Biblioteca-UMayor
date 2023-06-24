@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfBiblioteca.Ventanas;
 
 namespace wfBiblioteca
 {
@@ -128,7 +129,7 @@ namespace wfBiblioteca
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            //AbrirFormEnPanel(new Home());
+            AbrirFormEnPanel(new Home());
         }
 
         
@@ -178,24 +179,24 @@ namespace wfBiblioteca
 
         private void AbrirFormEnPanel(object formhija)
         {
-            //if (this.P_contenido.Controls.Count > 0)
-            //    this.P_contenido.Controls.RemoveAt(0);
-            //Form fh = formhija as Form;
-            //fh.TopLevel = false;
-            //fh.Dock = DockStyle.Fill;
-            //this.P_contenido.Controls.Add(fh);
-            //this.P_contenido.Tag = fh;
-            //fh.Show();
+            if (this.P_contenido.Controls.Count > 0)
+                this.P_contenido.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.P_contenido.Controls.Add(fh);
+            this.P_contenido.Tag = fh;
+            fh.Show();
 
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Login frm = new Login();
-            //AddOwnedForm(frm);
-            //frm.Show();
-            //this.Hide();
+            Login frm = new Login();
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
         }
         private void CerrarSesion()
         {

@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 
 namespace wfBiblioteca
 {
-    public partial class Inicio : Form
+    public partial class Login : Form
     {
-        public Inicio()
+        public Login()
         {
             InitializeComponent();
         }
