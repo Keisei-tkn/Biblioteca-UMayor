@@ -46,6 +46,8 @@ namespace wfBiblioteca.Ventanas
             this.btnRegistrar2 = new System.Windows.Forms.Button();
             this.txtContraJefe = new System.Windows.Forms.TextBox();
             this.lblJefe = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboSede = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,15 +58,15 @@ namespace wfBiblioteca.Ventanas
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(256, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 25);
+            this.label1.Size = new System.Drawing.Size(179, 25);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Agregar Funcionarios";
+            this.label1.Text = "Agregar Usuarios";
             // 
             // txtCorreo
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(127, 275);
+            this.txtCorreo.Location = new System.Drawing.Point(319, 125);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(167, 26);
             this.txtCorreo.TabIndex = 37;
@@ -73,7 +75,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(317, 196);
+            this.txtApellido.Location = new System.Drawing.Point(317, 247);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(167, 26);
             this.txtApellido.TabIndex = 36;
@@ -82,7 +84,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(127, 196);
+            this.txtNombre.Location = new System.Drawing.Point(116, 248);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(167, 26);
             this.txtNombre.TabIndex = 35;
@@ -91,7 +93,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtRut.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRut.Location = new System.Drawing.Point(127, 132);
+            this.txtRut.Location = new System.Drawing.Point(116, 186);
             this.txtRut.Name = "txtRut";
             this.txtRut.Size = new System.Drawing.Size(167, 26);
             this.txtRut.TabIndex = 34;
@@ -102,11 +104,11 @@ namespace wfBiblioteca.Ventanas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(125, 325);
+            this.label5.Location = new System.Drawing.Point(112, 102);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Cargo*";
+            this.label5.Text = "Tipo de Usuario:*";
             // 
             // label4
             // 
@@ -114,7 +116,7 @@ namespace wfBiblioteca.Ventanas
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(123, 252);
+            this.label4.Location = new System.Drawing.Point(315, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 30;
@@ -126,7 +128,7 @@ namespace wfBiblioteca.Ventanas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(313, 173);
+            this.label3.Location = new System.Drawing.Point(313, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 29;
@@ -138,7 +140,7 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(123, 173);
+            this.label2.Location = new System.Drawing.Point(112, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 28;
@@ -150,7 +152,7 @@ namespace wfBiblioteca.Ventanas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(123, 109);
+            this.label8.Location = new System.Drawing.Point(112, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 20);
             this.label8.TabIndex = 27;
@@ -180,7 +182,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(317, 275);
+            this.txtContraseña.Location = new System.Drawing.Point(116, 367);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(167, 26);
             this.txtContraseña.TabIndex = 40;
@@ -191,7 +193,7 @@ namespace wfBiblioteca.Ventanas
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(313, 252);
+            this.label6.Location = new System.Drawing.Point(112, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 20);
             this.label6.TabIndex = 39;
@@ -202,7 +204,7 @@ namespace wfBiblioteca.Ventanas
             this.cboCargo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(127, 348);
+            this.cboCargo.Location = new System.Drawing.Point(114, 125);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(169, 28);
             this.cboCargo.TabIndex = 41;
@@ -214,7 +216,7 @@ namespace wfBiblioteca.Ventanas
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(314, 138);
+            this.label7.Location = new System.Drawing.Point(316, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(215, 15);
             this.label7.TabIndex = 42;
@@ -245,7 +247,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraJefe.Location = new System.Drawing.Point(317, 348);
+            this.txtContraJefe.Location = new System.Drawing.Point(317, 367);
             this.txtContraJefe.Name = "txtContraJefe";
             this.txtContraJefe.Size = new System.Drawing.Size(167, 26);
             this.txtContraJefe.TabIndex = 45;
@@ -257,12 +259,34 @@ namespace wfBiblioteca.Ventanas
             this.lblJefe.AutoSize = true;
             this.lblJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJefe.ForeColor = System.Drawing.Color.White;
-            this.lblJefe.Location = new System.Drawing.Point(313, 325);
+            this.lblJefe.Location = new System.Drawing.Point(313, 344);
             this.lblJefe.Name = "lblJefe";
             this.lblJefe.Size = new System.Drawing.Size(174, 20);
             this.lblJefe.TabIndex = 44;
             this.lblJefe.Text = "Ingrese Su Contraseña";
             this.lblJefe.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(112, 284);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 20);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Sede:*";
+            // 
+            // cboSede
+            // 
+            this.cboSede.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSede.FormattingEnabled = true;
+            this.cboSede.Location = new System.Drawing.Point(114, 309);
+            this.cboSede.Name = "cboSede";
+            this.cboSede.Size = new System.Drawing.Size(169, 28);
+            this.cboSede.TabIndex = 47;
             // 
             // AgregarU
             // 
@@ -271,6 +295,8 @@ namespace wfBiblioteca.Ventanas
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 456);
+            this.Controls.Add(this.cboSede);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtContraJefe);
             this.Controls.Add(this.lblJefe);
             this.Controls.Add(this.btnRegistrar2);
@@ -317,5 +343,7 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Button btnRegistrar2;
         private System.Windows.Forms.TextBox txtContraJefe;
         private System.Windows.Forms.Label lblJefe;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboSede;
     }
 }

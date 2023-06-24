@@ -53,6 +53,12 @@ namespace wfBiblioteca.Ventanas
             this.label10 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPoster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +74,7 @@ namespace wfBiblioteca.Ventanas
             this.btnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExaminar.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnExaminar.ForeColor = System.Drawing.Color.White;
-            this.btnExaminar.Location = new System.Drawing.Point(48, 364);
+            this.btnExaminar.Location = new System.Drawing.Point(45, 314);
             this.btnExaminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExaminar.Name = "btnExaminar";
             this.btnExaminar.Size = new System.Drawing.Size(118, 40);
@@ -80,7 +86,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.ptbPoster.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ptbPoster.BackColor = System.Drawing.Color.Transparent;
-            this.ptbPoster.Location = new System.Drawing.Point(22, 124);
+            this.ptbPoster.Location = new System.Drawing.Point(22, 74);
             this.ptbPoster.Name = "ptbPoster";
             this.ptbPoster.Size = new System.Drawing.Size(156, 231);
             this.ptbPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,7 +99,7 @@ namespace wfBiblioteca.Ventanas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(234, 52);
+            this.label1.Location = new System.Drawing.Point(234, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 25);
             this.label1.TabIndex = 86;
@@ -106,7 +112,7 @@ namespace wfBiblioteca.Ventanas
             this.Ccodigo,
             this.Ctitulo});
             this.lsvPeliculas.HideSelection = false;
-            this.lsvPeliculas.Location = new System.Drawing.Point(519, 119);
+            this.lsvPeliculas.Location = new System.Drawing.Point(519, 75);
             this.lsvPeliculas.Name = "lsvPeliculas";
             this.lsvPeliculas.Size = new System.Drawing.Size(208, 255);
             this.lsvPeliculas.TabIndex = 87;
@@ -211,7 +217,7 @@ namespace wfBiblioteca.Ventanas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(206, 116);
+            this.label8.Location = new System.Drawing.Point(206, 65);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 92;
@@ -222,7 +228,7 @@ namespace wfBiblioteca.Ventanas
             this.cboEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(210, 203);
+            this.cboEstado.Location = new System.Drawing.Point(210, 142);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(148, 28);
             this.cboEstado.TabIndex = 95;
@@ -233,19 +239,19 @@ namespace wfBiblioteca.Ventanas
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(206, 182);
+            this.label4.Location = new System.Drawing.Point(206, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 94;
-            this.label4.Text = "Estado";
+            this.label4.Text = "Editorial";
             // 
             // txtContraJefe
             // 
             this.txtContraJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraJefe.Location = new System.Drawing.Point(210, 329);
+            this.txtContraJefe.Location = new System.Drawing.Point(210, 251);
             this.txtContraJefe.Name = "txtContraJefe";
-            this.txtContraJefe.Size = new System.Drawing.Size(169, 26);
+            this.txtContraJefe.Size = new System.Drawing.Size(148, 26);
             this.txtContraJefe.TabIndex = 97;
             this.txtContraJefe.Visible = false;
             // 
@@ -255,11 +261,11 @@ namespace wfBiblioteca.Ventanas
             this.lblJefe.AutoSize = true;
             this.lblJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJefe.ForeColor = System.Drawing.Color.White;
-            this.lblJefe.Location = new System.Drawing.Point(207, 304);
+            this.lblJefe.Location = new System.Drawing.Point(207, 226);
             this.lblJefe.Name = "lblJefe";
-            this.lblJefe.Size = new System.Drawing.Size(174, 20);
+            this.lblJefe.Size = new System.Drawing.Size(57, 20);
             this.lblJefe.TabIndex = 96;
-            this.lblJefe.Text = "Ingrese Su Contraseña";
+            this.lblJefe.Text = "Idioma";
             this.lblJefe.Visible = false;
             // 
             // cboCat
@@ -267,9 +273,9 @@ namespace wfBiblioteca.Ventanas
             this.cboCat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(210, 260);
+            this.cboCat.Location = new System.Drawing.Point(210, 198);
             this.cboCat.Name = "cboCat";
-            this.cboCat.Size = new System.Drawing.Size(163, 28);
+            this.cboCat.Size = new System.Drawing.Size(148, 28);
             this.cboCat.TabIndex = 99;
             // 
             // label5
@@ -278,19 +284,19 @@ namespace wfBiblioteca.Ventanas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(208, 237);
+            this.label5.Location = new System.Drawing.Point(208, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 98;
-            this.label5.Text = "Categoria";
+            this.label5.Text = "Materia";
             // 
             // txtPremios
             // 
             this.txtPremios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPremios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPremios.Location = new System.Drawing.Point(393, 262);
+            this.txtPremios.Location = new System.Drawing.Point(365, 198);
             this.txtPremios.Name = "txtPremios";
-            this.txtPremios.Size = new System.Drawing.Size(95, 26);
+            this.txtPremios.Size = new System.Drawing.Size(147, 26);
             this.txtPremios.TabIndex = 101;
             // 
             // label12
@@ -299,18 +305,18 @@ namespace wfBiblioteca.Ventanas
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(391, 239);
+            this.label12.Location = new System.Drawing.Point(361, 175);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 20);
+            this.label12.Size = new System.Drawing.Size(155, 20);
             this.label12.TabIndex = 100;
-            this.label12.Text = "N°Premios";
+            this.label12.Text = "Unidades Existentes";
             // 
             // lblTitulo
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.BackColor = System.Drawing.Color.White;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(210, 143);
+            this.lblTitulo.Location = new System.Drawing.Point(210, 92);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(279, 26);
             this.lblTitulo.TabIndex = 102;
@@ -320,7 +326,7 @@ namespace wfBiblioteca.Ventanas
             this.cboRestriccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboRestriccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRestriccion.FormattingEnabled = true;
-            this.cboRestriccion.Location = new System.Drawing.Point(369, 206);
+            this.cboRestriccion.Location = new System.Drawing.Point(369, 141);
             this.cboRestriccion.Name = "cboRestriccion";
             this.cboRestriccion.Size = new System.Drawing.Size(113, 28);
             this.cboRestriccion.TabIndex = 104;
@@ -331,11 +337,11 @@ namespace wfBiblioteca.Ventanas
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(365, 183);
+            this.label10.Location = new System.Drawing.Point(365, 119);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 20);
+            this.label10.Size = new System.Drawing.Size(65, 20);
             this.label10.TabIndex = 103;
-            this.label10.Text = "Restriccion de Edad";
+            this.label10.Text = "Autores";
             // 
             // openFileDialog1
             // 
@@ -349,9 +355,75 @@ namespace wfBiblioteca.Ventanas
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 16);
+            this.label6.Size = new System.Drawing.Size(251, 16);
             this.label6.TabIndex = 105;
-            this.label6.Text = "Nota: Siempre volver a cargar el poster";
+            this.label6.Text = "Nota: Siempre volver a cargar la portada";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(209, 303);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(303, 26);
+            this.textBox1.TabIndex = 107;
+            this.textBox1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(209, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "Descripcion";
+            this.label2.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(210, 358);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker1.TabIndex = 108;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(210, 330);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 20);
+            this.label3.TabIndex = 109;
+            this.label3.Text = "Fecha Publicacion";
+            this.label3.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(363, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 20);
+            this.label7.TabIndex = 110;
+            this.label7.Text = "Tipo de Prestamos";
+            this.label7.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(364, 250);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(148, 28);
+            this.comboBox1.TabIndex = 111;
             // 
             // EditarM
             // 
@@ -359,6 +431,12 @@ namespace wfBiblioteca.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(750, 456);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboRestriccion);
             this.Controls.Add(this.label10);
@@ -415,5 +493,11 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
