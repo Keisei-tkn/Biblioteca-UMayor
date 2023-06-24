@@ -48,5 +48,23 @@ namespace wfBiblioteca.Classes
 
             connection.Close();
         }
+
+        public void EliminarOtro(Otro otr)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE MATERIAL
+            WHERE id_material = {otr.Id};
+
+            DELETE OTRO
+            WHERE id_material = {otr.Id};
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
     }
 }

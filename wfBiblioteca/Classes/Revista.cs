@@ -49,5 +49,23 @@ namespace wfBiblioteca.Classes
 
             connection.Close();
         }
+
+        public void EliminarRevista(Revista rev)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE MATERIAL
+            WHERE id_material = {rev.Id};
+
+            DELETE REVISTA
+            WHERE id_material = {rev.Id};
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
     }
 }

@@ -50,5 +50,23 @@ namespace wfBiblioteca.Classes
 
             connection.Close();
         }
+
+        public void EliminarLibro(Libro lib)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE MATERIAL
+            WHERE id_material = {lib.Id};
+
+            DELETE LIBRO
+            WHERE id_material = {lib.Id};
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
     }
 }

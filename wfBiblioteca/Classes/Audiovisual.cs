@@ -49,5 +49,23 @@ namespace wfBiblioteca.Classes
             connection.Close();
         }
 
+        public void EliminarAudiovisual(Audiovisual aud)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE MATERIAL
+            WHERE id_material = {aud.Id};
+
+            DELETE AUDIOVISUAL
+            WHERE id_material = {aud.Id};
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
+
     }
 }
