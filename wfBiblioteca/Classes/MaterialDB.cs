@@ -15,12 +15,10 @@ namespace wfBiblioteca.Classes
         public MaterialDB()
         {
             this.ListaMaterial = new List<Material>();
-            ConnectionDB connection = new ConnectionDB();
-            SqlDataReader registros = null;
-            connection.Open();
-
-
-
+            this.ListaMaterial.AddRange(ObtenerLibro());
+            this.ListaMaterial.AddRange(ObtenerAudiovisual());
+            this.ListaMaterial.AddRange(ObtenerRevista());
+            this.ListaMaterial.AddRange(ObtenerOtro());
         }
 
         public List<Material> ObtenerLibro() {
@@ -88,6 +86,8 @@ namespace wfBiblioteca.Classes
                     Estado = ((int)registros["estado"] == 1) ? true : false,
                     Autor = registros["autor"].ToString(),
                     Editorial = registros["editorial"].ToString(),
+                    Numero = (int)registros["num_revista"],
+                    Volumen = (int)registros["vol_revista"]
                     
                 };
                 ListaRevista.Add(registro);
