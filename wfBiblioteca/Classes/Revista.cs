@@ -10,6 +10,5 @@ namespace wfBiblioteca.Classes
     {
         public int Numero { get; set; }
         public int Volumen { get; set; }
-        public string Indice { get; set; }
     }
 }

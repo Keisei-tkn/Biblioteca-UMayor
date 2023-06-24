@@ -8,7 +8,7 @@ namespace wfBiblioteca.Classes
 {
     class Audiovisual:Material
     {
-        public TimeSpan Duracion { get; set; }
+        public int Duracion { get; set; }
 
     }
 }

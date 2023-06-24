@@ -59,7 +59,7 @@
     <Compile Include="Classes\Sistema.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Classes\UsuariosUM.cs" />
-    <Compile Include="ConnectionDB\ConnectionDB.cs" />
+    <Compile Include="SQL\ConnectionDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

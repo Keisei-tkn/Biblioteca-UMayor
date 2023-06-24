@@ -8,6 +8,6 @@ namespace wfBiblioteca.Classes
 {
     class Profesores:Usuario
     {
-        public string Departamento { get; set; }
+        public string Nucleo { get; set; }
     }
 }
