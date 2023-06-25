@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 
-namespace prueba.Models
+namespace wfBiblioteca.SQL
 {
     public class ConnectionDB
     {
-        string Cad = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=bibliotecaumayor; Integrated Security=True";
+        string Cad = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=BibliotecaMayor; Integrated Security=True";
 
         public SqlConnection connectDb = new SqlConnection();
 
@@ -23,6 +23,7 @@ namespace prueba.Models
             {
                 connectDb.Open();
                 Console.WriteLine("DB working");
+                System.Diagnostics.Debug.WriteLine("DB Working");
             }
             catch (Exception ex)
             {

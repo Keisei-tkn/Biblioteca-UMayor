@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace wfBiblioteca.Classes
 {
-    class Profesores:Usuario
+    class Prestamo
     {
-        public string Nucleo { get; set; }
+        public string Id { get; set; }
+        public DateTime FechaPrestamo { get; set; }
+        public DateTime FechaDevolucion { get; set; }
     }
 }
+ 
