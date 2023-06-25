@@ -37,11 +37,11 @@ namespace wfBiblioteca
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAcceder = new System.Windows.Forms.Button();
             this.linkPregunta = new System.Windows.Forms.LinkLabel();
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnAccede = new wfBiblioteca.Classes.BotonesPersonalizados();
+            this.btnVolve = new wfBiblioteca.Classes.BotonesPersonalizados();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCartelera)).BeginInit();
@@ -66,9 +66,9 @@ namespace wfBiblioteca
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 212);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 209);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -77,9 +77,9 @@ namespace wfBiblioteca
             // 
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 82);
+            this.label2.Location = new System.Drawing.Point(12, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(208, 148);
+            this.label2.Size = new System.Drawing.Size(212, 152);
             this.label2.TabIndex = 2;
             this.label2.Text = "Biblioteca Central Mayor";
             // 
@@ -87,11 +87,11 @@ namespace wfBiblioteca
             // 
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCartelera.Image = global::wfBiblioteca.Properties.Resources.Logo;
+            this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
             this.btnCartelera.Location = new System.Drawing.Point(79, 11);
             this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(102, 60);
+            this.btnCartelera.Size = new System.Drawing.Size(100, 65);
             this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCartelera.TabIndex = 1;
             this.btnCartelera.TabStop = false;
@@ -99,11 +99,12 @@ namespace wfBiblioteca
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(315, 111);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(397, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(397, 25);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -112,11 +113,12 @@ namespace wfBiblioteca
             // txtContraseña
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.txtContraseña.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(315, 166);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(397, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(397, 25);
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -132,23 +134,6 @@ namespace wfBiblioteca
             this.label1.Size = new System.Drawing.Size(155, 44);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ingresar";
-            // 
-            // btnAcceder
-            // 
-            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnAcceder.FlatAppearance.BorderSize = 0;
-            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcceder.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(515, 224);
-            this.btnAcceder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(199, 37);
-            this.btnAcceder.TabIndex = 3;
-            this.btnAcceder.Text = "ACCEDER";
-            this.btnAcceder.UseVisualStyleBackColor = false;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
-            this.btnAcceder.Paint += new System.Windows.Forms.PaintEventHandler(this.btnAcceder_Paint);
             // 
             // linkPregunta
             // 
@@ -167,7 +152,7 @@ namespace wfBiblioteca
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = global::wfBiblioteca.Properties.Resources.minimazar;
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
             this.btnMin.Location = new System.Drawing.Point(700, 11);
             this.btnMin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnMin.Name = "btnMin";
@@ -181,7 +166,7 @@ namespace wfBiblioteca
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wfBiblioteca.Properties.Resources.cerrar;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(739, 11);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCerrar.Name = "btnCerrar";
@@ -191,23 +176,44 @@ namespace wfBiblioteca
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnVolver
+            // btnAccede
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Franklin Gothic Medium", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(315, 224);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(175, 34);
-            this.btnVolver.TabIndex = 10;
-            this.btnVolver.Text = "VOLVER";
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Paint += new System.Windows.Forms.PaintEventHandler(this.btnVolver_Paint);
+            this.btnAccede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnAccede.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnAccede.BorderColor = System.Drawing.Color.Yellow;
+            this.btnAccede.BorderRadius = 40;
+            this.btnAccede.BorderSize = 0;
+            this.btnAccede.FlatAppearance.BorderSize = 0;
+            this.btnAccede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccede.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccede.ForeColor = System.Drawing.Color.White;
+            this.btnAccede.Location = new System.Drawing.Point(535, 213);
+            this.btnAccede.Name = "btnAccede";
+            this.btnAccede.Size = new System.Drawing.Size(177, 45);
+            this.btnAccede.TabIndex = 11;
+            this.btnAccede.Text = "ACCEDER";
+            this.btnAccede.TextColor = System.Drawing.Color.White;
+            this.btnAccede.UseVisualStyleBackColor = false;
+            this.btnAccede.Click += new System.EventHandler(this.btnAccede_Click_1);
+            // 
+            // btnVolve
+            // 
+            this.btnVolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnVolve.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnVolve.BorderColor = System.Drawing.Color.Yellow;
+            this.btnVolve.BorderRadius = 40;
+            this.btnVolve.BorderSize = 0;
+            this.btnVolve.FlatAppearance.BorderSize = 0;
+            this.btnVolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolve.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolve.ForeColor = System.Drawing.Color.White;
+            this.btnVolve.Location = new System.Drawing.Point(315, 213);
+            this.btnVolve.Name = "btnVolve";
+            this.btnVolve.Size = new System.Drawing.Size(177, 45);
+            this.btnVolve.TabIndex = 12;
+            this.btnVolve.Text = "VOLVER";
+            this.btnVolve.TextColor = System.Drawing.Color.White;
+            this.btnVolve.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -215,11 +221,11 @@ namespace wfBiblioteca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnVolve);
+            this.Controls.Add(this.btnAccede);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.linkPregunta);
-            this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -247,13 +253,13 @@ namespace wfBiblioteca
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.LinkLabel linkPregunta;
         private System.Windows.Forms.PictureBox btnMin;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnCartelera;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Classes.BotonesPersonalizados btnAccede;
+        private Classes.BotonesPersonalizados btnVolve;
     }
 }

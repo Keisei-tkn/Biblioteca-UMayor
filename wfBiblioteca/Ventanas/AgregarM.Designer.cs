@@ -76,7 +76,7 @@ namespace wfBiblioteca.Ventanas
             this.txtContraJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraJefe.Location = new System.Drawing.Point(283, 478);
-            this.txtContraJefe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraJefe.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraJefe.Name = "txtContraJefe";
             this.txtContraJefe.Size = new System.Drawing.Size(221, 30);
             this.txtContraJefe.TabIndex = 62;
@@ -142,7 +142,7 @@ namespace wfBiblioteca.Ventanas
             this.ptbPoster.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ptbPoster.BackColor = System.Drawing.Color.Transparent;
             this.ptbPoster.Location = new System.Drawing.Point(35, 139);
-            this.ptbPoster.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbPoster.Margin = new System.Windows.Forms.Padding(4);
             this.ptbPoster.Name = "ptbPoster";
             this.ptbPoster.Size = new System.Drawing.Size(208, 284);
             this.ptbPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,7 +180,7 @@ namespace wfBiblioteca.Ventanas
             this.cboPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPrestamos.FormattingEnabled = true;
             this.cboPrestamos.Location = new System.Drawing.Point(475, 295);
-            this.cboPrestamos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPrestamos.Margin = new System.Windows.Forms.Padding(4);
             this.cboPrestamos.Name = "cboPrestamos";
             this.cboPrestamos.Size = new System.Drawing.Size(196, 33);
             this.cboPrestamos.TabIndex = 128;
@@ -216,7 +216,7 @@ namespace wfBiblioteca.Ventanas
             // dtpFecha
             // 
             this.dtpFecha.Location = new System.Drawing.Point(681, 374);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(264, 22);
             this.dtpFecha.TabIndex = 125;
@@ -226,7 +226,7 @@ namespace wfBiblioteca.Ventanas
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(257, 367);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(403, 30);
             this.txtDescripcion.TabIndex = 124;
@@ -252,7 +252,7 @@ namespace wfBiblioteca.Ventanas
             this.cboAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAutor.FormattingEnabled = true;
             this.cboAutor.Location = new System.Drawing.Point(256, 224);
-            this.cboAutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboAutor.Margin = new System.Windows.Forms.Padding(4);
             this.cboAutor.Name = "cboAutor";
             this.cboAutor.Size = new System.Drawing.Size(165, 33);
             this.cboAutor.TabIndex = 122;
@@ -275,7 +275,7 @@ namespace wfBiblioteca.Ventanas
             this.txtUnidadesExistentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUnidadesExistentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUnidadesExistentes.Location = new System.Drawing.Point(669, 228);
-            this.txtUnidadesExistentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnidadesExistentes.Margin = new System.Windows.Forms.Padding(4);
             this.txtUnidadesExistentes.Name = "txtUnidadesExistentes";
             this.txtUnidadesExistentes.Size = new System.Drawing.Size(191, 30);
             this.txtUnidadesExistentes.TabIndex = 119;
@@ -299,7 +299,7 @@ namespace wfBiblioteca.Ventanas
             this.cboMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMateria.FormattingEnabled = true;
             this.cboMateria.Location = new System.Drawing.Point(447, 224);
-            this.cboMateria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMateria.Margin = new System.Windows.Forms.Padding(4);
             this.cboMateria.Name = "cboMateria";
             this.cboMateria.Size = new System.Drawing.Size(196, 33);
             this.cboMateria.TabIndex = 117;
@@ -322,7 +322,7 @@ namespace wfBiblioteca.Ventanas
             this.txtIdioma.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdioma.Location = new System.Drawing.Point(257, 297);
-            this.txtIdioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdioma.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdioma.Name = "txtIdioma";
             this.txtIdioma.Size = new System.Drawing.Size(196, 30);
             this.txtIdioma.TabIndex = 115;
@@ -348,7 +348,7 @@ namespace wfBiblioteca.Ventanas
             this.cboEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEditorial.FormattingEnabled = true;
             this.cboEditorial.Location = new System.Drawing.Point(687, 294);
-            this.cboEditorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboEditorial.Margin = new System.Windows.Forms.Padding(4);
             this.cboEditorial.Name = "cboEditorial";
             this.cboEditorial.Size = new System.Drawing.Size(173, 33);
             this.cboEditorial.TabIndex = 113;
@@ -384,7 +384,7 @@ namespace wfBiblioteca.Ventanas
             this.txtTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitulo.Location = new System.Drawing.Point(256, 160);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(603, 30);
             this.txtTitulo.TabIndex = 130;
@@ -422,7 +422,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarM";
             this.Text = "AgregarP";
             ((System.ComponentModel.ISupportInitialize)(this.ptbPoster)).EndInit();

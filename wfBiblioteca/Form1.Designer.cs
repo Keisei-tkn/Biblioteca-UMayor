@@ -31,6 +31,7 @@ namespace wfBiblioteca
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.P_titulo = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -95,7 +96,7 @@ namespace wfBiblioteca
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(897, 4);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(894, 4);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(149, 32);
@@ -130,7 +131,7 @@ namespace wfBiblioteca
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = global::wfBiblioteca.Properties.Resources.res;
+            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
             this.btnRestaurar.Location = new System.Drawing.Point(1120, 6);
             this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRestaurar.Name = "btnRestaurar";
@@ -145,7 +146,7 @@ namespace wfBiblioteca
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = global::wfBiblioteca.Properties.Resources.minimazar;
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
             this.btnMin.Location = new System.Drawing.Point(1079, 6);
             this.btnMin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnMin.Name = "btnMin";
@@ -159,7 +160,7 @@ namespace wfBiblioteca
             // 
             this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax.Image = global::wfBiblioteca.Properties.Resources.maxi;
+            this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
             this.btnMax.Location = new System.Drawing.Point(1120, 6);
             this.btnMax.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnMax.Name = "btnMax";
@@ -173,7 +174,7 @@ namespace wfBiblioteca
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = global::wfBiblioteca.Properties.Resources.cerrar;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(1159, 6);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCerrar.Name = "btnCerrar";
@@ -263,7 +264,7 @@ namespace wfBiblioteca
             // btnRegistrarPresupuesto
             // 
             this.btnRegistrarPresupuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnRegistrarPresupuesto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarPresupuesto.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnRegistrarPresupuesto.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnRegistrarPresupuesto.FlatAppearance.BorderSize = 0;
             this.btnRegistrarPresupuesto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
@@ -278,6 +279,7 @@ namespace wfBiblioteca
             this.btnRegistrarPresupuesto.TabIndex = 15;
             this.btnRegistrarPresupuesto.Text = "Presupuesto";
             this.btnRegistrarPresupuesto.UseVisualStyleBackColor = false;
+            this.btnRegistrarPresupuesto.UseWaitCursor = true;
             // 
             // panel7
             // 
@@ -417,7 +419,7 @@ namespace wfBiblioteca
             this.btnBuscarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarMaterial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarMaterial.Location = new System.Drawing.Point(4, 176);
+            this.btnBuscarMaterial.Location = new System.Drawing.Point(4, 178);
             this.btnBuscarMaterial.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnBuscarMaterial.Name = "btnBuscarMaterial";
             this.btnBuscarMaterial.Size = new System.Drawing.Size(216, 46);
@@ -429,7 +431,7 @@ namespace wfBiblioteca
             // 
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCartelera.Image = global::wfBiblioteca.Properties.Resources.Logo;
+            this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
             this.btnCartelera.Location = new System.Drawing.Point(40, 1);
             this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";

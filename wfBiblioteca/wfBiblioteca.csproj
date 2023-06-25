@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="Classes\Administrador.cs" />
     <Compile Include="Classes\Audiovisual.cs" />
+    <Compile Include="Classes\BotonesPersonalizados.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\Departamento.cs" />
     <Compile Include="Classes\Externos.cs" />
     <Compile Include="Classes\Libro.cs" />
