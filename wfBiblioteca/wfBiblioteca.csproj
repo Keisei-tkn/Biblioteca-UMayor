@@ -66,6 +66,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\AgregarD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\AgregarD.Designer.cs">
+      <DependentUpon>AgregarD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\AgregarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\AgregarD.resx">
+      <DependentUpon>AgregarD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\AgregarDatos.resx">
       <DependentUpon>AgregarDatos.cs</DependentUpon>

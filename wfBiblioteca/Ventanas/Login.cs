@@ -67,7 +67,10 @@ namespace wfBiblioteca
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form1 frm = new Form1();
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -85,6 +88,14 @@ namespace wfBiblioteca
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
         }
     }
 }

@@ -30,6 +30,7 @@ namespace wfBiblioteca
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,7 +39,7 @@ namespace wfBiblioteca
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnCartelera = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -52,18 +53,31 @@ namespace wfBiblioteca
             this.panel1.Controls.Add(this.btnCartelera);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 330);
+            this.panel1.Size = new System.Drawing.Size(188, 268);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(17, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 95);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Bliblioteca Central Mayor";
             // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.txtUsuario.Location = new System.Drawing.Point(315, 111);
+            this.txtUsuario.Location = new System.Drawing.Point(236, 90);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(397, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(299, 20);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuario";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -73,9 +87,10 @@ namespace wfBiblioteca
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.txtContraseña.Location = new System.Drawing.Point(315, 166);
+            this.txtContraseña.Location = new System.Drawing.Point(236, 135);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(397, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(299, 20);
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "Contraseña";
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -86,9 +101,10 @@ namespace wfBiblioteca
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(449, 38);
+            this.label1.Location = new System.Drawing.Point(337, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 39);
+            this.label1.Size = new System.Drawing.Size(114, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ingresar";
             // 
@@ -98,12 +114,14 @@ namespace wfBiblioteca
             this.btnAcceder.FlatAppearance.BorderSize = 0;
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(419, 222);
+            this.btnAcceder.Location = new System.Drawing.Point(386, 182);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(199, 40);
+            this.btnAcceder.Size = new System.Drawing.Size(149, 30);
             this.btnAcceder.TabIndex = 3;
-            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // linkPregunta
             // 
@@ -111,9 +129,10 @@ namespace wfBiblioteca
             this.linkPregunta.AutoSize = true;
             this.linkPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkPregunta.LinkColor = System.Drawing.Color.White;
-            this.linkPregunta.Location = new System.Drawing.Point(440, 281);
+            this.linkPregunta.Location = new System.Drawing.Point(330, 228);
+            this.linkPregunta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkPregunta.Name = "linkPregunta";
-            this.linkPregunta.Size = new System.Drawing.Size(164, 18);
+            this.linkPregunta.Size = new System.Drawing.Size(135, 15);
             this.linkPregunta.TabIndex = 0;
             this.linkPregunta.TabStop = true;
             this.linkPregunta.Text = "¿Olvido su contraseña?";
@@ -123,10 +142,10 @@ namespace wfBiblioteca
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Image = global::wfBiblioteca.Properties.Resources.minimazar;
-            this.btnMin.Location = new System.Drawing.Point(715, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnMin.Location = new System.Drawing.Point(536, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(28, 27);
+            this.btnMin.Size = new System.Drawing.Size(21, 22);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMin.TabIndex = 8;
             this.btnMin.TabStop = false;
@@ -137,10 +156,10 @@ namespace wfBiblioteca
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::wfBiblioteca.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(751, 0);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(563, 0);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(28, 27);
+            this.btnCerrar.Size = new System.Drawing.Size(21, 22);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.TabStop = false;
@@ -151,30 +170,36 @@ namespace wfBiblioteca
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCartelera.Image = global::wfBiblioteca.Properties.Resources.Logo;
-            this.btnCartelera.Location = new System.Drawing.Point(48, 2);
-            this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnCartelera.Location = new System.Drawing.Point(36, 2);
+            this.btnCartelera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(141, 118);
+            this.btnCartelera.Size = new System.Drawing.Size(106, 96);
             this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCartelera.TabIndex = 1;
             this.btnCartelera.TabStop = false;
             // 
-            // label2
+            // btnVolver
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 117);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Bliblioteca Central Mayor";
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.ForeColor = System.Drawing.Color.LightGray;
+            this.btnVolver.Location = new System.Drawing.Point(236, 182);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(131, 28);
+            this.btnVolver.TabIndex = 10;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
-            // Inicio
+            // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.ClientSize = new System.Drawing.Size(585, 268);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.linkPregunta);
@@ -184,7 +209,8 @@ namespace wfBiblioteca
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Inicio";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Login";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
@@ -211,5 +237,6 @@ namespace wfBiblioteca
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnCartelera;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
