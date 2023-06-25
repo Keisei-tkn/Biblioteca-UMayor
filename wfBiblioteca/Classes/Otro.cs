@@ -18,8 +18,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia) 
-            VALUES('{otr.Id}', '{otr.FechaPublicacion.ToString("yyyyMMdd")}', {otr.Unidades}, '{otr.Deposito_reserva}', {(otr.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion) 
+            VALUES('{otr.Id}', '{otr.FechaPublicacion.ToString("yyyyMMdd")}', {otr.Unidades}, '{otr.Deposito_reserva}', {(otr.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{otr.Descripcion}')
             
             INSERT INTO OTRO(categoria)
             VALUES('{otr.Categoria}')
@@ -35,7 +35,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             UPDATE MATERIAL
-            SET titulo = {otr.Nombre}, fecha_publicacion = {otr.FechaPublicacion.ToString("yyyyMMdd")}, unidades_existentes = {otr.Unidades}, deposito_o_reserva = {otr.Deposito_reserva}, estado = {(otr.Estado == true ? 1 : 0)}
+            SET titulo = {otr.Nombre}, fecha_publicacion = {otr.FechaPublicacion.ToString("yyyyMMdd")}, unidades_existentes = {otr.Unidades}, deposito_o_reserva = {otr.Deposito_reserva}, estado = {(otr.Estado == true ? 1 : 0)}, descripcion = '{otr.Descripcion}'
             WHERE id_material = {otr.Id};
 
             UPDATE LIBRO

@@ -12,6 +12,7 @@ namespace wfBiblioteca.Classes
         public string Nombre { get; set; }
         public string Autor { get; set; }
         public string Materia { get; set; }
+        public string Descripcion { get; set; }
         public Boolean Estado { get; set; }
         public string Deposito_reserva { get; set; }
         public string Idioma { get; set; }

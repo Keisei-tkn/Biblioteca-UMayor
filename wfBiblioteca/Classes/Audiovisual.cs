@@ -18,8 +18,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia) 
-            VALUES('{aud.Id}', '{aud.FechaPublicacion.ToString("yyyyMMdd")}', {aud.Unidades}, '{aud.Deposito_reserva}', {(aud.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion ) 
+            VALUES('{aud.Id}', '{aud.FechaPublicacion.ToString("yyyyMMdd")}', {aud.Unidades}, '{aud.Deposito_reserva}', {(aud.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}', '{aud.Descripcion}')
             
             INSERT INTO AUDIOVISUAL(duracion)
             VALUES({aud.Duracion})
@@ -35,14 +35,14 @@ namespace wfBiblioteca.Classes
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             UPDATE MATERIAL
-            SET titulo = {aud.Nombre}, fecha_publicacion = {aud.FechaPublicacion.ToString("yyyyMMdd")}, unidades_existentes = {aud.Unidades}, deposito_o_reserva = {aud.Deposito_reserva}, estado = {(aud.Estado == true ? 1 : 0)}
+            SET titulo = {aud.Nombre}, fecha_publicacion = {aud.FechaPublicacion.ToString("yyyyMMdd")}, unidades_existentes = {aud.Unidades}, deposito_o_reserva = {aud.Deposito_reserva}, estado = {(aud.Estado == true ? 1 : 0)}, descripcion = '{aud.Descripcion}'
             WHERE id_material = {aud.Id};
 
             UPDATE AUDIOVISUAL
             SET duracion = {aud.Duracion}
             WHERE id_material = {aud.Id};
             COMMIT;";
-
+             
             SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
             queryUpdate.ExecuteNonQuery();
 

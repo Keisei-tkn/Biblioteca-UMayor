@@ -20,8 +20,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia) 
-            VALUES('{lib.Id}', '{lib.FechaPublicacion.ToString("yyyyMMdd")}', {lib.Unidades}, '{lib.Deposito_reserva}', {(lib.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion) 
+            VALUES('{lib.Id}', '{lib.FechaPublicacion.ToString("yyyyMMdd")}', {lib.Unidades}, '{lib.Deposito_reserva}', {(lib.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{lib.Descripcion}')
             
             INSERT INTO LIBRO(isbn, num_pag)
             VALUES('{lib.Isbn}',{lib.NumPag})
@@ -37,12 +37,12 @@ namespace wfBiblioteca.Classes
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             UPDATE MATERIAL
-            SET titulo = {lib.Nombre}, fecha_publicacion = {lib.FechaPublicacion.ToString("yyyyMMdd")}, unidades_existentes = {lib.Unidades}, deposito_o_reserva = {lib.Deposito_reserva}, estado = {(lib.Estado == true ? 1 : 0)}
-            WHERE id_material = {lib.Id};
+            SET titulo = '{lib.Nombre}', fecha_publicacion = '{lib.FechaPublicacion.ToString("yyyyMMdd")}', unidades_existentes = {lib.Unidades}, deposito_o_reserva = '{lib.Deposito_reserva}', estado = {(lib.Estado == true ? 1 : 0)}, descripcion = '{lib.Descripcion}'
+            WHERE id_material = '{lib.Id}';
 
             UPDATE LIBRO
-            SET isbn = {lib.Isbn}, num_pag = {lib.NumPag}
-            WHERE id_material = {lib.Id};
+            SET isbn = '{lib.Isbn}', num_pag = {lib.NumPag}
+            WHERE id_material = '{lib.Id}';
             COMMIT;";
 
             SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);

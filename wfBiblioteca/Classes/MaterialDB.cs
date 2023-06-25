@@ -26,7 +26,7 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             SqlDataReader registros = null;
             connection.Open();
-            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado," +
+            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado, MAT.descripcion" +
                 "MAR.nombre_materia, AUT.nombre autor, ED.nombre editorial, LIB.isbn, LIB.num_pag" +
                 "FROM MATERIAL AS MAT" +
                 "INNER JOIN LIBRO AS LIB ON MAT.id_material = LIB.id_material" +
@@ -44,6 +44,7 @@ namespace wfBiblioteca.Classes
                     Nombre = registros["titulo"].ToString(),
                     FechaPublicacion = DateTime.Parse(registros["fecha_publicacion"].ToString()),
                     Unidades = (int)registros["unidades_existentes"],
+                    Descripcion = registros["descripcion"].ToString(),
                     Materia = registros["nombre_materia"].ToString(),
                     Estado = ((int)registros["estado"] == 1) ? true : false,
                     Autor = registros["autor"].ToString(),
@@ -64,7 +65,7 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             SqlDataReader registros = null;
             connection.Open();
-            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado," +
+            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado, MAT.descripcion" +
                 "MAR.nombre_materia, AUT.nombre autor, ED.nombre editorial, REV.num_revista, REV.vol_revista, MAR.nombre_materia" +
                 "FROM MATERIAL AS MAT" +
                 "INNER JOIN REVISTA AS REV ON MAT.id_material = REV.id_material" +
@@ -82,6 +83,7 @@ namespace wfBiblioteca.Classes
                     Nombre = registros["titulo"].ToString(),
                     FechaPublicacion = DateTime.Parse(registros["fecha_publicacion"].ToString()),
                     Unidades = (int)registros["unidades_existentes"],
+                    Descripcion = registros["descripcion"].ToString(),
                     Materia = registros["nombre_materia"].ToString(),
                     Estado = ((int)registros["estado"] == 1) ? true : false,
                     Autor = registros["autor"].ToString(),
@@ -103,7 +105,7 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             SqlDataReader registros = null;
             connection.Open();
-            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado," +
+            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado, MAT.descripcion" +
                 "MAR.nombre_materia, AUT.nombre autor, ED.nombre editorial, AUD.duracion" +
                 "FROM MATERIAL AS MAT" +
                 "INNER JOIN AUDIOVISUAL AS AUD ON MAT.id_material = AUD.id_material" +
@@ -121,6 +123,7 @@ namespace wfBiblioteca.Classes
                     Nombre = registros["titulo"].ToString(),
                     FechaPublicacion = DateTime.Parse(registros["fecha_publicacion"].ToString()),
                     Unidades = (int)registros["unidades_existentes"],
+                    Descripcion = registros["descripcion"].ToString(),
                     Materia = registros["nombre_materia"].ToString(),
                     Estado = ((int)registros["estado"] == 1) ? true : false,
                     Autor = registros["autor"].ToString(),
@@ -142,7 +145,7 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             SqlDataReader registros = null;
             connection.Open();
-            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado," +
+            SqlCommand querySel = new SqlCommand("SELECT MAT.id_material, MAT.titulo, MAT.fecha_publicacion, MAT.unidades_existentes, MAT.deposito_o_reserva, MAT.estado, MAT.descripcion" +
                 "MAR.nombre_materia, AUT.nombre autor, ED.nombre editorial, OTR.categoria" +
                 "FROM MATERIAL AS MAT" +
                 "INNER JOIN OTRO AS OTR ON MAT.id_material = OTR.id_material" +
@@ -160,6 +163,7 @@ namespace wfBiblioteca.Classes
                     Nombre = registros["titulo"].ToString(),
                     FechaPublicacion = DateTime.Parse(registros["fecha_publicacion"].ToString()),
                     Unidades = (int)registros["unidades_existentes"],
+                    Descripcion = registros["descripcion"].ToString(),
                     Materia = registros["nombre_materia"].ToString(),
                     Estado = ((int)registros["estado"] == 1) ? true : false,
                     Autor = registros["autor"].ToString(),
