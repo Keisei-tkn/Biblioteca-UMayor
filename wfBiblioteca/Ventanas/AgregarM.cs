@@ -17,9 +17,5 @@ namespace wfBiblioteca.Ventanas
             InitializeComponent();
         }
 
-        private void btnExaminar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

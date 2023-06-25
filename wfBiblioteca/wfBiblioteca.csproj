@@ -175,5 +175,11 @@
   <ItemGroup>
     <None Include="Multimedia\Logo.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-3981515_1280.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
