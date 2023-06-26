@@ -13,7 +13,7 @@ namespace wfBiblioteca.Classes
         public int Id { set; get; }
         public string Nombre { set; get; }
         public string Correo { set; get; }
-
+        public string Password { get; set; }
 
         public List<Prestamo> ObtenerHistorial(Usuario usr)
         {
