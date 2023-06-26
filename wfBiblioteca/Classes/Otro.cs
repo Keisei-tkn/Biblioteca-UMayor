@@ -12,6 +12,16 @@ namespace wfBiblioteca.Classes
     {
         public string Categoria { get; set; }
 
+        public Otro()
+        {
+            this.Categoria = null;
+        }
+
+        public Otro(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, string categoria) : base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        {
+            this.Categoria = categoria;
+        }
+
         public void InsertarOtro(Otro otr, string idAutor, string idEditorial, string idMateria)
         {
             ConnectionDB connection = new ConnectionDB();

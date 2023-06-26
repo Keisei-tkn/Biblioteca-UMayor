@@ -13,7 +13,17 @@ namespace wfBiblioteca.Classes
         public string Isbn { get; set; }
         public int NumPag { get; set; }
 
+        public Libro():base()
+        {
+            Isbn = null;
+            NumPag = 0;
+        }
 
+        public Libro(string id, string nombre,string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, string isbn, int num_pag):base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        {
+            this.Isbn = isbn;
+            this.NumPag = num_pag;
+        }
         public void InsertarLibro(Libro lib, string idAutor, string idEditorial, string idMateria)
         {
             ConnectionDB connection = new ConnectionDB();

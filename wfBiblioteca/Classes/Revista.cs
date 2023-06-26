@@ -13,6 +13,18 @@ namespace wfBiblioteca.Classes
         public int Numero { get; set; }
         public int Volumen { get; set; }
 
+        public Revista():base()
+        {
+            this.Numero = 0;
+            this.Volumen = 0;
+        }
+
+        public Revista(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, int numero, int volumen) : base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        {
+            this.Numero = numero;
+            this.Volumen = volumen;
+        }
+
         public void InsertarRevista(Revista rev, string idAutor, string idEditorial, string idMateria)
         {
             ConnectionDB connection = new ConnectionDB();

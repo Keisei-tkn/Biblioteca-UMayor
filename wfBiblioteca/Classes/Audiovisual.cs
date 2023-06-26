@@ -12,6 +12,16 @@ namespace wfBiblioteca.Classes
     {
         public int Duracion { get; set; }
 
+        public Audiovisual():base()
+        {
+            this.Duracion = 0;
+        }
+
+        public Audiovisual(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, int duracion) : base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        {
+            this.Duracion = duracion;
+        }
+
         public void InsertarAudiovisual(Audiovisual aud, string idAutor, string idEditorial, string idMateria)
         {
             ConnectionDB connection = new ConnectionDB();

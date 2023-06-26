@@ -48,13 +48,16 @@
   <ItemGroup>
     <Compile Include="Classes\AlumnoUM.cs" />
     <Compile Include="Classes\Audiovisual.cs" />
+    <Compile Include="Classes\Autor.cs" />
     <Compile Include="Classes\BotonesPersonalizados.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Departamento.cs" />
+    <Compile Include="Classes\Editorial.cs" />
     <Compile Include="Classes\Externos.cs" />
     <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Libro.cs" />
+    <Compile Include="Classes\Materia.cs" />
     <Compile Include="Classes\Material.cs" />
     <Compile Include="Classes\MaterialDB.cs" />
     <Compile Include="Classes\Nucleo.cs" />

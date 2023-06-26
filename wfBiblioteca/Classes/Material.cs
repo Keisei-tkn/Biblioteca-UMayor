@@ -18,8 +18,35 @@ namespace wfBiblioteca.Classes
         public string Idioma { get; set; }
         public DateTime FechaPublicacion { get; set; }
         public int Unidades { get; set; }
-        public List<string> Cola { get; set; } = new List<string>();
         public string Editorial { get; set; }
 
+        public Material()
+        {
+            this.Id = null;
+            this.Nombre = null;
+            this.Autor = null;
+            this.Materia = null;
+            this.Descripcion = null;
+            this.Estado = false;
+            this.Deposito_reserva = null;
+            this.Idioma = null;
+            this.FechaPublicacion = DateTime.MinValue;
+            this.Unidades = 0;
+            this.Editorial = null;
+        }
+        public Material(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial)
+        {
+            this.Id = id;
+            this.Nombre = nombre;
+            this.Autor = autor;
+            this.Materia = materia;
+            this.Descripcion = descripcion;
+            this.Estado = estado;
+            this.Deposito_reserva = dep_rev;
+            this.Idioma = idioma;
+            this.FechaPublicacion = fecha;
+            this.Unidades = un;
+            this.Editorial = editorial;
+        }
     }
 }
