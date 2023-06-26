@@ -32,9 +32,9 @@ namespace wfBiblioteca.Ventanas
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imagen1 = new System.Windows.Forms.PictureBox();
             this.Aaa = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.rdbUno = new System.Windows.Forms.RadioButton();
             this.rdbDos = new System.Windows.Forms.RadioButton();
             this.rdbTres = new System.Windows.Forms.RadioButton();
@@ -47,10 +47,9 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(231, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(173, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(494, 39);
+            this.label2.Size = new System.Drawing.Size(393, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "¡Bienvenido a Biblioteca Mayor!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,22 +59,19 @@ namespace wfBiblioteca.Ventanas
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.imagen1);
             this.panel1.Controls.Add(this.Aaa);
-            this.panel1.Location = new System.Drawing.Point(202, 191);
+            this.panel1.Location = new System.Drawing.Point(152, 155);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(549, 227);
+            this.panel1.Size = new System.Drawing.Size(412, 184);
             this.panel1.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // imagen1
             // 
             this.imagen1.Image = global::wfBiblioteca.Properties.Resources.descarga;
-            this.imagen1.Location = new System.Drawing.Point(6, 3);
+            this.imagen1.Location = new System.Drawing.Point(4, 2);
+            this.imagen1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.imagen1.Name = "imagen1";
-            this.imagen1.Size = new System.Drawing.Size(543, 221);
+            this.imagen1.Size = new System.Drawing.Size(407, 180);
             this.imagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imagen1.TabIndex = 0;
             this.imagen1.TabStop = false;
@@ -83,19 +79,26 @@ namespace wfBiblioteca.Ventanas
             // Aaa
             // 
             this.Aaa.AutoSize = true;
-            this.Aaa.Location = new System.Drawing.Point(21, 15);
+            this.Aaa.Location = new System.Drawing.Point(16, 12);
+            this.Aaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Aaa.Name = "Aaa";
-            this.Aaa.Size = new System.Drawing.Size(16, 17);
+            this.Aaa.Size = new System.Drawing.Size(13, 13);
             this.Aaa.TabIndex = 1;
             this.Aaa.Text = "0";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // rdbUno
             // 
             this.rdbUno.AutoSize = true;
             this.rdbUno.Checked = true;
-            this.rdbUno.Location = new System.Drawing.Point(426, 424);
+            this.rdbUno.Location = new System.Drawing.Point(320, 344);
+            this.rdbUno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbUno.Name = "rdbUno";
-            this.rdbUno.Size = new System.Drawing.Size(17, 16);
+            this.rdbUno.Size = new System.Drawing.Size(14, 13);
             this.rdbUno.TabIndex = 3;
             this.rdbUno.TabStop = true;
             this.rdbUno.UseVisualStyleBackColor = true;
@@ -103,34 +106,35 @@ namespace wfBiblioteca.Ventanas
             // rdbDos
             // 
             this.rdbDos.AutoSize = true;
-            this.rdbDos.Location = new System.Drawing.Point(458, 424);
+            this.rdbDos.Location = new System.Drawing.Point(344, 344);
+            this.rdbDos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbDos.Name = "rdbDos";
-            this.rdbDos.Size = new System.Drawing.Size(17, 16);
+            this.rdbDos.Size = new System.Drawing.Size(14, 13);
             this.rdbDos.TabIndex = 4;
             this.rdbDos.UseVisualStyleBackColor = true;
             // 
             // rdbTres
             // 
             this.rdbTres.AutoSize = true;
-            this.rdbTres.Location = new System.Drawing.Point(491, 424);
+            this.rdbTres.Location = new System.Drawing.Point(368, 344);
+            this.rdbTres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbTres.Name = "rdbTres";
-            this.rdbTres.Size = new System.Drawing.Size(17, 16);
+            this.rdbTres.Size = new System.Drawing.Size(14, 13);
             this.rdbTres.TabIndex = 5;
             this.rdbTres.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(955, 561);
+            this.ClientSize = new System.Drawing.Size(716, 456);
             this.Controls.Add(this.rdbTres);
             this.Controls.Add(this.rdbDos);
             this.Controls.Add(this.rdbUno);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);

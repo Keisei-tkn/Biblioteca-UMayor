@@ -46,23 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Administrador.cs" />
+    <Compile Include="Classes\AlumnoUM.cs" />
     <Compile Include="Classes\Audiovisual.cs" />
     <Compile Include="Classes\BotonesPersonalizados.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\Departamento.cs" />
     <Compile Include="Classes\Externos.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Libro.cs" />
     <Compile Include="Classes\Material.cs" />
     <Compile Include="Classes\MaterialDB.cs" />
+    <Compile Include="Classes\Nucleo.cs" />
     <Compile Include="Classes\Otro.cs" />
     <Compile Include="Classes\Prestamo.cs" />
     <Compile Include="Classes\Profesores.cs" />
     <Compile Include="Classes\Revista.cs" />
     <Compile Include="Classes\Sistema.cs" />
     <Compile Include="Classes\Usuario.cs" />
-    <Compile Include="Classes\UsuariosUM.cs" />
     <Compile Include="SQL\ConnectionDB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

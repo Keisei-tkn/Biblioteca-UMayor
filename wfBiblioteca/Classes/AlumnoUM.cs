@@ -4,15 +4,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wfBiblioteca.ConnectionBD;
+using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Classes
 {
-    class AlumnoUM:Usuario
+    class AlumnoUM : Usuario
     {
+
         public string Sede { get; set; }
 
-        public AlumnoUM(string id, string n, string a, string contra, string correo, string sede): base(id, n, a, contra, correo)
+        public AlumnoUM(string id, string n, string a, string contra, string correo, string sede) : base(id, n, a, contra, correo)
         {
             Sede = sede;
         }
@@ -61,7 +62,7 @@ namespace wfBiblioteca.Classes
             DELETE ALUMNO
             WHERE id_usuario= {u.Id};
 
-            DELETE MATERIAL
+            DELETE USUARIO
             WHERE id_usuario= {u.Id};
 
             COMMIT;";

@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wfBiblioteca.ConnectionBD;
+using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Classes
 {
@@ -17,10 +17,41 @@ namespace wfBiblioteca.Classes
 
         public Departamento(string n,double p)
         {
+            this.Id = GeneradorId();
             this.Nombre = n;
             this.Presupuesto = p;
         }
 
+        public void AgregarDepartamento(Departamento d)
+        {
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            INSERT INTO NUCLEO(id_departamento,presupuesto,nombre)
+            VALUES('{d.Id}', '{d.Presupuesto}','{d.Nombre}')
+            COMMIT;";
+
+            SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+
+            connection.Close();
+        }
+
+        public void EliminarDepartamento(Departamento d)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE RELACION_FUNCIONARIO_DEPARTAMENTO
+            WHERE id_departamento= {d.Id};
+
+            DELETE DEPARTAMENTO
+            WHERE id_departamento= {d.Id};
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
 
         private string GeneradorId()
         {

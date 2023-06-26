@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wfBiblioteca.ConnectionBD;
+using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Classes
 {
@@ -20,7 +20,33 @@ namespace wfBiblioteca.Classes
             id_nucleo = GeneradorId();
             Nombre = nombre;
         }
+        public void AgregarNucleo(Nucleo n)
+        {
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            INSERT INTO NUCLEO(id_nucleo,nombre)
+            VALUES('{n.id_nucleo}', '{n.Nombre}')
+             COMMIT;";
 
+            SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+
+            connection.Close();
+
+        }
+        public void EliminarNucleo(Nucleo n)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            DELETE NUCLEO
+            WHERE  id_nucleo= '{n.id_nucleo}';
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
         private string GeneradorId()
         {
             Random random = new Random();
@@ -41,7 +67,7 @@ namespace wfBiblioteca.Classes
             }
             id_nucleo = codeBuilder.ToString();
 
-            
+
             if (validar_id(id_nucleo) == false)
             {
                 GeneradorId();
@@ -61,7 +87,7 @@ namespace wfBiblioteca.Classes
             while (registros.Read())
             {
                 idBuscado = registros.GetString(0).ToString();
-                if (id==idBuscado)
+                if (id == idBuscado)
                 {
                     EstaOk = false;
                     connection.Close();
@@ -69,9 +95,9 @@ namespace wfBiblioteca.Classes
                 }
                 else
                 {
-                    
+
                     EstaOk = true;
-                    
+
 
                 }
             }
