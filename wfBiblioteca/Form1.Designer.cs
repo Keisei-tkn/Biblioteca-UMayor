@@ -432,11 +432,11 @@ namespace wfBiblioteca
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
-            this.btnCartelera.Location = new System.Drawing.Point(40, 1);
+            this.btnCartelera.Location = new System.Drawing.Point(50, 2);
             this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(141, 118);
-            this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCartelera.Size = new System.Drawing.Size(134, 110);
+            this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCartelera.TabIndex = 0;
             this.btnCartelera.TabStop = false;
             this.btnCartelera.Click += new System.EventHandler(this.btnCartelera_Click);
