@@ -162,7 +162,7 @@ namespace wfBiblioteca.Ventanas
             this.btnActualizar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnActualizar2.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar2.Location = new System.Drawing.Point(515, 392);
+            this.btnActualizar2.Location = new System.Drawing.Point(517, 392);
             this.btnActualizar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnActualizar2.Name = "btnActualizar2";
             this.btnActualizar2.Size = new System.Drawing.Size(118, 37);
@@ -174,7 +174,7 @@ namespace wfBiblioteca.Ventanas
             // btnActualizar
             // 
             this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnActualizar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
