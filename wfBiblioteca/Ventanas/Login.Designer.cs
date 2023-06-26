@@ -40,8 +40,8 @@ namespace wfBiblioteca
             this.linkPregunta = new System.Windows.Forms.LinkLabel();
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnAccede = new wfBiblioteca.Classes.BotonesPersonalizados();
-            this.btnVolve = new wfBiblioteca.Classes.BotonesPersonalizados();
+            this.btnAcceder = new wfBiblioteca.Classes.BotonesPersonalizados();
+            this.btnVolver = new wfBiblioteca.Classes.BotonesPersonalizados();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCartelera)).BeginInit();
@@ -176,44 +176,44 @@ namespace wfBiblioteca
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnAccede
+            // btnAcceder
             // 
-            this.btnAccede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnAccede.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnAccede.BorderColor = System.Drawing.Color.Yellow;
-            this.btnAccede.BorderRadius = 40;
-            this.btnAccede.BorderSize = 0;
-            this.btnAccede.FlatAppearance.BorderSize = 0;
-            this.btnAccede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccede.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccede.ForeColor = System.Drawing.Color.White;
-            this.btnAccede.Location = new System.Drawing.Point(535, 213);
-            this.btnAccede.Name = "btnAccede";
-            this.btnAccede.Size = new System.Drawing.Size(177, 45);
-            this.btnAccede.TabIndex = 11;
-            this.btnAccede.Text = "ACCEDER";
-            this.btnAccede.TextColor = System.Drawing.Color.White;
-            this.btnAccede.UseVisualStyleBackColor = false;
-            this.btnAccede.Click += new System.EventHandler(this.btnAccede_Click_1);
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnAcceder.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnAcceder.BorderColor = System.Drawing.Color.Yellow;
+            this.btnAcceder.BorderRadius = 40;
+            this.btnAcceder.BorderSize = 0;
+            this.btnAcceder.FlatAppearance.BorderSize = 0;
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceder.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.ForeColor = System.Drawing.Color.White;
+            this.btnAcceder.Location = new System.Drawing.Point(535, 213);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(177, 45);
+            this.btnAcceder.TabIndex = 11;
+            this.btnAcceder.Text = "ACCEDER";
+            this.btnAcceder.TextColor = System.Drawing.Color.White;
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAccede_Click_1);
             // 
-            // btnVolve
+            // btnVolver
             // 
-            this.btnVolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnVolve.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnVolve.BorderColor = System.Drawing.Color.Yellow;
-            this.btnVolve.BorderRadius = 40;
-            this.btnVolve.BorderSize = 0;
-            this.btnVolve.FlatAppearance.BorderSize = 0;
-            this.btnVolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolve.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolve.ForeColor = System.Drawing.Color.White;
-            this.btnVolve.Location = new System.Drawing.Point(315, 213);
-            this.btnVolve.Name = "btnVolve";
-            this.btnVolve.Size = new System.Drawing.Size(177, 45);
-            this.btnVolve.TabIndex = 12;
-            this.btnVolve.Text = "VOLVER";
-            this.btnVolve.TextColor = System.Drawing.Color.White;
-            this.btnVolve.UseVisualStyleBackColor = false;
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnVolver.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnVolver.BorderColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderRadius = 40;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Franklin Gothic Medium", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(315, 213);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(177, 45);
+            this.btnVolver.TabIndex = 12;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.TextColor = System.Drawing.Color.White;
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -221,8 +221,8 @@ namespace wfBiblioteca
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
-            this.Controls.Add(this.btnVolve);
-            this.Controls.Add(this.btnAccede);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.linkPregunta);
@@ -259,7 +259,7 @@ namespace wfBiblioteca
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnCartelera;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Classes.BotonesPersonalizados btnAccede;
-        private Classes.BotonesPersonalizados btnVolve;
+        private Classes.BotonesPersonalizados btnAcceder;
+        private Classes.BotonesPersonalizados btnVolver;
     }
 }
