@@ -8,19 +8,18 @@ using wfBiblioteca.ConnectionBD;
 
 namespace wfBiblioteca.Classes
 {
-    class Departamento
+    class Nucleo
     {
         ConnectionDB connection = new ConnectionDB();
-        public string Id { get; set; }
+        public string id_nucleo { get; set; }
         public string Nombre { get; set; }
-        public double Presupuesto { get; set; }
 
-        public Departamento(string n,double p)
+
+        public Nucleo(string nombre)
         {
-            this.Nombre = n;
-            this.Presupuesto = p;
+            id_nucleo = GeneradorId();
+            Nombre = nombre;
         }
-
 
         private string GeneradorId()
         {
@@ -40,22 +39,21 @@ namespace wfBiblioteca.Classes
                 int number = random.Next(0, 10);
                 codeBuilder.Append(number);
             }
-            Id = codeBuilder.ToString();
+            id_nucleo = codeBuilder.ToString();
 
-
-            if (validar_id(Id) == false)
+            
+            if (validar_id(id_nucleo) == false)
             {
                 GeneradorId();
             }
-            return Id;
+            return id_nucleo;
         }
-
         private bool validar_id(string id)
         {
             bool EstaOk = false;
             SqlDataReader registros = null;
             connection.Open();
-            string cadena = "SELECT id_departamento from DEPARTAMENTO";
+            string cadena = "SELECT id_nucleo from NUCLEO";
             SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
             registros = comando.ExecuteReader();
             string idBuscado;
@@ -63,7 +61,7 @@ namespace wfBiblioteca.Classes
             while (registros.Read())
             {
                 idBuscado = registros.GetString(0).ToString();
-                if (id == idBuscado)
+                if (id==idBuscado)
                 {
                     EstaOk = false;
                     connection.Close();
@@ -71,9 +69,9 @@ namespace wfBiblioteca.Classes
                 }
                 else
                 {
-
+                    
                     EstaOk = true;
-
+                    
 
                 }
             }
