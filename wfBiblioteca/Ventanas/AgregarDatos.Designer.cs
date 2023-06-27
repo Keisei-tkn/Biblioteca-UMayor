@@ -121,7 +121,7 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregar2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar2.Location = new System.Drawing.Point(81, 357);
+            this.btnAgregar2.Location = new System.Drawing.Point(60, 357);
             this.btnAgregar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar2.Name = "btnAgregar2";
             this.btnAgregar2.Size = new System.Drawing.Size(118, 37);
@@ -163,7 +163,7 @@ namespace wfBiblioteca.Ventanas
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(327, 357);
+            this.button1.Location = new System.Drawing.Point(298, 357);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 37);
@@ -262,7 +262,7 @@ namespace wfBiblioteca.Ventanas
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(575, 357);
+            this.button3.Location = new System.Drawing.Point(539, 357);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 37);
