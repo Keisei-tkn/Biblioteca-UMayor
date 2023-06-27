@@ -191,5 +191,15 @@
   <ItemGroup>
     <None Include="Resources\descarga.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Multimedia\hogar.png" />
+    <Content Include="Multimedia\i1.jpg" />
+    <Content Include="Multimedia\i2.jpg" />
+    <Content Include="Multimedia\i3.jpg" />
+    <Content Include="Multimedia\libro %281%29.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\minimizar-signo.png" />
+    <None Include="Resources\hogar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

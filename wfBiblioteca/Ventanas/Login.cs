@@ -89,14 +89,6 @@ namespace wfBiblioteca
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnAccede_Click(object sender, EventArgs e)
-        {
-            Form1 frm = new Form1();
-            AddOwnedForm(frm);
-            frm.Show();
-            this.Hide();
-        }
-
         private void btnAcceder_Paint(object sender, PaintEventArgs e)
         {
             System.Drawing.Drawing2D.GraphicsPath buttonPath = new System.Drawing.Drawing2D.GraphicsPath();
@@ -123,12 +115,14 @@ namespace wfBiblioteca
             btnVolver.Region = new System.Drawing.Region(buttonPath);
         }
 
-        private void btnAccede_Click_1(object sender, EventArgs e)
+        private void btnAcceder_Click(object sender, EventArgs e)
         {
             Form1 frm = new Form1();
             AddOwnedForm(frm);
             frm.Show();
             this.Hide();
+            
+        
         }
     }
 }

@@ -194,7 +194,7 @@ namespace wfBiblioteca
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.TextColor = System.Drawing.Color.White;
             this.btnAcceder.UseVisualStyleBackColor = false;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAccede_Click_1);
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // btnVolver
             // 

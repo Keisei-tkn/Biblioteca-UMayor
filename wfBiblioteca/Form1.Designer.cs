@@ -33,11 +33,8 @@ namespace wfBiblioteca
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.P_titulo = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnvolver = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.PictureBox();
-            this.btnMax = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.P_Menu = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,10 +54,11 @@ namespace wfBiblioteca
             this.btnBuscarMaterial = new System.Windows.Forms.Button();
             this.btnCartelera = new System.Windows.Forms.PictureBox();
             this.P_contenido = new System.Windows.Forms.Panel();
+            this.btnCerrarSes = new wfBiblioteca.Classes.BotonesPersonalizados();
+            this.btnIniciarSesion = new wfBiblioteca.Classes.BotonesPersonalizados();
             this.P_titulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnvolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.P_Menu.SuspendLayout();
             this.pSubMenu.SuspendLayout();
@@ -70,116 +68,54 @@ namespace wfBiblioteca
             // P_titulo
             // 
             this.P_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
-            this.P_titulo.Controls.Add(this.btnCerrarSesion);
-            this.P_titulo.Controls.Add(this.btnLogin);
-            this.P_titulo.Controls.Add(this.btnRestaurar);
+            this.P_titulo.Controls.Add(this.btnIniciarSesion);
+            this.P_titulo.Controls.Add(this.btnCerrarSes);
+            this.P_titulo.Controls.Add(this.btnvolver);
             this.P_titulo.Controls.Add(this.btnMin);
-            this.P_titulo.Controls.Add(this.btnMax);
             this.P_titulo.Controls.Add(this.btnCerrar);
             this.P_titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.P_titulo.Location = new System.Drawing.Point(0, 0);
             this.P_titulo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.P_titulo.Name = "P_titulo";
-            this.P_titulo.Size = new System.Drawing.Size(1200, 41);
+            this.P_titulo.Size = new System.Drawing.Size(1200, 48);
             this.P_titulo.TabIndex = 0;
             this.P_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_titulo_MouseDown);
             // 
-            // btnCerrarSesion
+            // btnvolver
             // 
-            this.btnCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(894, 4);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(149, 32);
-            this.btnCerrarSesion.TabIndex = 9;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Visible = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(911, 1);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(147, 41);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Iniciar Sesión";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnRestaurar
-            // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1120, 6);
-            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(28, 27);
-            this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnRestaurar.TabIndex = 3;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.btnvolver.Image = global::wfBiblioteca.Properties.Resources.hogar;
+            this.btnvolver.Location = new System.Drawing.Point(414, 5);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(65, 39);
+            this.btnvolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnvolver.TabIndex = 10;
+            this.btnvolver.TabStop = false;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
             // 
             // btnMin
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(1079, 6);
+            this.btnMin.Image = global::wfBiblioteca.Properties.Resources.minimizar_signo;
+            this.btnMin.Location = new System.Drawing.Point(1123, 6);
             this.btnMin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(28, 27);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMin.TabIndex = 2;
             this.btnMin.TabStop = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnMax
-            // 
-            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMax.Image = ((System.Drawing.Image)(resources.GetObject("btnMax.Image")));
-            this.btnMax.Location = new System.Drawing.Point(1120, 6);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(28, 27);
-            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMax.TabIndex = 1;
-            this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Image = global::wfBiblioteca.Properties.Resources.cerrar1;
             this.btnCerrar.Location = new System.Drawing.Point(1159, 6);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(28, 27);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -200,10 +136,10 @@ namespace wfBiblioteca
             this.P_Menu.Controls.Add(this.btnBuscarMaterial);
             this.P_Menu.Controls.Add(this.btnCartelera);
             this.P_Menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.P_Menu.Location = new System.Drawing.Point(0, 41);
+            this.P_Menu.Location = new System.Drawing.Point(0, 48);
             this.P_Menu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.P_Menu.Name = "P_Menu";
-            this.P_Menu.Size = new System.Drawing.Size(245, 561);
+            this.P_Menu.Size = new System.Drawing.Size(251, 554);
             this.P_Menu.TabIndex = 1;
             this.P_Menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_Menu_MouseDown);
             // 
@@ -234,7 +170,6 @@ namespace wfBiblioteca
             this.btnInformesEstadisticos.TabIndex = 14;
             this.btnInformesEstadisticos.Text = "Informes Estadísticos";
             this.btnInformesEstadisticos.UseVisualStyleBackColor = false;
-            this.btnInformesEstadisticos.Click += new System.EventHandler(this.btnC_Click);
             // 
             // pSubMenu
             // 
@@ -366,7 +301,7 @@ namespace wfBiblioteca
             this.pEditF.Location = new System.Drawing.Point(0, 285);
             this.pEditF.Margin = new System.Windows.Forms.Padding(4);
             this.pEditF.Name = "pEditF";
-            this.pEditF.Size = new System.Drawing.Size(5, 60);
+            this.pEditF.Size = new System.Drawing.Size(10, 60);
             this.pEditF.TabIndex = 11;
             this.pEditF.Visible = false;
             // 
@@ -397,7 +332,7 @@ namespace wfBiblioteca
             this.btnPrestamos.TabIndex = 6;
             this.btnPrestamos.Text = "Prestamos";
             this.btnPrestamos.UseVisualStyleBackColor = false;
-            this.btnPrestamos.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
             // panel1
             // 
@@ -432,25 +367,64 @@ namespace wfBiblioteca
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
-            this.btnCartelera.Location = new System.Drawing.Point(50, 2);
+            this.btnCartelera.Location = new System.Drawing.Point(58, 4);
             this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(134, 110);
-            this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCartelera.Size = new System.Drawing.Size(117, 104);
+            this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCartelera.TabIndex = 0;
             this.btnCartelera.TabStop = false;
-            this.btnCartelera.Click += new System.EventHandler(this.btnCartelera_Click);
             // 
             // P_contenido
             // 
             this.P_contenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.P_contenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.P_contenido.Location = new System.Drawing.Point(245, 41);
+            this.P_contenido.Location = new System.Drawing.Point(251, 48);
             this.P_contenido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.P_contenido.Name = "P_contenido";
-            this.P_contenido.Size = new System.Drawing.Size(955, 561);
+            this.P_contenido.Size = new System.Drawing.Size(949, 554);
             this.P_contenido.TabIndex = 2;
             this.P_contenido.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_contenido_MouseDown);
+            // 
+            // btnCerrarSes
+            // 
+            this.btnCerrarSes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnCerrarSes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnCerrarSes.BorderColor = System.Drawing.Color.Black;
+            this.btnCerrarSes.BorderRadius = 40;
+            this.btnCerrarSes.BorderSize = 0;
+            this.btnCerrarSes.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSes.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSes.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSes.Location = new System.Drawing.Point(868, 3);
+            this.btnCerrarSes.Name = "btnCerrarSes";
+            this.btnCerrarSes.Size = new System.Drawing.Size(171, 40);
+            this.btnCerrarSes.TabIndex = 11;
+            this.btnCerrarSes.Text = "Cerrar Sesión";
+            this.btnCerrarSes.TextColor = System.Drawing.Color.White;
+            this.btnCerrarSes.UseVisualStyleBackColor = false;
+            this.btnCerrarSes.Click += new System.EventHandler(this.btnCerrarSes_Click);
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnIniciarSesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnIniciarSesion.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.BorderRadius = 40;
+            this.btnIniciarSesion.BorderSize = 0;
+            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(868, 5);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(171, 40);
+            this.btnIniciarSesion.TabIndex = 10;
+            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // Form1
             // 
@@ -467,9 +441,8 @@ namespace wfBiblioteca
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.P_titulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnvolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.P_Menu.ResumeLayout(false);
             this.pSubMenu.ResumeLayout(false);
@@ -482,17 +455,12 @@ namespace wfBiblioteca
         private Panel P_titulo;
         private PictureBox btnCerrar;
         private Panel P_Menu;
-        private Panel P_contenido;
         private PictureBox btnMin;
-        private PictureBox btnMax;
-        private PictureBox btnRestaurar;
         private PictureBox btnCartelera;
         private Button btnBuscarMaterial;
         private Panel panel1;
         private Panel panel4;
         private Button btnPrestamos;
-        private Button btnLogin;
-        private Button btnCerrarSesion;
         private Panel pEditF;
         private Button btnAbrirSubM;
         private Button btnRegistrarMaterial;
@@ -504,6 +472,10 @@ namespace wfBiblioteca
         private Button btnInformesEstadisticos;
         private Panel panel2;
         private Button btnRegistrarPresupuesto;
+        private Panel P_contenido;
+        private PictureBox btnvolver;
+        private Classes.BotonesPersonalizados btnIniciarSesion;
+        private Classes.BotonesPersonalizados btnCerrarSes;
         //private MouseEventHandler P_titulo_MouseDown;
         //private EventHandler btnRestaurar_Click;
         //private EventHandler btnMin_Click;

@@ -18,6 +18,11 @@ namespace wfBiblioteca
         public Form1(/*string EmpBuscado, string EmpConBuscado , string CliBuscado, string CliContraBuscada, string Cargoencontrado*/)
         {
             InitializeComponent();
+            this.btnPrestamos.Visible = false;
+            this.panel4.Visible = false;
+            this.btnInformesEstadisticos.Visible = false;
+            this.btnRegistrarMaterial.Visible = false;
+            this.panel6.Visible = false;
             //this.Emp = EmpBuscado;
             //this.EmpCon = EmpConBuscado;
             //this.Cli = CliBuscado;
@@ -25,7 +30,7 @@ namespace wfBiblioteca
             //this.cargo = Cargoencontrado;
             //if (Emp == string.Empty && EmpCon == string.Empty && Cli == string.Empty && CliContra == string.Empty&&cargo==string.Empty)
             //{
-               
+
             //}
             //else if (Emp != string.Empty && EmpCon != string.Empty && Cli == null && CliContra == null && cargo != string.Empty)
             //{
@@ -38,8 +43,8 @@ namespace wfBiblioteca
             //        this.pEdit.Visible = true;
             //        this.btnAbrirSubM.Visible = true;
             //        this.pEditF.Visible = true;
-                   
-                    
+
+
             //    }
             //    else if(cargo == "Supervisor")
             //    {
@@ -49,47 +54,33 @@ namespace wfBiblioteca
             //        this.btnEditar.Visible = true;
             //        this.pEdit.Visible = true;
 
-                    
+
             //    }
             //    else
             //    {
             //        InitializeComponent();
             //        this.btnLogin.Visible = false;
             //        this.btnCerrarSesion.Visible = true;
-                 
+
             //    }
 
             //}
             //else 
             //{
-            
+
             //    InitializeComponent();
             //    this.btnLogin.Visible = false;
             //    this.btnCerrarSesion.Visible = true;
             //    MessageBox.Show("Se inicio sesion como Cliente");
-                
+
             //}
-            
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-            private void btnMax_Click(object sender, EventArgs e)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                btnMax.Visible = false;
-                btnRestaurar.Visible = true;
-            }
-
-            private void btnRestaurar_Click(object sender, EventArgs e)
-            {
-                this.WindowState = FormWindowState.Normal;
-                btnMax.Visible = true;
-                btnRestaurar.Visible = false;
-            }
 
             private void btnMin_Click(object sender, EventArgs e)
             {
@@ -122,16 +113,6 @@ namespace wfBiblioteca
                 SendMessage(this.Handle, 0x112, 0xf012, 0);
             }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            CerrarSesion();
-            
-        }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new Home());
-        }
-
         
 
         private void btnComida_Click(object sender, EventArgs e)
@@ -150,10 +131,7 @@ namespace wfBiblioteca
             this.pSubMenu.Visible = true;
         }
 
-        private void btnCartelera_Click(object sender, EventArgs e)
-        {
-            //AbrirFormEnPanel(new Cartelera(Cli));
-        }
+ 
 
         private void btnAgregarF_Click(object sender, EventArgs e)
         {
@@ -167,14 +145,11 @@ namespace wfBiblioteca
             //this.pSubMenu.Visible = false;
         }
 
-        private void btnC_Click(object sender, EventArgs e)
-        {
-            //AbrirFormEnPanel(new Cartelera(Cli));
-        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnHome_Click(null, e);
+            btnPrestamos_Click(null, e);
         }
 
         private void AbrirFormEnPanel(object formhija)
@@ -191,13 +166,7 @@ namespace wfBiblioteca
         }
 
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            Login frm = new Login();
-            AddOwnedForm(frm);
-            frm.Show();
-            this.Hide();
-        }
+        
         private void CerrarSesion()
         {
             //Emp = string.Empty;
@@ -211,6 +180,43 @@ namespace wfBiblioteca
             this.Hide();
             MessageBox.Show("Sesión Cerrada Con Éxito","Cerrar Sesión");
         }
-        
+
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new Home());
+        }
+
+        private void btnvolver_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Home());
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Login frm = new Login();
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnCerrarSes_Click(object sender, EventArgs e)
+        {
+            CerrarSesion();
+        }
+
+        private Form formularioactivo = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (formularioactivo != null)
+                formularioactivo.Close();
+            formularioactivo = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            P_contenido.Controls.Add(childForm);
+            P_contenido.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
     }
 }

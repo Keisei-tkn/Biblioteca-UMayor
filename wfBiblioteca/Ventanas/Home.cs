@@ -59,5 +59,8 @@ namespace wfBiblioteca.Ventanas
                 timer1.Start();
             }
         }
+
+
+
     }
 }
