@@ -17,20 +17,19 @@ namespace wfBiblioteca.Classes
             this.Estado_Certificado = estado;
         }
 
-        public void AgregarAlumno(Externos e)
+        public void AgregarExterno(Externos e)
         {
             
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO(id_usuario,nombre_usuario,apellido_usuario,contraseña,correo_usuario)
-            VALUES('{e.Id}', '{e.Nombre}', {e.Apellido}, '{e.Contraseña}', {e.Correo})
+            INSERT INTO USUARIO VALUES('{e.Id}', '{e.Nombre}', '{e.Apellido}', '{e.Correo}', '{e.Contraseña}')
 
             INSERT INTO EXTERNO(id_usuario,certificado_externo)
             VALUES('{e.Id}','{e.Estado_Certificado}')
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
-
+            queryInsert.ExecuteNonQuery();
             connection.Close();
         }
 
@@ -40,8 +39,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
             //Se tiene que probar 
             string cad = $@"BEGIN TRANSACTION;
-            UPDATE USUARIO SET id_usuario='{e.Id}',nombre_usuario='{e.Nombre}',apellido_usuario='{e.Apellido}',contraseña='{e.Contraseña}',correo_usuario='{e.Correo}
-            WHERE id_usuario = {e.Id};
+            UPDATE USUARIO SET correo_usuario='{e.Correo}'
+            WHERE id_usuario = '{e.Id}';
             
             UPDATE EXTERNO SET certificado_externo='{e.Estado_Certificado}'
             WHERE id_usuario='{e.Id}'
@@ -59,10 +58,10 @@ namespace wfBiblioteca.Classes
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             DELETE EXTERNO
-            WHERE id_usuario= {e.Id};
+            WHERE id_usuario= '{e.Id}';
 
             DELETE USUARIO
-            WHERE id_usuario= {e.Id};
+            WHERE id_usuario= '{e.Id}';
 
             COMMIT;";
 

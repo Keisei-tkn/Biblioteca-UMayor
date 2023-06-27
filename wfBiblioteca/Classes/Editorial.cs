@@ -19,9 +19,9 @@ namespace wfBiblioteca.Classes
             this.Nombre = null;
         }
 
-        public Editorial(string id, string nombre)
+        public Editorial(string nombre)
         {
-            this.Id = id;
+            this.Id = GeneradorId();
             this.Nombre = nombre;
         }
         public void InsertarEditorial(Editorial edt)
@@ -29,10 +29,11 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             connection.Open();
 
-            string cad = $@"INSERT INTO AUTOR(id_editorial,nombre) 
+            string cad = $@"INSERT INTO EDITORIAL(id_editorial,nombre) 
             VALUES('{edt.Id}','{edt.Nombre}');";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
 
             connection.Close();
         }
@@ -60,6 +61,64 @@ namespace wfBiblioteca.Classes
             connection.Close();
 
             return ListaEditorial;
+        }
+
+
+        private string GeneradorId()
+        {
+            Random random = new Random();
+            StringBuilder codeBuilder = new StringBuilder();
+
+            // Generar tres letras mayúsculas
+            for (int i = 0; i < 3; i++)
+            {
+                char letter = (char)random.Next('A', 'Z' + 1);
+                codeBuilder.Append(letter);
+            }
+
+            // Generar tres números al azar
+            for (int i = 0; i < 3; i++)
+            {
+                int number = random.Next(0, 10);
+                codeBuilder.Append(number);
+            }
+            Id = codeBuilder.ToString();
+
+
+            if (validar_id(Id) == false)
+            {
+                GeneradorId();
+            }
+            return Id;
+        }
+        private bool validar_id(string id)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            bool EstaOk = false;
+            SqlDataReader registros = null;
+            connection.Open();
+            string cadena = "SELECT id_editorial from EDITORIAL";
+            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+            registros = comando.ExecuteReader();
+            string idBuscado;
+
+            while (registros.Read())
+            {
+                idBuscado = registros.GetString(0).ToString();
+                if (id == idBuscado)
+                {
+                    EstaOk = false;
+                    connection.Close();
+                    return EstaOk;
+                }
+                else
+                {
+
+                    EstaOk = true;
+                }
+            }
+            connection.Close();
+            return EstaOk;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using wfBiblioteca.SQL;
+using wfBiblioteca.Ventanas;
 
 namespace wfBiblioteca
 {

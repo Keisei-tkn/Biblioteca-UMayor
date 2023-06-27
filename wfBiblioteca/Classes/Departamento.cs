@@ -13,9 +13,9 @@ namespace wfBiblioteca.Classes
         ConnectionDB connection = new ConnectionDB();
         public string Id { get; set; }
         public string Nombre { get; set; }
-        public double Presupuesto { get; set; }
+        public string Presupuesto { get; set; }
 
-        public Departamento(string n,double p)
+        public Departamento(string n,string p)
         {
             this.Id = GeneradorId();
             this.Nombre = n;
@@ -26,25 +26,35 @@ namespace wfBiblioteca.Classes
         {
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO NUCLEO(id_departamento,presupuesto,nombre)
-            VALUES('{d.Id}', '{d.Presupuesto}','{d.Nombre}')
+            INSERT INTO DEPARTAMENTO VALUES('{d.Id}', {d.Presupuesto},'{d.Nombre}')
             COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
+            connection.Close();
+        }
+        public void EditarDepartamento(Departamento d)
+        {
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            UPDATE DEPARTAMENTO SET presupuesto='{d.Presupuesto}'
+            WHERE id_departamento = '{d.Id}';
+            COMMIT;";
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
 
             connection.Close();
         }
-
         public void EliminarDepartamento(Departamento d)
         {
             ConnectionDB connection = new ConnectionDB();
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             DELETE RELACION_FUNCIONARIO_DEPARTAMENTO
-            WHERE id_departamento= {d.Id};
+            WHERE id_departamento= '{d.Id}';
 
             DELETE DEPARTAMENTO
-            WHERE id_departamento= {d.Id};
+            WHERE id_departamento= '{d.Id}';
             COMMIT;";
 
             SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
@@ -108,6 +118,7 @@ namespace wfBiblioteca.Classes
 
                 }
             }
+            connection.Close();
             return EstaOk;
         }
     }

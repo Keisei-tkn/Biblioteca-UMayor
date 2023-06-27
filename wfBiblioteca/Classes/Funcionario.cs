@@ -23,15 +23,21 @@ namespace wfBiblioteca.Classes
         }
         private string BuscarDepartamento(string nombre)
         {
-            string idDep;
-            SqlDataReader registros = null;
+            ConnectionDB connection = new ConnectionDB();
             connection.Open();
-            string cadena = "SELECT id_departamento from DEPARTAMENTO WHERE nombre = '" + nombre + "'";
+            string cadena = "SELECT * from DEPARTAMENTO";
             SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
-            registros = comando.ExecuteReader();
-            idDep = registros.GetString(0).ToString();
+            SqlDataReader lector = comando.ExecuteReader();
+            while (lector.Read())
+            {
+                if (nombre == lector.GetValue(1).ToString())
+                {
+                    nombre = lector.GetValue(0).ToString();
+                    return nombre;
+                }
+            }
             connection.Close();
-            return idDep;
+            return nombre;
         }
 
         public void AgregarFuncionario(Funcionario f)
@@ -40,8 +46,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO(id_usuario,nombre_usuario,apellido_usuario,contraseña,correo_usuario)
-            VALUES('{f.Id}', '{f.Nombre}', {f.Apellido}, '{f.Contraseña}', {f.Correo})
+            INSERT INTO USUARIO VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Correo}', '{f.Contraseña}')
 
             INSERT INTO FUNCIONARIO(id_usuario,id_funcionario)
             VALUES('{f.Id}','{f.id_funcionario}')
@@ -51,6 +56,21 @@ namespace wfBiblioteca.Classes
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void EditarFuncionario(Funcionario f)
+        {
+            connection.Open();
+            //hacer el caso que se cambie de departamento
+            string cad = $@"BEGIN TRANSACTION;
+            UPDATE USUARIO SET correo_usuario='{f.Correo}'
+            WHERE id_usuario = '{f.Id}';
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
 
             connection.Close();
         }
@@ -73,6 +93,7 @@ namespace wfBiblioteca.Classes
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
 
             connection.Close();
         }

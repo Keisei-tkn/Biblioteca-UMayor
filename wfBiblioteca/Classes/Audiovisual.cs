@@ -17,6 +17,7 @@ namespace wfBiblioteca.Classes
             this.Duracion = 0;
         }
 
+
         public Audiovisual(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, int duracion) : base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
         {
             this.Duracion = duracion;
