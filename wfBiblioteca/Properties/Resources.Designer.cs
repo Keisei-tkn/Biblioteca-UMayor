@@ -113,6 +113,16 @@ namespace wfBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imgbin_magnifying_glass_icon_science_icon_research_icon_png {
+            get {
+                object obj = ResourceManager.GetObject("imgbin_magnifying-glass-icon-science-icon-research-icon-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap libro__1_ {
             get {
                 object obj = ResourceManager.GetObject("libro (1)", resourceCulture);

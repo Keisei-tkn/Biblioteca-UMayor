@@ -97,11 +97,23 @@
     <Compile Include="Ventanas\AgregarM.Designer.cs">
       <DependentUpon>AgregarM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\AgregarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\AgregarPrestamo.Designer.cs">
+      <DependentUpon>AgregarPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\AgregarU.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\AgregarU.Designer.cs">
       <DependentUpon>AgregarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\BuscarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\BuscarMaterial.Designer.cs">
+      <DependentUpon>BuscarMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\EditarM.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="Ventanas\EditarU.Designer.cs">
       <DependentUpon>EditarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Historial.Designer.cs">
+      <DependentUpon>Historial.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Home.cs">
       <SubType>Form</SubType>
@@ -129,6 +147,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ventanas\Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\AgregarU.resx">
       <DependentUpon>AgregarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\BuscarMaterial.resx">
+      <DependentUpon>BuscarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\EditarM.resx">
       <DependentUpon>EditarM.cs</DependentUpon>
@@ -211,6 +238,7 @@
     <Content Include="Multimedia\i1.jpg" />
     <Content Include="Multimedia\i2.jpg" />
     <Content Include="Multimedia\i3.jpg" />
+    <None Include="Multimedia\imgbin_magnifying-glass-icon-science-icon-research-icon-png.png" />
     <Content Include="Multimedia\libro %281%29.png" />
     <None Include="Resources\cerrar.png" />
     <None Include="Resources\minimizar-signo.png" />
