@@ -23,12 +23,17 @@ namespace wfBiblioteca.Classes
             IdMaterial = null;
         }
 
-        public Prestamo(string id, DateTime fechaPrestamo, DateTime fechaDevolucion, string idMaterial)
+        public Prestamo(Material mat)
         {
-            Id = id;
-            FechaPrestamo = fechaPrestamo;
-            FechaDevolucion = fechaDevolucion;
-            IdMaterial = idMaterial;
+            Id = GeneradorId();
+            FechaPrestamo = DateTime.Now;
+            if (mat.Deposito_reserva.Equals("Deposito")){
+                FechaDevolucion = FechaPrestamo.AddDays(7);
+            }else
+            {
+                FechaDevolucion = FechaPrestamo.AddDays(1);
+            }
+            IdMaterial = mat.Id;
         }
 
         public void InsertarPrestamo(Prestamo prs)
@@ -74,7 +79,7 @@ namespace wfBiblioteca.Classes
             SqlDataReader registros = null;
             connection.Open();
 
-            foreach (string Id in IdPrestamos){
+            foreach (string Id in IdPrestamos) {
                 SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material FROM PRESTAMO AS PRS WHERE id_prestamo = '{Id}';", connection.connectDb);
 
                 registros = querySel.ExecuteReader();
@@ -93,6 +98,63 @@ namespace wfBiblioteca.Classes
             }
             connection.Close();
             return ListaPrestamos;
+        }
+
+        private string GeneradorId()
+        {
+            Random random = new Random();
+            StringBuilder codeBuilder = new StringBuilder();
+
+            // Generar tres letras mayúsculas
+            for (int i = 0; i < 3; i++)
+            {
+                char letter = (char)random.Next('A', 'Z' + 1);
+                codeBuilder.Append(letter);
+            }
+
+            // Generar tres números al azar
+            for (int i = 0; i < 3; i++)
+            {
+                int number = random.Next(0, 10);
+                codeBuilder.Append(number);
+            }
+            Id = codeBuilder.ToString();
+
+
+            if (validar_id(Id) == false)
+            {
+                GeneradorId();
+            }
+            return Id;
+        }
+        private bool validar_id(string id)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            bool EstaOk = false;
+            SqlDataReader registros = null;
+            connection.Open();
+            string cadena = "SELECT id_prestamo from PRESTAMO";
+            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+            registros = comando.ExecuteReader();
+            string idBuscado;
+
+            while (registros.Read())
+            {
+                idBuscado = registros.GetString(0).ToString();
+                if (id == idBuscado)
+                {
+                    EstaOk = false;
+                    connection.Close();
+                    return EstaOk;
+                }
+                else
+                {
+
+                    EstaOk = true;
+                }
+            }
+            connection.Close();
+            return EstaOk;
         }
     }
 }

@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AlumnoUM.cs" />
+    <Compile Include="Classes\Atraso.cs" />
     <Compile Include="Classes\Audiovisual.cs" />
     <Compile Include="Classes\Autor.cs" />
     <Compile Include="Classes\BotonesPersonalizados.cs">
