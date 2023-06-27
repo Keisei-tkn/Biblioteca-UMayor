@@ -132,17 +132,25 @@ namespace wfBiblioteca
                 frm.btnAbrirSubM.Visible = true;
                 frm.btnRegistrarUsuario.Visible = true;
                 frm.btnBuscarMaterial.Visible = true;
+                frm.btnUEditar.Visible = true;
+                frm.btnMatEditar.Visible = true;
+                frm.btnEditar.Visible = true;
+                frm.btnPresuEditar.Visible = true;
             }
             if (txtUsuario.Text == "funcionario")
             {
                 frm.btnPrestamos.Visible = true;
                 frm.btnInformesEstadisticos.Visible = true;
-                frm.btnInformesEstadisticos.Enabled = true;
+                frm.btnInformesEstadisticos.Enabled = false;
                 frm.btnRegistrarMaterial.Visible = true;
                 frm.btnRegistrarPresupuesto.Visible = true;
                 frm.btnAbrirSubM.Visible = true;
                 frm.btnRegistrarUsuario.Visible = true;
                 frm.btnBuscarMaterial.Visible = true;
+                frm.btnUEditar.Visible = true;
+                frm.btnMatEditar.Visible = true;
+                frm.btnEditar.Visible = true;
+                frm.btnPresuEditar.Visible = true;
             }
             if (txtUsuario.Text == "profesor")
             {
@@ -154,6 +162,10 @@ namespace wfBiblioteca
                 frm.btnAbrirSubM.Visible = true;
                 frm.btnRegistrarUsuario.Visible = true;
                 frm.btnBuscarMaterial.Visible = true;
+                frm.btnUEditar.Visible = true;
+                frm.btnMatEditar.Visible = true;
+                frm.btnEditar.Visible = true;
+                frm.btnPresuEditar.Visible = true;
             }
             if (txtUsuario.Text == "externo")
             {
@@ -165,6 +177,10 @@ namespace wfBiblioteca
                 frm.btnAbrirSubM.Visible = true;
                 frm.btnRegistrarUsuario.Visible = true;
                 frm.btnBuscarMaterial.Visible = true;
+                frm.btnUEditar.Visible = true;
+                frm.btnMatEditar.Visible = true;
+                frm.btnEditar.Visible = true;
+                frm.btnPresuEditar.Visible = true;
             }
 
 

@@ -223,5 +223,10 @@ namespace wfBiblioteca
         {
             this.pSubmenu2.Visible = true;
         }
+
+        private void Ocultarsubmenu()
+        {
+           //
+        }
     }
 }

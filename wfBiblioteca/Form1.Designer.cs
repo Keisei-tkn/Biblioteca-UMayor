@@ -33,8 +33,6 @@ namespace wfBiblioteca
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.P_titulo = new System.Windows.Forms.Panel();
-            this.btnIniciarSesion = new wfBiblioteca.Classes.BotonesPersonalizados();
-            this.btnCerrarSes = new wfBiblioteca.Classes.BotonesPersonalizados();
             this.btnvolver = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -65,6 +63,8 @@ namespace wfBiblioteca
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.P_contenido = new System.Windows.Forms.Panel();
+            this.btnIniciarSesion = new wfBiblioteca.Classes.BotonesPersonalizados();
+            this.btnCerrarSes = new wfBiblioteca.Classes.BotonesPersonalizados();
             this.P_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnvolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -90,46 +90,6 @@ namespace wfBiblioteca
             this.P_titulo.Size = new System.Drawing.Size(1200, 49);
             this.P_titulo.TabIndex = 0;
             this.P_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_titulo_MouseDown);
-            // 
-            // btnIniciarSesion
-            // 
-            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
-            this.btnIniciarSesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
-            this.btnIniciarSesion.BorderColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.BorderRadius = 40;
-            this.btnIniciarSesion.BorderSize = 0;
-            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(868, 5);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(171, 40);
-            this.btnIniciarSesion.TabIndex = 10;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
-            this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.UseVisualStyleBackColor = false;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-            // 
-            // btnCerrarSes
-            // 
-            this.btnCerrarSes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
-            this.btnCerrarSes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
-            this.btnCerrarSes.BorderColor = System.Drawing.Color.Black;
-            this.btnCerrarSes.BorderRadius = 40;
-            this.btnCerrarSes.BorderSize = 0;
-            this.btnCerrarSes.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSes.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSes.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSes.Location = new System.Drawing.Point(868, 3);
-            this.btnCerrarSes.Name = "btnCerrarSes";
-            this.btnCerrarSes.Size = new System.Drawing.Size(171, 40);
-            this.btnCerrarSes.TabIndex = 11;
-            this.btnCerrarSes.Text = "Cerrar Sesión";
-            this.btnCerrarSes.TextColor = System.Drawing.Color.White;
-            this.btnCerrarSes.UseVisualStyleBackColor = false;
-            this.btnCerrarSes.Click += new System.EventHandler(this.btnCerrarSes_Click);
             // 
             // btnvolver
             // 
@@ -424,7 +384,7 @@ namespace wfBiblioteca
             this.P_Menu.Location = new System.Drawing.Point(0, 49);
             this.P_Menu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.P_Menu.Name = "P_Menu";
-            this.P_Menu.Size = new System.Drawing.Size(280, 561);
+            this.P_Menu.Size = new System.Drawing.Size(291, 559);
             this.P_Menu.TabIndex = 1;
             this.P_Menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_Menu_MouseDown);
             // 
@@ -562,16 +522,56 @@ namespace wfBiblioteca
             // 
             // P_contenido
             // 
-            this.P_contenido.Location = new System.Drawing.Point(257, 49);
+            this.P_contenido.Location = new System.Drawing.Point(288, 49);
             this.P_contenido.Name = "P_contenido";
-            this.P_contenido.Size = new System.Drawing.Size(942, 560);
+            this.P_contenido.Size = new System.Drawing.Size(912, 559);
             this.P_contenido.TabIndex = 2;
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnIniciarSesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnIniciarSesion.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.BorderRadius = 40;
+            this.btnIniciarSesion.BorderSize = 0;
+            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(868, 5);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(171, 40);
+            this.btnIniciarSesion.TabIndex = 10;
+            this.btnIniciarSesion.Text = "Iniciar Sesión";
+            this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // btnCerrarSes
+            // 
+            this.btnCerrarSes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnCerrarSes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(13)))));
+            this.btnCerrarSes.BorderColor = System.Drawing.Color.Black;
+            this.btnCerrarSes.BorderRadius = 40;
+            this.btnCerrarSes.BorderSize = 0;
+            this.btnCerrarSes.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSes.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSes.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSes.Location = new System.Drawing.Point(868, 3);
+            this.btnCerrarSes.Name = "btnCerrarSes";
+            this.btnCerrarSes.Size = new System.Drawing.Size(171, 40);
+            this.btnCerrarSes.TabIndex = 11;
+            this.btnCerrarSes.Text = "Cerrar Sesión";
+            this.btnCerrarSes.TextColor = System.Drawing.Color.White;
+            this.btnCerrarSes.UseVisualStyleBackColor = false;
+            this.btnCerrarSes.Click += new System.EventHandler(this.btnCerrarSes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 610);
+            this.ClientSize = new System.Drawing.Size(1200, 608);
             this.Controls.Add(this.P_contenido);
             this.Controls.Add(this.P_Menu);
             this.Controls.Add(this.P_titulo);
