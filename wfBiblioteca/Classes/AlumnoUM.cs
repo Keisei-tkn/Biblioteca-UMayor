@@ -22,7 +22,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{a.Id}', '{a.Nombre}', '{a.Apellido}', '{a.Contraseña}', '{a.Correo}')
+            INSERT INTO USUARIO VALUES('{a.Id}', '{a.Nombre}', '{a.Apellido}', '{a.Correo}', '{a.Contraseña}')
 
             INSERT INTO ALUMNO VALUES('{a.Id}','{a.Sede}')
             COMMIT;";

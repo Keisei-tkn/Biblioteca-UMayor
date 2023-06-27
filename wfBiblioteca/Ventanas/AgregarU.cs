@@ -80,7 +80,9 @@ namespace wfBiblioteca.Ventanas
             {
                 Funcionario f1 = new Funcionario(rut, nombre, apellido, contra, correo,pinS,dep);
                 f1.AgregarFuncionario(f1);
-       
+                MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno")
             {
@@ -94,12 +96,16 @@ namespace wfBiblioteca.Ventanas
             {
                 Externos e1 = new Externos(rut, nombre, apellido, contra, correo, estadoV);
                 e1.AgregarExterno(e1);
+                MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
+                Limpiar();
             }
             else
             {
                 Profesores p1 = new Profesores(rut, nombre, apellido, contra, correo, nucleo);
                 p1.AgregarProfesor(p1);
-             
+                MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+
             }
 
         }
@@ -158,6 +164,8 @@ namespace wfBiblioteca.Ventanas
             {
                 MessageBox.Show("Error", "Mensaje Error" + ex.Message);
             }
+            cboDep.SelectedIndex = 0;
+            this.cboNucleo.SelectedIndex = 0;
         }
 
         private void cboTipoU_SelectedIndexChanged(object sender, EventArgs e)
