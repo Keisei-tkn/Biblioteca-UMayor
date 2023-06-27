@@ -29,35 +29,32 @@ namespace wfBiblioteca.Ventanas
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRut = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.lblContra = new System.Windows.Forms.Label();
             this.cboTipoU = new System.Windows.Forms.ComboBox();
-            this.lblRut1 = new System.Windows.Forms.Label();
             this.btnRegistrar2 = new System.Windows.Forms.Button();
             this.txtContraSeguridad = new System.Windows.Forms.TextBox();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.lblSede = new System.Windows.Forms.Label();
             this.txtSede = new System.Windows.Forms.TextBox();
             this.lblNucleo = new System.Windows.Forms.Label();
-            this.txtVerificacion = new System.Windows.Forms.TextBox();
             this.lblVerificacion = new System.Windows.Forms.Label();
-            this.txt2daClave = new System.Windows.Forms.TextBox();
-            this.lbl2daClav = new System.Windows.Forms.Label();
             this.lblDepartamento = new System.Windows.Forms.Label();
-            this.cboDep = new System.Windows.Forms.ComboBox();
-            this.cboNucleo = new System.Windows.Forms.ComboBox();
-            this.lsvFuncionarios = new System.Windows.Forms.ListView();
+            this.lsvUsuarios = new System.Windows.Forms.ListView();
             this.Funcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cboDep = new System.Windows.Forms.ComboBox();
+            this.lblRut1 = new System.Windows.Forms.Label();
+            this.lblApellido1 = new System.Windows.Forms.Label();
+            this.lblNom1 = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.txtVerificacion = new System.Windows.Forms.TextBox();
+            this.cboNucleo = new System.Windows.Forms.ComboBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -72,98 +69,52 @@ namespace wfBiblioteca.Ventanas
             this.label1.TabIndex = 12;
             this.label1.Text = "Editar Usuarios";
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(45, 299);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(167, 26);
-            this.txtCorreo.TabIndex = 37;
-            this.txtCorreo.Visible = false;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(272, 242);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(167, 26);
-            this.txtApellido.TabIndex = 36;
-            this.txtApellido.Visible = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(45, 242);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(167, 26);
-            this.txtNombre.TabIndex = 35;
-            this.txtNombre.Visible = false;
-            // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 88);
+            this.label5.Location = new System.Drawing.Point(45, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 31;
             this.label5.Text = "Tipo de Usuario:*";
             // 
-            // lblCorreo
-            // 
-            this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(41, 276);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(67, 20);
-            this.lblCorreo.TabIndex = 30;
-            this.lblCorreo.Text = "Correo:*";
-            this.lblCorreo.Visible = false;
-            // 
             // lblApellido
             // 
             this.lblApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblApellido.AutoSize = true;
+            this.lblApellido.BackColor = System.Drawing.Color.White;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(268, 219);
+            this.lblApellido.ForeColor = System.Drawing.Color.Black;
+            this.lblApellido.Location = new System.Drawing.Point(243, 233);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(75, 20);
+            this.lblApellido.Size = new System.Drawing.Size(156, 28);
             this.lblApellido.TabIndex = 29;
-            this.lblApellido.Text = "Apellido:*";
             this.lblApellido.Visible = false;
             // 
             // lblNombre
             // 
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(41, 219);
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(45, 233);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(75, 20);
+            this.lblNombre.Size = new System.Drawing.Size(156, 28);
             this.lblNombre.TabIndex = 28;
-            this.lblNombre.Text = "Nombre:*";
             this.lblNombre.Visible = false;
             // 
             // lblRut
             // 
             this.lblRut.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblRut.AutoSize = true;
+            this.lblRut.BackColor = System.Drawing.Color.White;
             this.lblRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRut.ForeColor = System.Drawing.Color.White;
-            this.lblRut.Location = new System.Drawing.Point(43, 153);
+            this.lblRut.ForeColor = System.Drawing.Color.Black;
+            this.lblRut.Location = new System.Drawing.Point(243, 159);
             this.lblRut.Name = "lblRut";
-            this.lblRut.Size = new System.Drawing.Size(45, 20);
+            this.lblRut.Size = new System.Drawing.Size(156, 28);
             this.lblRut.TabIndex = 27;
-            this.lblRut.Text = "Rut:*";
             this.lblRut.Visible = false;
             // 
             // btnRegistrar
@@ -187,54 +138,17 @@ namespace wfBiblioteca.Ventanas
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(272, 299);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(167, 26);
-            this.txtContraseña.TabIndex = 40;
-            this.txtContraseña.Visible = false;
-            // 
-            // lblContra
-            // 
-            this.lblContra.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblContra.AutoSize = true;
-            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContra.ForeColor = System.Drawing.Color.White;
-            this.lblContra.Location = new System.Drawing.Point(268, 276);
-            this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(102, 20);
-            this.lblContra.TabIndex = 39;
-            this.lblContra.Text = "Contraseña:*";
-            this.lblContra.Visible = false;
-            // 
             // cboTipoU
             // 
             this.cboTipoU.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboTipoU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoU.FormattingEnabled = true;
-            this.cboTipoU.Location = new System.Drawing.Point(45, 111);
+            this.cboTipoU.Location = new System.Drawing.Point(47, 159);
             this.cboTipoU.Name = "cboTipoU";
             this.cboTipoU.Size = new System.Drawing.Size(169, 28);
             this.cboTipoU.TabIndex = 41;
             this.cboTipoU.SelectedIndexChanged += new System.EventHandler(this.cboTipoU_SelectedIndexChanged);
-            // 
-            // lblRut1
-            // 
-            this.lblRut1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblRut1.AutoSize = true;
-            this.lblRut1.BackColor = System.Drawing.Color.Transparent;
-            this.lblRut1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRut1.ForeColor = System.Drawing.Color.White;
-            this.lblRut1.Location = new System.Drawing.Point(224, 182);
-            this.lblRut1.Name = "lblRut1";
-            this.lblRut1.Size = new System.Drawing.Size(215, 15);
-            this.lblRut1.TabIndex = 42;
-            this.lblRut1.Text = "Escribir Rut de la Forma 11.111.111-1";
-            this.lblRut1.Visible = false;
             // 
             // btnRegistrar2
             // 
@@ -287,7 +201,7 @@ namespace wfBiblioteca.Ventanas
             this.lblSede.AutoSize = true;
             this.lblSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.White;
-            this.lblSede.Location = new System.Drawing.Point(43, 339);
+            this.lblSede.Location = new System.Drawing.Point(45, 324);
             this.lblSede.Name = "lblSede";
             this.lblSede.Size = new System.Drawing.Size(57, 20);
             this.lblSede.TabIndex = 46;
@@ -298,7 +212,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtSede.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSede.Location = new System.Drawing.Point(47, 362);
+            this.txtSede.Location = new System.Drawing.Point(49, 347);
             this.txtSede.Name = "txtSede";
             this.txtSede.Size = new System.Drawing.Size(167, 26);
             this.txtSede.TabIndex = 47;
@@ -310,22 +224,12 @@ namespace wfBiblioteca.Ventanas
             this.lblNucleo.AutoSize = true;
             this.lblNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNucleo.ForeColor = System.Drawing.Color.White;
-            this.lblNucleo.Location = new System.Drawing.Point(43, 339);
+            this.lblNucleo.Location = new System.Drawing.Point(45, 324);
             this.lblNucleo.Name = "lblNucleo";
             this.lblNucleo.Size = new System.Drawing.Size(68, 20);
             this.lblNucleo.TabIndex = 48;
             this.lblNucleo.Text = "Nucleo:*";
             this.lblNucleo.Visible = false;
-            // 
-            // txtVerificacion
-            // 
-            this.txtVerificacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtVerificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerificacion.Location = new System.Drawing.Point(47, 362);
-            this.txtVerificacion.Name = "txtVerificacion";
-            this.txtVerificacion.Size = new System.Drawing.Size(167, 26);
-            this.txtVerificacion.TabIndex = 51;
-            this.txtVerificacion.Visible = false;
             // 
             // lblVerificacion
             // 
@@ -333,35 +237,12 @@ namespace wfBiblioteca.Ventanas
             this.lblVerificacion.AutoSize = true;
             this.lblVerificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerificacion.ForeColor = System.Drawing.Color.White;
-            this.lblVerificacion.Location = new System.Drawing.Point(43, 339);
+            this.lblVerificacion.Location = new System.Drawing.Point(45, 324);
             this.lblVerificacion.Name = "lblVerificacion";
             this.lblVerificacion.Size = new System.Drawing.Size(160, 20);
             this.lblVerificacion.TabIndex = 50;
             this.lblVerificacion.Text = "Estado Verificacion: *";
             this.lblVerificacion.Visible = false;
-            // 
-            // txt2daClave
-            // 
-            this.txt2daClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt2daClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2daClave.Location = new System.Drawing.Point(47, 362);
-            this.txt2daClave.Name = "txt2daClave";
-            this.txt2daClave.Size = new System.Drawing.Size(167, 26);
-            this.txt2daClave.TabIndex = 53;
-            this.txt2daClave.Visible = false;
-            // 
-            // lbl2daClav
-            // 
-            this.lbl2daClav.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl2daClav.AutoSize = true;
-            this.lbl2daClav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2daClav.ForeColor = System.Drawing.Color.White;
-            this.lbl2daClav.Location = new System.Drawing.Point(43, 339);
-            this.lbl2daClav.Name = "lbl2daClav";
-            this.lbl2daClav.Size = new System.Drawing.Size(119, 20);
-            this.lbl2daClav.TabIndex = 52;
-            this.lbl2daClav.Text = "Pin seguridad :*";
-            this.lbl2daClav.Visible = false;
             // 
             // lblDepartamento
             // 
@@ -369,12 +250,42 @@ namespace wfBiblioteca.Ventanas
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartamento.ForeColor = System.Drawing.Color.White;
-            this.lblDepartamento.Location = new System.Drawing.Point(268, 339);
+            this.lblDepartamento.Location = new System.Drawing.Point(45, 324);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(122, 20);
             this.lblDepartamento.TabIndex = 54;
             this.lblDepartamento.Text = "Departamento:*";
             this.lblDepartamento.Visible = false;
+            // 
+            // lsvUsuarios
+            // 
+            this.lsvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lsvUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Funcion,
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lsvUsuarios.HideSelection = false;
+            this.lsvUsuarios.Location = new System.Drawing.Point(445, 94);
+            this.lsvUsuarios.Name = "lsvUsuarios";
+            this.lsvUsuarios.Size = new System.Drawing.Size(241, 231);
+            this.lsvUsuarios.TabIndex = 58;
+            this.lsvUsuarios.UseCompatibleStateImageBehavior = false;
+            this.lsvUsuarios.View = System.Windows.Forms.View.Details;
+            this.lsvUsuarios.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvUsuarios_MouseClick);
+            // 
+            // Funcion
+            // 
+            this.Funcion.Text = "Rut";
+            this.Funcion.Width = 79;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nombre";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Apellido";
+            this.columnHeader2.Width = 70;
             // 
             // cboDep
             // 
@@ -382,11 +293,73 @@ namespace wfBiblioteca.Ventanas
             this.cboDep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDep.FormattingEnabled = true;
-            this.cboDep.Location = new System.Drawing.Point(270, 362);
+            this.cboDep.Location = new System.Drawing.Point(49, 347);
             this.cboDep.Name = "cboDep";
             this.cboDep.Size = new System.Drawing.Size(169, 28);
-            this.cboDep.TabIndex = 55;
+            this.cboDep.TabIndex = 59;
             this.cboDep.Visible = false;
+            // 
+            // lblRut1
+            // 
+            this.lblRut1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRut1.AutoSize = true;
+            this.lblRut1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRut1.ForeColor = System.Drawing.Color.White;
+            this.lblRut1.Location = new System.Drawing.Point(243, 136);
+            this.lblRut1.Name = "lblRut1";
+            this.lblRut1.Size = new System.Drawing.Size(45, 20);
+            this.lblRut1.TabIndex = 60;
+            this.lblRut1.Text = "Rut:*";
+            this.lblRut1.Visible = false;
+            // 
+            // lblApellido1
+            // 
+            this.lblApellido1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblApellido1.AutoSize = true;
+            this.lblApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido1.ForeColor = System.Drawing.Color.White;
+            this.lblApellido1.Location = new System.Drawing.Point(243, 204);
+            this.lblApellido1.Name = "lblApellido1";
+            this.lblApellido1.Size = new System.Drawing.Size(75, 20);
+            this.lblApellido1.TabIndex = 61;
+            this.lblApellido1.Text = "Apellido:*";
+            this.lblApellido1.Visible = false;
+            // 
+            // lblNom1
+            // 
+            this.lblNom1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNom1.AutoSize = true;
+            this.lblNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNom1.ForeColor = System.Drawing.Color.White;
+            this.lblNom1.Location = new System.Drawing.Point(43, 204);
+            this.lblNom1.Name = "lblNom1";
+            this.lblNom1.Size = new System.Drawing.Size(75, 20);
+            this.lblNom1.TabIndex = 62;
+            this.lblNom1.Text = "Nombre:*";
+            this.lblNom1.Visible = false;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.White;
+            this.lblCorreo.Location = new System.Drawing.Point(43, 265);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(67, 20);
+            this.lblCorreo.TabIndex = 63;
+            this.lblCorreo.Text = "Correo:*";
+            this.lblCorreo.Visible = false;
+            // 
+            // txtVerificacion
+            // 
+            this.txtVerificacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtVerificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVerificacion.Location = new System.Drawing.Point(49, 347);
+            this.txtVerificacion.Name = "txtVerificacion";
+            this.txtVerificacion.Size = new System.Drawing.Size(167, 26);
+            this.txtVerificacion.TabIndex = 51;
+            this.txtVerificacion.Visible = false;
             // 
             // cboNucleo
             // 
@@ -394,35 +367,21 @@ namespace wfBiblioteca.Ventanas
             this.cboNucleo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNucleo.FormattingEnabled = true;
-            this.cboNucleo.Location = new System.Drawing.Point(47, 362);
+            this.cboNucleo.Location = new System.Drawing.Point(49, 347);
             this.cboNucleo.Name = "cboNucleo";
             this.cboNucleo.Size = new System.Drawing.Size(169, 28);
             this.cboNucleo.TabIndex = 56;
             this.cboNucleo.Visible = false;
             // 
-            // lsvFuncionarios
+            // txtCorreo
             // 
-            this.lsvFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lsvFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Funcion,
-            this.columnHeader1});
-            this.lsvFuncionarios.HideSelection = false;
-            this.lsvFuncionarios.Location = new System.Drawing.Point(474, 94);
-            this.lsvFuncionarios.Name = "lsvFuncionarios";
-            this.lsvFuncionarios.Size = new System.Drawing.Size(212, 231);
-            this.lsvFuncionarios.TabIndex = 58;
-            this.lsvFuncionarios.UseCompatibleStateImageBehavior = false;
-            this.lsvFuncionarios.View = System.Windows.Forms.View.Details;
-            // 
-            // Funcion
-            // 
-            this.Funcion.Text = "Rut";
-            this.Funcion.Width = 86;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Nombre";
-            this.columnHeader1.Width = 313;
+            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(47, 288);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(241, 26);
+            this.txtCorreo.TabIndex = 64;
+            this.txtCorreo.Visible = false;
             // 
             // EditarU
             // 
@@ -431,12 +390,15 @@ namespace wfBiblioteca.Ventanas
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 456);
-            this.Controls.Add(this.lsvFuncionarios);
-            this.Controls.Add(this.cboNucleo);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.lblCorreo);
+            this.Controls.Add(this.lblNom1);
+            this.Controls.Add(this.lblApellido1);
+            this.Controls.Add(this.lblRut1);
             this.Controls.Add(this.cboDep);
+            this.Controls.Add(this.lsvUsuarios);
+            this.Controls.Add(this.cboNucleo);
             this.Controls.Add(this.lblDepartamento);
-            this.Controls.Add(this.txt2daClave);
-            this.Controls.Add(this.lbl2daClav);
             this.Controls.Add(this.txtVerificacion);
             this.Controls.Add(this.lblVerificacion);
             this.Controls.Add(this.lblNucleo);
@@ -445,15 +407,8 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.txtContraSeguridad);
             this.Controls.Add(this.lblConfirmacion);
             this.Controls.Add(this.btnRegistrar2);
-            this.Controls.Add(this.lblRut1);
             this.Controls.Add(this.cboTipoU);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.lblContra);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblRut);
@@ -470,34 +425,31 @@ namespace wfBiblioteca.Ventanas
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblRut;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.ComboBox cboTipoU;
-        private System.Windows.Forms.Label lblRut1;
         private System.Windows.Forms.Button btnRegistrar2;
         private System.Windows.Forms.TextBox txtContraSeguridad;
         private System.Windows.Forms.Label lblConfirmacion;
         private System.Windows.Forms.Label lblSede;
         private System.Windows.Forms.TextBox txtSede;
         private System.Windows.Forms.Label lblNucleo;
-        private System.Windows.Forms.TextBox txtVerificacion;
         private System.Windows.Forms.Label lblVerificacion;
-        private System.Windows.Forms.TextBox txt2daClave;
-        private System.Windows.Forms.Label lbl2daClav;
         private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.ComboBox cboDep;
-        private System.Windows.Forms.ComboBox cboNucleo;
-        private System.Windows.Forms.ListView lsvFuncionarios;
+        private System.Windows.Forms.ListView lsvUsuarios;
         public System.Windows.Forms.ColumnHeader Funcion;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ComboBox cboDep;
+        private System.Windows.Forms.Label lblRut1;
+        private System.Windows.Forms.Label lblApellido1;
+        private System.Windows.Forms.Label lblNom1;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.TextBox txtVerificacion;
+        private System.Windows.Forms.ComboBox cboNucleo;
+        private System.Windows.Forms.TextBox txtCorreo;
     }
 }

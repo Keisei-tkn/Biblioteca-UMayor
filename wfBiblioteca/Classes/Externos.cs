@@ -22,8 +22,7 @@ namespace wfBiblioteca.Classes
             
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO(id_usuario,nombre_usuario,apellido_usuario,contraseña,correo_usuario)
-            VALUES('{e.Id}', '{e.Nombre}', '{e.Apellido}', '{e.Contraseña}', '{e.Correo}')
+            INSERT INTO USUARIO VALUES('{e.Id}', '{e.Nombre}', '{e.Apellido}', '{e.Correo}', '{e.Contraseña}')
 
             INSERT INTO EXTERNO(id_usuario,certificado_externo)
             VALUES('{e.Id}','{e.Estado_Certificado}')
