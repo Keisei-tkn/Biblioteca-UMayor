@@ -14,7 +14,7 @@ namespace wfBiblioteca.Classes
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }
         public string IdMaterial { get; set; }
-        public Boolean activo { get; set; }
+        public Boolean Activo { get; set; }
 
         public Prestamo()
         {
@@ -22,6 +22,7 @@ namespace wfBiblioteca.Classes
             FechaPrestamo = DateTime.MinValue;
             FechaDevolucion = DateTime.MinValue;
             IdMaterial = null;
+            Activo = false;
         }
 
         public Prestamo(Material mat)
@@ -81,7 +82,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             foreach (string Id in IdPrestamos) {
-                SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material FROM PRESTAMO AS PRS WHERE id_prestamo = '{Id}';", connection.connectDb);
+                SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material, PRS.activo FROM PRESTAMO AS PRS WHERE id_prestamo = '{Id}';", connection.connectDb);
 
                 registros = querySel.ExecuteReader();
 
@@ -92,7 +93,8 @@ namespace wfBiblioteca.Classes
                         Id = registros["id_prestamo"].ToString(),
                         FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
                         FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString()),
-                        IdMaterial = registros["id_material"].ToString()
+                        IdMaterial = registros["id_material"].ToString(),
+                        Activo = (bool)registros["activo"]
                     };
                     ListaPrestamos.Add(registro);
                 }
@@ -107,7 +109,7 @@ namespace wfBiblioteca.Classes
             SqlDataReader registros = null;
             connection.Open();
 
-            SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material FROM PRESTAMO AS PRS;", connection.connectDb);
+            SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material, PRS.activo FROM PRESTAMO AS PRS;", connection.connectDb);
 
             registros = querySel.ExecuteReader();
 
@@ -118,7 +120,8 @@ namespace wfBiblioteca.Classes
                     Id = registros["id_prestamo"].ToString(),
                     FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
                     FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString()),
-                    IdMaterial = registros["id_material"].ToString()
+                    IdMaterial = registros["id_material"].ToString(),
+                    Activo = (bool)registros["activo"]
                 };
                 ListaPrestamos.Add(registro);
             }
