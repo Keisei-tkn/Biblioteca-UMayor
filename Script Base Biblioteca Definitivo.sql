@@ -56,6 +56,7 @@ CREATE TABLE PRESTAMO (
     id_prestamo VARCHAR(20) PRIMARY KEY,
     fecha_prestamo DATE,
     fecha_devolucion DATE,
+	activo BIT,
 	id_material VARCHAR(20),
 	FOREIGN KEY (id_material) REFERENCES MATERIAL(id_material)
 );

@@ -53,9 +53,10 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(71, 76);
+            this.label2.Location = new System.Drawing.Point(95, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 31);
+            this.label2.Size = new System.Drawing.Size(254, 39);
             this.label2.TabIndex = 3;
             this.label2.Text = "Agregar Nucleo";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,9 +65,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtNombreN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombreN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreN.Location = new System.Drawing.Point(89, 171);
+            this.txtNombreN.Location = new System.Drawing.Point(119, 210);
+            this.txtNombreN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreN.Name = "txtNombreN";
-            this.txtNombreN.Size = new System.Drawing.Size(163, 26);
+            this.txtNombreN.Size = new System.Drawing.Size(216, 30);
             this.txtNombreN.TabIndex = 89;
             // 
             // label8
@@ -75,9 +77,10 @@ namespace wfBiblioteca.Ventanas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(85, 148);
+            this.label8.Location = new System.Drawing.Point(113, 182);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
+            this.label8.Size = new System.Drawing.Size(81, 25);
             this.label8.TabIndex = 88;
             this.label8.Text = "Nombre";
             // 
@@ -85,9 +88,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraNucleo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraNucleo.Location = new System.Drawing.Point(89, 263);
+            this.txtContraNucleo.Location = new System.Drawing.Point(119, 324);
+            this.txtContraNucleo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraNucleo.Name = "txtContraNucleo";
-            this.txtContraNucleo.Size = new System.Drawing.Size(167, 26);
+            this.txtContraNucleo.Size = new System.Drawing.Size(221, 30);
             this.txtContraNucleo.TabIndex = 91;
             this.txtContraNucleo.Visible = false;
             // 
@@ -97,9 +101,10 @@ namespace wfBiblioteca.Ventanas
             this.lblNucleoS.AutoSize = true;
             this.lblNucleoS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNucleoS.ForeColor = System.Drawing.Color.White;
-            this.lblNucleoS.Location = new System.Drawing.Point(85, 240);
+            this.lblNucleoS.Location = new System.Drawing.Point(113, 295);
+            this.lblNucleoS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNucleoS.Name = "lblNucleoS";
-            this.lblNucleoS.Size = new System.Drawing.Size(174, 20);
+            this.lblNucleoS.Size = new System.Drawing.Size(214, 25);
             this.lblNucleoS.TabIndex = 90;
             this.lblNucleoS.Text = "Ingrese Su Contraseña";
             this.lblNucleoS.Visible = false;
@@ -116,10 +121,10 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarN2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarN2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarN2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarN2.Location = new System.Drawing.Point(89, 302);
-            this.btnAgregarN2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarN2.Location = new System.Drawing.Point(119, 372);
+            this.btnAgregarN2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAgregarN2.Name = "btnAgregarN2";
-            this.btnAgregarN2.Size = new System.Drawing.Size(168, 37);
+            this.btnAgregarN2.Size = new System.Drawing.Size(224, 46);
             this.btnAgregarN2.TabIndex = 93;
             this.btnAgregarN2.Text = "Agregar Nucleo";
             this.btnAgregarN2.UseVisualStyleBackColor = false;
@@ -138,10 +143,10 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarN.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarN.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarN.Location = new System.Drawing.Point(89, 302);
-            this.btnAgregarN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarN.Location = new System.Drawing.Point(119, 372);
+            this.btnAgregarN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAgregarN.Name = "btnAgregarN";
-            this.btnAgregarN.Size = new System.Drawing.Size(168, 37);
+            this.btnAgregarN.Size = new System.Drawing.Size(224, 46);
             this.btnAgregarN.TabIndex = 92;
             this.btnAgregarN.Text = "Agregar Nucleo";
             this.btnAgregarN.UseVisualStyleBackColor = false;
@@ -159,10 +164,10 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarDep2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarDep2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarDep2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarDep2.Location = new System.Drawing.Point(424, 292);
-            this.btnAgregarDep2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarDep2.Location = new System.Drawing.Point(565, 359);
+            this.btnAgregarDep2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAgregarDep2.Name = "btnAgregarDep2";
-            this.btnAgregarDep2.Size = new System.Drawing.Size(155, 70);
+            this.btnAgregarDep2.Size = new System.Drawing.Size(207, 86);
             this.btnAgregarDep2.TabIndex = 100;
             this.btnAgregarDep2.Text = "Agregar Departamento";
             this.btnAgregarDep2.UseVisualStyleBackColor = false;
@@ -181,10 +186,10 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarDep.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarDep.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarDep.Location = new System.Drawing.Point(424, 292);
-            this.btnAgregarDep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarDep.Location = new System.Drawing.Point(565, 359);
+            this.btnAgregarDep.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAgregarDep.Name = "btnAgregarDep";
-            this.btnAgregarDep.Size = new System.Drawing.Size(155, 70);
+            this.btnAgregarDep.Size = new System.Drawing.Size(207, 86);
             this.btnAgregarDep.TabIndex = 99;
             this.btnAgregarDep.Text = "Agregar Departamento";
             this.btnAgregarDep.UseVisualStyleBackColor = false;
@@ -194,9 +199,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraDep.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraDep.Location = new System.Drawing.Point(419, 253);
+            this.txtContraDep.Location = new System.Drawing.Point(559, 311);
+            this.txtContraDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraDep.Name = "txtContraDep";
-            this.txtContraDep.Size = new System.Drawing.Size(167, 26);
+            this.txtContraDep.Size = new System.Drawing.Size(221, 30);
             this.txtContraDep.TabIndex = 98;
             this.txtContraDep.Visible = false;
             // 
@@ -206,9 +212,10 @@ namespace wfBiblioteca.Ventanas
             this.lblDepS.AutoSize = true;
             this.lblDepS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepS.ForeColor = System.Drawing.Color.White;
-            this.lblDepS.Location = new System.Drawing.Point(416, 230);
+            this.lblDepS.Location = new System.Drawing.Point(555, 283);
+            this.lblDepS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepS.Name = "lblDepS";
-            this.lblDepS.Size = new System.Drawing.Size(174, 20);
+            this.lblDepS.Size = new System.Drawing.Size(214, 25);
             this.lblDepS.TabIndex = 97;
             this.lblDepS.Text = "Ingrese Su Contraseña";
             this.lblDepS.Visible = false;
@@ -217,9 +224,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtNombreD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombreD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreD.Location = new System.Drawing.Point(322, 171);
+            this.txtNombreD.Location = new System.Drawing.Point(429, 210);
+            this.txtNombreD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreD.Name = "txtNombreD";
-            this.txtNombreD.Size = new System.Drawing.Size(163, 26);
+            this.txtNombreD.Size = new System.Drawing.Size(216, 30);
             this.txtNombreD.TabIndex = 96;
             // 
             // label3
@@ -228,9 +236,10 @@ namespace wfBiblioteca.Ventanas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(318, 148);
+            this.label3.Location = new System.Drawing.Point(424, 182);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(81, 25);
             this.label3.TabIndex = 95;
             this.label3.Text = "Nombre";
             // 
@@ -240,9 +249,10 @@ namespace wfBiblioteca.Ventanas
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(351, 76);
+            this.label4.Location = new System.Drawing.Point(468, 94);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 31);
+            this.label4.Size = new System.Drawing.Size(362, 39);
             this.label4.TabIndex = 94;
             this.label4.Text = "Agregar Departamento";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -251,9 +261,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtPresupuesto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPresupuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresupuesto.Location = new System.Drawing.Point(519, 171);
+            this.txtPresupuesto.Location = new System.Drawing.Point(692, 210);
+            this.txtPresupuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPresupuesto.Name = "txtPresupuesto";
-            this.txtPresupuesto.Size = new System.Drawing.Size(163, 26);
+            this.txtPresupuesto.Size = new System.Drawing.Size(216, 30);
             this.txtPresupuesto.TabIndex = 102;
             // 
             // label5
@@ -262,18 +273,19 @@ namespace wfBiblioteca.Ventanas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(514, 148);
+            this.label5.Location = new System.Drawing.Point(685, 182);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 20);
+            this.label5.Size = new System.Drawing.Size(122, 25);
             this.label5.TabIndex = 101;
             this.label5.Text = "Presupuesto";
             // 
             // AgregarD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(716, 455);
+            this.ClientSize = new System.Drawing.Size(955, 560);
             this.Controls.Add(this.txtPresupuesto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAgregarDep2);
@@ -292,6 +304,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(245, 41);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AgregarD";
             this.Text = "AgregarCat";
             this.ResumeLayout(false);

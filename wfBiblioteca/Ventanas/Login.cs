@@ -121,8 +121,53 @@ namespace wfBiblioteca
             AddOwnedForm(frm);
             frm.Show();
             this.Hide();
-            
-        
+            frm.btnIniciarSesion.Visible = false;
+            if (txtUsuario.Text == "alumno")
+            {
+                frm.btnPrestamos.Visible = true;
+                frm.btnInformesEstadisticos.Visible = true;
+                frm.btnInformesEstadisticos.Enabled = false;
+                frm.btnRegistrarMaterial.Visible = true;
+                frm.btnRegistrarPresupuesto.Visible = true;
+                frm.btnAbrirSubM.Visible = true;
+                frm.btnRegistrarUsuario.Visible = true;
+                frm.btnBuscarMaterial.Visible = true;
+            }
+            if (txtUsuario.Text == "funcionario")
+            {
+                frm.btnPrestamos.Visible = true;
+                frm.btnInformesEstadisticos.Visible = true;
+                frm.btnInformesEstadisticos.Enabled = true;
+                frm.btnRegistrarMaterial.Visible = true;
+                frm.btnRegistrarPresupuesto.Visible = true;
+                frm.btnAbrirSubM.Visible = true;
+                frm.btnRegistrarUsuario.Visible = true;
+                frm.btnBuscarMaterial.Visible = true;
+            }
+            if (txtUsuario.Text == "profesor")
+            {
+                frm.btnPrestamos.Visible = true;
+                frm.btnInformesEstadisticos.Visible = true;
+                frm.btnInformesEstadisticos.Enabled = false;
+                frm.btnRegistrarMaterial.Visible = true;
+                frm.btnRegistrarPresupuesto.Visible = true;
+                frm.btnAbrirSubM.Visible = true;
+                frm.btnRegistrarUsuario.Visible = true;
+                frm.btnBuscarMaterial.Visible = true;
+            }
+            if (txtUsuario.Text == "externo")
+            {
+                frm.btnPrestamos.Visible = true;
+                frm.btnInformesEstadisticos.Visible = true;
+                frm.btnInformesEstadisticos.Enabled = false;
+                frm.btnRegistrarMaterial.Visible = true;
+                frm.btnRegistrarPresupuesto.Visible = true;
+                frm.btnAbrirSubM.Visible = true;
+                frm.btnRegistrarUsuario.Visible = true;
+                frm.btnBuscarMaterial.Visible = true;
+            }
+
+
         }
     }
 }

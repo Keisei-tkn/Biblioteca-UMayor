@@ -218,5 +218,10 @@ namespace wfBiblioteca
             childForm.Show();
 
         }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            this.pSubmenu2.Visible = true;
+        }
     }
 }
