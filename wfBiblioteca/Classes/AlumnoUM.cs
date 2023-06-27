@@ -12,7 +12,11 @@ namespace wfBiblioteca.Classes
     {
         public string Sede { get; set; }
 
-        public AlumnoUM(string id, string n, string a, string contra, string correo, string sede) : base(id, n, a, contra, correo)
+        public AlumnoUM(string id, string n, string a, string contra, string correo,string t ,string sede) : base(id, n, a, contra, correo,t)
+        {
+            Sede = sede;
+        }
+        public AlumnoUM(string id, string correo, string sede) : base(id, correo)
         {
             Sede = sede;
         }
@@ -22,7 +26,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{a.Id}', '{a.Nombre}', '{a.Apellido}', '{a.Correo}', '{a.Contraseña}')
+            INSERT INTO USUARIO VALUES('{a.Id}', '{a.Nombre}', '{a.Apellido}', '{a.Correo}', '{a.Contraseña}','{a.Tipo}')
 
             INSERT INTO ALUMNO VALUES('{a.Id}','{a.Sede}')
             COMMIT;";

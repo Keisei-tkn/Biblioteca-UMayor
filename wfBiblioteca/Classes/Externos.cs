@@ -12,17 +12,22 @@ namespace wfBiblioteca.Classes
     {
         ConnectionDB connection = new ConnectionDB();
         public string Estado_Certificado{ get; set; }
-        public Externos(string id, string n, string a, string contra, string c,string estado) : base(id, n, a, contra, c)
+        public Externos(string id, string n, string a, string contra, string c,string t ,string estado) : base(id, n, a, contra, c,t)
         {
             this.Estado_Certificado = estado;
         }
+        public Externos(string id, string c, string estado) : base(id, c)
+        {
+            this.Estado_Certificado = estado;
+        }
+
 
         public void AgregarExterno(Externos e)
         {
             
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{e.Id}', '{e.Nombre}', '{e.Apellido}', '{e.Correo}', '{e.Contraseña}')
+            INSERT INTO USUARIO VALUES('{e.Id}', '{e.Nombre}', '{e.Apellido}', '{e.Correo}', '{e.Contraseña}','{e.Tipo}')
 
             INSERT INTO EXTERNO(id_usuario,certificado_externo)
             VALUES('{e.Id}','{e.Estado_Certificado}')
@@ -33,7 +38,7 @@ namespace wfBiblioteca.Classes
             connection.Close();
         }
 
-        public void EditarAlumno(Externos e)
+        public void EditarExterno(Externos e)
         {
             
             connection.Open();
@@ -52,7 +57,7 @@ namespace wfBiblioteca.Classes
 
             connection.Close();
         }
-        public void EliminarAlumno(Externos e)
+        public void EliminarExterno(Externos e)
         {
             
             connection.Open();

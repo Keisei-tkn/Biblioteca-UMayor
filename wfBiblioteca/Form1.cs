@@ -8,73 +8,63 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfBiblioteca.Classes;
 using wfBiblioteca.Ventanas;
 
 namespace wfBiblioteca
 {
     public partial class Form1 : Form
     {
-        //string Emp, EmpCon, Cli, CliContra,cargo;
-        public Form1(/*string EmpBuscado, string EmpConBuscado , string CliBuscado, string CliContraBuscada, string Cargoencontrado*/)
+        string rut, nombre, apellido, c, pass,tipo;
+        public Form1(string id,string nom,string ap,string correo,string password,string t)
         {
-            InitializeComponent();
-            this.btnPrestamos.Visible = false;
-            this.panel4.Visible = false;
-            this.btnInformesEstadisticos.Visible = false;
-            this.btnRegistrarMaterial.Visible = false;
-            this.panel6.Visible = false;
-            //this.Emp = EmpBuscado;
-            //this.EmpCon = EmpConBuscado;
-            //this.Cli = CliBuscado;
-            //this.CliContra = CliContraBuscada;
-            //this.cargo = Cargoencontrado;
-            //if (Emp == string.Empty && EmpCon == string.Empty && Cli == string.Empty && CliContra == string.Empty&&cargo==string.Empty)
-            //{
+            rut = id;
+            this.nombre = nom;
+            this.apellido = ap;
+            this.c = correo;
+            this.pass = password;
+            this.tipo = t;
 
-            //}
-            //else if (Emp != string.Empty && EmpCon != string.Empty && Cli == null && CliContra == null && cargo != string.Empty)
-            //{
-            //    if (cargo != "Cajero"&& cargo != "Supervisor")
-            //    {
-            //        InitializeComponent();
-            //        this.btnLogin.Visible = false;
-            //        this.btnCerrarSesion.Visible = true;
-            //        this.btnEditar.Visible = true;
-            //        this.pEdit.Visible = true;
-            //        this.btnAbrirSubM.Visible = true;
-            //        this.pEditF.Visible = true;
+            Usuario u1 = new Usuario(rut,nombre,apellido,pass,c,tipo);
 
-
-            //    }
-            //    else if(cargo == "Supervisor")
-            //    {
-            //        InitializeComponent();
-            //        this.btnLogin.Visible = false;
-            //        this.btnCerrarSesion.Visible = true;
-            //        this.btnEditar.Visible = true;
-            //        this.pEdit.Visible = true;
-
-
-            //    }
-            //    else
-            //    {
-            //        InitializeComponent();
-            //        this.btnLogin.Visible = false;
-            //        this.btnCerrarSesion.Visible = true;
-
-            //    }
-
-            //}
-            //else 
-            //{
-
-            //    InitializeComponent();
-            //    this.btnLogin.Visible = false;
-            //    this.btnCerrarSesion.Visible = true;
-            //    MessageBox.Show("Se inicio sesion como Cliente");
-
-            //}
-
+            if (rut == string.Empty && password == string.Empty)
+            {
+                InitializeComponent();
+            }
+            else if (tipo=="Alumno"|| tipo == "Profesor" || tipo == "Externo")
+            {
+                InitializeComponent();
+                btnIniciarSesion.Visible = false;
+                btnPrestamos.Visible = true;
+                btnInformesEstadisticos.Visible = true;
+                btnRegistrarMaterial.Visible = false;
+                btnRegistrarPresupuesto.Visible = false;
+                btnAbrirSubM.Visible = false;
+                btnRegistrarUsuario.Visible = false;
+                btnBuscarMaterial.Visible = true;
+                btnUEditar.Visible = false;
+                btnMatEditar.Visible = false;
+                btnEditar.Visible = false;
+                btnPresuEditar.Visible = false;
+            }
+            else if (tipo == "Funcionario")
+            {
+                InitializeComponent();
+                btnIniciarSesion.Visible = false;
+                btnPrestamos.Visible = true;
+                btnInformesEstadisticos.Visible = true;
+                btnRegistrarMaterial.Visible = true;
+                btnRegistrarPresupuesto.Visible = true;
+                btnAbrirSubM.Visible = true;
+                btnRegistrarUsuario.Visible = true;
+                btnBuscarMaterial.Visible = true;
+                btnUEditar.Visible = true;
+                btnMatEditar.Visible = true;
+                btnEditar.Visible = true;
+                btnPresuEditar.Visible = true;
+            }
+            
+           
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -183,7 +173,9 @@ namespace wfBiblioteca
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
+         
             AbrirFormEnPanel(new Home());
+
         }
 
         private void btnvolver_Click(object sender, EventArgs e)

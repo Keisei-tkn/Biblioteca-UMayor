@@ -7,7 +7,8 @@ CREATE TABLE USUARIO (
     nombre_usuario VARCHAR(50),
 	apellido_usuario VARCHAR(50),
     correo_usuario VARCHAR(50),
-	contraseña VARCHAR(50)
+	contraseña VARCHAR(50),
+	tipo_usuario VARCHAR(50)
 );
 -- Tabla MATERIA
 CREATE TABLE MATERIA (

@@ -33,9 +33,9 @@ namespace wfBiblioteca.Ventanas
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblRut = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.cboTipoU = new System.Windows.Forms.ComboBox();
-            this.btnRegistrar2 = new System.Windows.Forms.Button();
+            this.btnActualizar2 = new System.Windows.Forms.Button();
             this.txtContraSeguridad = new System.Windows.Forms.TextBox();
             this.lblConfirmacion = new System.Windows.Forms.Label();
             this.lblSede = new System.Windows.Forms.Label();
@@ -55,6 +55,8 @@ namespace wfBiblioteca.Ventanas
             this.txtVerificacion = new System.Windows.Forms.TextBox();
             this.cboNucleo = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.btnEliminar2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -117,26 +119,26 @@ namespace wfBiblioteca.Ventanas
             this.lblRut.TabIndex = 27;
             this.lblRut.Visible = false;
             // 
-            // btnRegistrar
+            // btnActualizar
             // 
-            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(506, 403);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(118, 37);
-            this.btnRegistrar.TabIndex = 26;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(506, 403);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(118, 37);
+            this.btnActualizar.TabIndex = 26;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // cboTipoU
             // 
@@ -150,27 +152,27 @@ namespace wfBiblioteca.Ventanas
             this.cboTipoU.TabIndex = 41;
             this.cboTipoU.SelectedIndexChanged += new System.EventHandler(this.cboTipoU_SelectedIndexChanged);
             // 
-            // btnRegistrar2
+            // btnActualizar2
             // 
-            this.btnRegistrar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnRegistrar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnRegistrar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnRegistrar2.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnRegistrar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnRegistrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar2.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnRegistrar2.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar2.Location = new System.Drawing.Point(506, 403);
-            this.btnRegistrar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegistrar2.Name = "btnRegistrar2";
-            this.btnRegistrar2.Size = new System.Drawing.Size(118, 37);
-            this.btnRegistrar2.TabIndex = 43;
-            this.btnRegistrar2.Text = "Registrar";
-            this.btnRegistrar2.UseVisualStyleBackColor = false;
-            this.btnRegistrar2.Visible = false;
-            this.btnRegistrar2.Click += new System.EventHandler(this.btnRegistrar2_Click);
+            this.btnActualizar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnActualizar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnActualizar2.FlatAppearance.BorderSize = 0;
+            this.btnActualizar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnActualizar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnActualizar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnActualizar2.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar2.Location = new System.Drawing.Point(506, 403);
+            this.btnActualizar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar2.Name = "btnActualizar2";
+            this.btnActualizar2.Size = new System.Drawing.Size(118, 37);
+            this.btnActualizar2.TabIndex = 43;
+            this.btnActualizar2.Text = "Actualizar";
+            this.btnActualizar2.UseVisualStyleBackColor = false;
+            this.btnActualizar2.Visible = false;
+            this.btnActualizar2.Click += new System.EventHandler(this.btnActualizar2_Click);
             // 
             // txtContraSeguridad
             // 
@@ -181,6 +183,7 @@ namespace wfBiblioteca.Ventanas
             this.txtContraSeguridad.Size = new System.Drawing.Size(167, 26);
             this.txtContraSeguridad.TabIndex = 45;
             this.txtContraSeguridad.Visible = false;
+            this.txtContraSeguridad.Enter += new System.EventHandler(this.txtContraSeguridad_Enter);
             // 
             // lblConfirmacion
             // 
@@ -383,6 +386,49 @@ namespace wfBiblioteca.Ventanas
             this.txtCorreo.TabIndex = 64;
             this.txtCorreo.Visible = false;
             // 
+            // btnEliminar2
+            // 
+            this.btnEliminar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnEliminar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnEliminar2.FlatAppearance.BorderSize = 0;
+            this.btnEliminar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEliminar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnEliminar2.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar2.Location = new System.Drawing.Point(506, 403);
+            this.btnEliminar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar2.Name = "btnEliminar2";
+            this.btnEliminar2.Size = new System.Drawing.Size(118, 37);
+            this.btnEliminar2.TabIndex = 66;
+            this.btnEliminar2.Text = "Eliminar";
+            this.btnEliminar2.UseVisualStyleBackColor = false;
+            this.btnEliminar2.Visible = false;
+            this.btnEliminar2.Click += new System.EventHandler(this.btnEliminar2_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(354, 403);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(118, 37);
+            this.btnEliminar.TabIndex = 65;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // EditarU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +436,8 @@ namespace wfBiblioteca.Ventanas
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 456);
+            this.Controls.Add(this.btnEliminar2);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblNom1);
@@ -406,13 +454,13 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.lblSede);
             this.Controls.Add(this.txtContraSeguridad);
             this.Controls.Add(this.lblConfirmacion);
-            this.Controls.Add(this.btnRegistrar2);
+            this.Controls.Add(this.btnActualizar2);
             this.Controls.Add(this.cboTipoU);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblRut);
-            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditarU";
@@ -429,9 +477,9 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblRut;
-        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ComboBox cboTipoU;
-        private System.Windows.Forms.Button btnRegistrar2;
+        private System.Windows.Forms.Button btnActualizar2;
         private System.Windows.Forms.TextBox txtContraSeguridad;
         private System.Windows.Forms.Label lblConfirmacion;
         private System.Windows.Forms.Label lblSede;
@@ -451,5 +499,7 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.TextBox txtVerificacion;
         private System.Windows.Forms.ComboBox cboNucleo;
         private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Button btnEliminar2;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -8,15 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using wfBiblioteca.SQL;
+using wfBiblioteca.Classes;
 
 namespace wfBiblioteca
 {
     public partial class Login : Form
     {
+
+        string usuario, password;
+        string nom, apellido, correo,tipo;
+        ConnectionDB connection = new ConnectionDB();
         public Login()
         {
             InitializeComponent();
-
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -66,7 +72,7 @@ namespace wfBiblioteca
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            Form1 frm = new Form1(usuario,nom,apellido,correo,password,tipo);
             AddOwnedForm(frm);
             frm.Show();
             this.Hide();
@@ -117,73 +123,151 @@ namespace wfBiblioteca
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            AddOwnedForm(frm);
-            frm.Show();
-            this.Hide();
-            frm.btnIniciarSesion.Visible = false;
-            if (txtUsuario.Text == "alumno")
+            this.password = this.txtContraseña.Text;
+            this.usuario = this.txtUsuario.Text;
+
+            if(ValidarUsuario(usuario)==true && ValidarContraseña(password)==true)
             {
-                frm.btnPrestamos.Visible = true;
-                frm.btnInformesEstadisticos.Visible = true;
-                frm.btnInformesEstadisticos.Enabled = false;
-                frm.btnRegistrarMaterial.Visible = true;
-                frm.btnRegistrarPresupuesto.Visible = true;
-                frm.btnAbrirSubM.Visible = true;
-                frm.btnRegistrarUsuario.Visible = true;
-                frm.btnBuscarMaterial.Visible = true;
-                frm.btnUEditar.Visible = true;
-                frm.btnMatEditar.Visible = true;
-                frm.btnEditar.Visible = true;
-                frm.btnPresuEditar.Visible = true;
+                Form1 frm = new Form1(usuario, nom, apellido,correo,password,tipo);
+                AddOwnedForm(frm);
+                frm.Show();
+                this.Hide();
+                MessageBox.Show("Se Inicio sesion de manera exitosa ");
             }
-            if (txtUsuario.Text == "funcionario")
+            else
             {
-                frm.btnPrestamos.Visible = true;
-                frm.btnInformesEstadisticos.Visible = true;
-                frm.btnInformesEstadisticos.Enabled = false;
-                frm.btnRegistrarMaterial.Visible = true;
-                frm.btnRegistrarPresupuesto.Visible = true;
-                frm.btnAbrirSubM.Visible = true;
-                frm.btnRegistrarUsuario.Visible = true;
-                frm.btnBuscarMaterial.Visible = true;
-                frm.btnUEditar.Visible = true;
-                frm.btnMatEditar.Visible = true;
-                frm.btnEditar.Visible = true;
-                frm.btnPresuEditar.Visible = true;
-            }
-            if (txtUsuario.Text == "profesor")
-            {
-                frm.btnPrestamos.Visible = true;
-                frm.btnInformesEstadisticos.Visible = true;
-                frm.btnInformesEstadisticos.Enabled = false;
-                frm.btnRegistrarMaterial.Visible = true;
-                frm.btnRegistrarPresupuesto.Visible = true;
-                frm.btnAbrirSubM.Visible = true;
-                frm.btnRegistrarUsuario.Visible = true;
-                frm.btnBuscarMaterial.Visible = true;
-                frm.btnUEditar.Visible = true;
-                frm.btnMatEditar.Visible = true;
-                frm.btnEditar.Visible = true;
-                frm.btnPresuEditar.Visible = true;
-            }
-            if (txtUsuario.Text == "externo")
-            {
-                frm.btnPrestamos.Visible = true;
-                frm.btnInformesEstadisticos.Visible = true;
-                frm.btnInformesEstadisticos.Enabled = false;
-                frm.btnRegistrarMaterial.Visible = true;
-                frm.btnRegistrarPresupuesto.Visible = true;
-                frm.btnAbrirSubM.Visible = true;
-                frm.btnRegistrarUsuario.Visible = true;
-                frm.btnBuscarMaterial.Visible = true;
-                frm.btnUEditar.Visible = true;
-                frm.btnMatEditar.Visible = true;
-                frm.btnEditar.Visible = true;
-                frm.btnPresuEditar.Visible = true;
+                MessageBox.Show("Verifique Bien los datos del Usuario o contraseña");
             }
 
 
+            //frm.btnIniciarSesion.Visible = false;
+            //if (txtUsuario.Text == "alumno")
+            //{
+            //    frm.btnPrestamos.Visible = true;
+            //    frm.btnInformesEstadisticos.Visible = true;
+            //    frm.btnInformesEstadisticos.Enabled = false;
+            //    frm.btnRegistrarMaterial.Visible = true;
+            //    frm.btnRegistrarPresupuesto.Visible = true;
+            //    frm.btnAbrirSubM.Visible = true;
+            //    frm.btnRegistrarUsuario.Visible = true;
+            //    frm.btnBuscarMaterial.Visible = true;
+            //    frm.btnUEditar.Visible = true;
+            //    frm.btnMatEditar.Visible = true;
+            //    frm.btnEditar.Visible = true;
+            //    frm.btnPresuEditar.Visible = true;
+            //}
+            //if (txtUsuario.Text == "funcionario")
+            //{
+            //    frm.btnPrestamos.Visible = true;
+            //    frm.btnInformesEstadisticos.Visible = true;
+            //    frm.btnInformesEstadisticos.Enabled = false;
+            //    frm.btnRegistrarMaterial.Visible = true;
+            //    frm.btnRegistrarPresupuesto.Visible = true;
+            //    frm.btnAbrirSubM.Visible = true;
+            //    frm.btnRegistrarUsuario.Visible = true;
+            //    frm.btnBuscarMaterial.Visible = true;
+            //    frm.btnUEditar.Visible = true;
+            //    frm.btnMatEditar.Visible = true;
+            //    frm.btnEditar.Visible = true;
+            //    frm.btnPresuEditar.Visible = true;
+            //}
+            //if (txtUsuario.Text == "profesor")
+            //{
+            //    frm.btnPrestamos.Visible = true;
+            //    frm.btnInformesEstadisticos.Visible = true;
+            //    frm.btnInformesEstadisticos.Enabled = false;
+            //    frm.btnRegistrarMaterial.Visible = true;
+            //    frm.btnRegistrarPresupuesto.Visible = true;
+            //    frm.btnAbrirSubM.Visible = true;
+            //    frm.btnRegistrarUsuario.Visible = true;
+            //    frm.btnBuscarMaterial.Visible = true;
+            //    frm.btnUEditar.Visible = true;
+            //    frm.btnMatEditar.Visible = true;
+            //    frm.btnEditar.Visible = true;
+            //    frm.btnPresuEditar.Visible = true;
+            //}
+            //if (txtUsuario.Text == "externo")
+            //{
+            //    frm.btnPrestamos.Visible = true;
+            //    frm.btnInformesEstadisticos.Visible = true;
+            //    frm.btnInformesEstadisticos.Enabled = false;
+            //    frm.btnRegistrarMaterial.Visible = true;
+            //    frm.btnRegistrarPresupuesto.Visible = true;
+            //    frm.btnAbrirSubM.Visible = true;
+            //    frm.btnRegistrarUsuario.Visible = true;
+            //    frm.btnBuscarMaterial.Visible = true;
+            //    frm.btnUEditar.Visible = true;
+            //    frm.btnMatEditar.Visible = true;
+            //    frm.btnEditar.Visible = true;
+            //    frm.btnPresuEditar.Visible = true;
+            //}
+
+
+        }
+
+        private bool ValidarUsuario(string user)
+        {
+            bool EstaOk = false;
+            SqlDataReader registros = null;
+            connection.Open();
+            string cadena = "SELECT * from USUARIO";
+            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+            registros = comando.ExecuteReader();
+            string idBuscado;
+
+            while (registros.Read())
+            {
+                idBuscado = registros.GetString(0).ToString();
+                if (user == idBuscado)
+                {
+                    EstaOk = true;
+                    nom= registros.GetString(1).ToString();
+                    apellido= registros.GetString(2).ToString();
+                    correo= registros.GetString(3).ToString();
+                    tipo = registros.GetString(5).ToString();
+                    connection.Close();
+                    return EstaOk;
+                }
+                else
+                {
+
+                    EstaOk = false;
+
+
+                }
+            }
+            connection.Close();
+            return EstaOk;
+        }
+        private bool ValidarContraseña(string password)
+        {
+            bool EstaOk = false;
+            SqlDataReader registros = null;
+            connection.Open();
+            string cadena = "SELECT * from USUARIO";
+            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+            registros = comando.ExecuteReader();
+            string idBuscado;
+
+            while (registros.Read())
+            {
+                idBuscado = registros.GetString(4).ToString();
+                if (password == idBuscado)
+                {
+                    EstaOk = true;
+                    connection.Close();
+                    return EstaOk;
+                }
+                else
+                {
+
+                    EstaOk = false;
+
+
+                }
+            }
+            connection.Close();
+            return EstaOk;
         }
     }
 }

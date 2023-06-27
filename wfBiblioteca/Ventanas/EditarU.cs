@@ -16,7 +16,7 @@ namespace wfBiblioteca.Ventanas
     public partial class EditarU : Form
     {
         string rut,id, nombre, apellido, correo;
-        string sede, nucleo, dep, estadoV;
+        string sede, nucleo, dep, estadoV,idfun;
 
         ConnectionDB connection = new ConnectionDB();
         public EditarU()
@@ -50,7 +50,7 @@ namespace wfBiblioteca.Ventanas
  
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
 
 
@@ -61,37 +61,119 @@ namespace wfBiblioteca.Ventanas
             else
             {
                 MessageBox.Show("Para Aplicar los Cambio Coloque su Contraseña", "Aplicar Cambios");
-                this.btnRegistrar.Visible = false;
-                this.btnRegistrar2.Visible = true;
+                this.btnActualizar.Visible = false;
+                this.btnActualizar2.Visible = true;
+                this.btnEliminar.Visible = false;
                 this.lblConfirmacion.Visible = true;
                 this.txtContraSeguridad.Visible = true;
 
             }
         }
-        private void btnRegistrar2_Click(object sender, EventArgs e)
+        private void btnActualizar2_Click(object sender, EventArgs e)
         {
             ObtenerDatos();
             //Falta Validador
             if (cboTipoU.SelectedItem.ToString() == "Funcionario")
             {
+                Funcionario f1 = new Funcionario(rut, correo, dep,idfun);
+                f1.EditarFuncionario(f1);
+                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
 
-                
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno")
             {
-                
+                AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
+                a1.EditarAlumno(a1);
+                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
             {
-                
+                Externos e1 = new Externos(id, correo, estadoV);
+                e1.EditarExterno(e1);
+                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
             }
             else
             {
-                
+                Profesores p1 = new Profesores(id, correo, nucleo);
+                p1.EditarProfesor(p1);
+                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
 
             }
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            if (rut == string.Empty && nombre == string.Empty && apellido == string.Empty && correo == string.Empty)
+            {
+                MessageBox.Show("Verifique que todos los campos esten rellenados", "Error");
+            }
+            else
+            {
+                MessageBox.Show("Para Aplicar los Cambio Coloque su Contraseña", "Aplicar Cambios");
+                this.btnEliminar.Visible = false;
+                this.btnEliminar2.Visible = true;
+                this.btnActualizar.Visible = false;
+                this.lblConfirmacion.Visible = true;
+                this.txtContraSeguridad.Visible = true;
+
+            }
+        }
+
+        private void txtContraSeguridad_Enter(object sender, EventArgs e)
+        {
+            this.txtContraSeguridad.UseSystemPasswordChar = true;
+        }
+
+        private void btnEliminar2_Click(object sender, EventArgs e)
+        {
+            ObtenerDatos();
+            //Falta Validador
+            if (cboTipoU.SelectedItem.ToString() == "Funcionario")
+            {
+                Funcionario f1 = new Funcionario(rut, correo, dep,idfun);
+                f1.EliminarFuncionario(f1);
+                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
+
+            }
+            else if (cboTipoU.SelectedItem.ToString() == "Alumno")
+            {
+                AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
+                a1.EliminarAlumno(a1);
+                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
+            }
+            else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
+            {
+                Externos e1 = new Externos(id, correo, estadoV);
+                e1.EliminarExterno(e1);
+                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
+            }
+            else
+            {
+                Profesores p1 = new Profesores(id, correo, nucleo);
+                p1.EliminarProfesor(p1);
+                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                Limpiar();
+                CargarListView();
+
+            }
+        }
+
         private void DatosComun()
         {
             
@@ -147,13 +229,18 @@ namespace wfBiblioteca.Ventanas
         }
         private void lsvUsuarios_MouseClick(object sender, MouseEventArgs e)
         {
+            CargarListView();
+        }
+
+        private void CargarListView()
+        {
             this.id = lsvUsuarios.SelectedItems[0].SubItems[0].Text;
             string cadena;
             ListViewItem item = new ListViewItem();
             if (cboTipoU.SelectedItem.ToString() == "Funcionario")
             {
                 Limpiar();
-                cadena = "Select u.id_usuario,u.nombre_usuario,u.apellido_usuario,u.correo_usuario,f.id_funcionario from USUARIO as U inner join FUNCIONARIO as f on u.id_usuario =f.id_usuario WHERE u.id_usuario='"+id+"'";
+                cadena = "Select u.id_usuario,u.nombre_usuario,u.apellido_usuario,u.correo_usuario,f.id_funcionario from USUARIO as U inner join FUNCIONARIO as f on u.id_usuario =f.id_usuario WHERE u.id_usuario='" + id + "'";
                 connection.Open();
 
                 try
@@ -167,6 +254,8 @@ namespace wfBiblioteca.Ventanas
                         this.lblApellido.Text = lector.GetValue(2).ToString();
                         this.txtCorreo.Text = lector.GetValue(3).ToString();
                         this.cboDep.Text = Obtenernombre(ObtenerId(lector.GetValue(4).ToString()));
+                        this.idfun = lector.GetValue(4).ToString();
+
 
                     }
 
@@ -176,7 +265,7 @@ namespace wfBiblioteca.Ventanas
                 {
                     MessageBox.Show("Error", "Mensaje Error" + ex.Message);
                 }
-               
+
 
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno")
@@ -206,7 +295,7 @@ namespace wfBiblioteca.Ventanas
                 {
                     MessageBox.Show("Error", "Mensaje Error" + ex.Message);
                 }
-           
+
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
             {
@@ -224,7 +313,7 @@ namespace wfBiblioteca.Ventanas
                         this.lblNombre.Text = lector.GetValue(1).ToString();
                         this.lblApellido.Text = lector.GetValue(2).ToString();
                         this.txtCorreo.Text = lector.GetValue(3).ToString();
-                        this.txtVerificacion.Text= lector.GetValue(4).ToString();
+                        this.txtVerificacion.Text = lector.GetValue(4).ToString();
 
 
                     }
@@ -235,7 +324,7 @@ namespace wfBiblioteca.Ventanas
                 {
                     MessageBox.Show("Error", "Mensaje Error" + ex.Message);
                 }
-              
+
 
 
             }
@@ -265,10 +354,9 @@ namespace wfBiblioteca.Ventanas
                 {
                     MessageBox.Show("Error", "Mensaje Error" + ex.Message);
                 }
-            
+
 
             }
-            
 
         }
 
@@ -446,25 +534,6 @@ namespace wfBiblioteca.Ventanas
 
         }
 
-        private string BuscarIDN(string nombre)
-        {
-            ConnectionDB connection = new ConnectionDB();
-            connection.Open();
-            string cadena = "SELECT * from NUCLEO";
-            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
-            SqlDataReader lector = comando.ExecuteReader();
-            while (lector.Read())
-            {
-                if (nombre == lector.GetValue(0).ToString())
-                {
-                    nombre = lector.GetValue(1).ToString();
-                    connection.Close();
-                    return nombre;
-                }
-            }
-            connection.Close();
-            return nombre;
-        }
         private string ObtenerId(string nombre)
         {
             ConnectionDB connection = new ConnectionDB();

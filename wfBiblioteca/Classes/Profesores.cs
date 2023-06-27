@@ -13,7 +13,11 @@ namespace wfBiblioteca.Classes
         ConnectionDB connection = new ConnectionDB();
         public string ID_Nucleo { get; set; }
 
-        public Profesores(string id, string n, string a, string contra, string c, string nomN) : base(id, n, a, contra, c)
+        public Profesores(string id, string n, string a, string contra, string c,string t, string nomN) : base(id, n, a, contra, c,t)
+        {
+            this.ID_Nucleo = BuscarID(nomN);
+        }
+        public Profesores(string id,string c, string nomN) : base(id, c)
         {
             this.ID_Nucleo = BuscarID(nomN);
         }
@@ -42,7 +46,7 @@ namespace wfBiblioteca.Classes
 
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{p.Id}', '{p.Nombre}', '{p.Apellido}', '{p.Correo}', '{p.Contraseña}')
+            INSERT INTO USUARIO VALUES('{p.Id}', '{p.Nombre}', '{p.Apellido}', '{p.Correo}', '{p.Contraseña}','{p.Tipo}')
 
             INSERT INTO PROFESOR(id_usuario,id_nucleo)
             VALUES('{p.Id}','{p.ID_Nucleo}')

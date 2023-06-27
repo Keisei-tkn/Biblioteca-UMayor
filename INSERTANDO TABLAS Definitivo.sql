@@ -2,17 +2,17 @@
 USE BibliotecaMayor;
 
 --AGREGANDO USUARIOS A AL TABLA
-INSERT INTO USUARIO(id_usuario,nombre_usuario, apellido_usuario, correo_usuario, contraseña)
-VALUES ('15.712.131-6','Pedro','Araya','pedro.araya@mayor.cl','9Sxa13'),
-       ('17.987.622-K','Daniela','Miranda','daniela.miranda@mayor.cl','dm1022'),
-	   ('14.812.621-2','Lorena','Acuña','lorena.acuña@mayor.cl','lorena55'),
-       ('21.007.687-5','Vicente','del Hierro','vicente.delhierro@mayor.cl','trentre'),
-	   ('21.258.356-9','Jonathan','Contreras','jonathan.contreras@mayor.cl','yoni123'),
-	   ('13.178.024-9','Maria','Muñoz','maria.muñoz@mayor.cl','mari942'),
-	   ('14.979.037-6','Edmundo','Pérez','edmundo.perez@mayor.cl','contraseña'),
-	   ('16.418.647-3','Benjamín','Droguett','benjamin.droguett@mayor.cl','eldrogas69'),
-	   ('19.455.358-4','Jorge','Reyes','jorge.reyes@mayor.cl','12345678'),
-	   ('19.959.065-7','Tomas','Gonzalez','tomas.gonzalez@mayor.cl','tomasg19');
+INSERT INTO USUARIO(id_usuario,nombre_usuario, apellido_usuario, correo_usuario, contraseña,tipo_usuario)
+VALUES ('15.712.131-6','Pedro','Araya','pedro.araya@mayor.cl','9Sxa13','Profesor'),
+       ('17.987.622-K','Daniela','Miranda','daniela.miranda@mayor.cl','dm1022','Profesor'),
+	   ('14.812.621-2','Lorena','Acuña','lorena.acuña@mayor.cl','lorena55','Profesor'),
+       ('21.007.687-5','Vicente','del Hierro','vicente.delhierro@mayor.cl','trentre','Alumno'),
+	   ('21.258.356-9','Jonathan','Contreras','jonathan.contreras@mayor.cl','yoni123','Alumno'),
+	   ('13.178.024-9','Maria','Muñoz','maria.muñoz@mayor.cl','mari942','Funcionario'),
+	   ('14.979.037-6','Edmundo','Pérez','edmundo.perez@mayor.cl','contraseña','Funcionario'),
+	   ('16.418.647-3','Benjamín','Droguett','benjamin.droguett@mayor.cl','eldrogas69','Funcionario'),
+	   ('19.455.358-4','Jorge','Reyes','jorge.reyes@mayor.cl','12345678','Externo'),
+	   ('19.959.065-7','Tomas','Gonzalez','tomas.gonzalez@mayor.cl','tomasg19','Externo');
 
 --AGREGANDO NUCLEOS
 INSERT INTO NUCLEO(id_nucleo,nombre)
@@ -108,10 +108,10 @@ VALUES ('QIW723','Textos varios');
 
 
 --AGREGANDO PRESTAMOS
-INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo,fecha_devolucion,id_material)
-VALUES('FTO542','2023/06/08','2023/06/04','ESM176'),
-      ('GYJ209','2023/06/05','2023/06/06','GFT723'),
-	  ('QCH348','2023/05/14','2023/05/22','JKA118');
+INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo,fecha_devolucion,activo,id_material)
+VALUES('FTO542','2023/06/08','2023/06/04',0,'ESM176'),
+      ('GYJ209','2023/06/05','2023/06/06',0,'GFT723'),
+	  ('QCH348','2023/05/14','2023/05/22',0,'JKA118');
 
 --AGREGANDO ATRASOS
 INSERT INTO ATRASO(id_atraso,id_prestamo,multa, pagado)

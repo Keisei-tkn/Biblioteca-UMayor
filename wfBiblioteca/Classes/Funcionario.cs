@@ -15,10 +15,15 @@ namespace wfBiblioteca.Classes
         public string contraseña_c { get; set; }
         public string departamento { get; set; }
 
-        public Funcionario(string id, string n, string a, string contra, string c, string contraC, string d) : base(id, n, a, contra, c)
+        public Funcionario(string id, string n, string a, string contra, string c,string t, string contraC, string d) : base(id, n, a, contra, c,t)
         {
             this.id_funcionario = GeneradorId();
             this.contraseña_c = contraC;
+            this.departamento = BuscarDepartamento(d);
+        }
+        public Funcionario(string id, string correo, string d,string idFun) : base(id, correo)
+        {
+            this.id_funcionario = idFun;
             this.departamento = BuscarDepartamento(d);
         }
         private string BuscarDepartamento(string nombre)
@@ -46,7 +51,7 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Correo}', '{f.Contraseña}')
+            INSERT INTO USUARIO VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Correo}', '{f.Contraseña}',,'{f.Tipo}')
 
             INSERT INTO FUNCIONARIO(id_usuario,id_funcionario)
             VALUES('{f.Id}','{f.id_funcionario}')
@@ -82,10 +87,10 @@ namespace wfBiblioteca.Classes
 
             string cad = $@"BEGIN TRANSACTION;
             DELETE RELACION_FUNCIONARIO_DEPARTAMENTO
-            WHERE id_funcionario='{f.Id}'
+            WHERE id_funcionario='{f.id_funcionario}'
 
             DELETE FUNCIONARIO
-            WHERE id_funcionario='{f.Id}'
+            WHERE id_usuario='{f.Id}'
                 
 
             DELETE USUARIO

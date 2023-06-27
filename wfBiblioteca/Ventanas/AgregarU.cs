@@ -16,7 +16,7 @@ namespace wfBiblioteca.Ventanas
     public partial class AgregarU : Form
     {
         string rut, nombre, apellido, correo, contra;
-        string sede, nucleo, pinS, dep, estadoV;
+        string sede, nucleo, pinS, dep, estadoV,tipo;
         ConnectionDB connection = new ConnectionDB();
 
         public AgregarU()
@@ -39,6 +39,7 @@ namespace wfBiblioteca.Ventanas
             this.pinS = this.txtContraSeguridad.Text;
             this.estadoV = this.txtVerificacion.Text;
             this.dep = this.cboDep.SelectedItem.ToString();
+            this.tipo = cboTipoU.SelectedItem.ToString();
         }
         private void Limpiar()
         {
@@ -78,7 +79,7 @@ namespace wfBiblioteca.Ventanas
             //Falta Validador
             if (cboTipoU.SelectedItem.ToString() == "Funcionario")
             {
-                Funcionario f1 = new Funcionario(rut, nombre, apellido, contra, correo,pinS,dep);
+                Funcionario f1 = new Funcionario(rut, nombre, apellido, contra, correo,tipo,pinS,dep);
                 f1.AgregarFuncionario(f1);
                 MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
                 Limpiar();
@@ -86,7 +87,7 @@ namespace wfBiblioteca.Ventanas
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno")
             {
-                AlumnoUM a1 = new AlumnoUM(rut, nombre, apellido, contra, correo, sede);
+                AlumnoUM a1 = new AlumnoUM(rut, nombre, apellido, contra, correo, tipo,sede);
                 a1.AgregarAlumno(a1);
                 MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
                 Limpiar();
@@ -94,14 +95,14 @@ namespace wfBiblioteca.Ventanas
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
             {
-                Externos e1 = new Externos(rut, nombre, apellido, contra, correo, estadoV);
+                Externos e1 = new Externos(rut, nombre, apellido, contra, correo,tipo, estadoV);
                 e1.AgregarExterno(e1);
                 MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
                 Limpiar();
             }
             else
             {
-                Profesores p1 = new Profesores(rut, nombre, apellido, contra, correo, nucleo);
+                Profesores p1 = new Profesores(rut, nombre, apellido, contra, correo,tipo, nucleo);
                 p1.AgregarProfesor(p1);
                 MessageBox.Show("USUARIO REGISTRADO EXITOSAMENTE", "EXITO");
                 Limpiar();
