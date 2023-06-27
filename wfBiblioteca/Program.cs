@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using wfBiblioteca.SQL;
+using wfBiblioteca.Ventanas;
 
 namespace wfBiblioteca
 {
@@ -18,7 +19,7 @@ namespace wfBiblioteca
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new AgregarDatos());
         }
     }
 }
