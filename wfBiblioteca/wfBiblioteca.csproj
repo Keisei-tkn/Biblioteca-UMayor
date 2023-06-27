@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Classes\Departamento.cs" />
     <Compile Include="Classes\Editorial.cs" />
+    <Compile Include="Classes\Estadisticas.cs" />
     <Compile Include="Classes\Externos.cs" />
     <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Libro.cs" />
