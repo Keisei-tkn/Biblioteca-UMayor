@@ -14,7 +14,6 @@ namespace wfBiblioteca.Classes
         public string id_nucleo { get; set; }
         public string Nombre { get; set; }
 
-
         public Nucleo(string nombre)
         {
             id_nucleo = GeneradorId();
@@ -27,8 +26,8 @@ namespace wfBiblioteca.Classes
             INSERT INTO NUCLEO(id_nucleo,nombre)
             VALUES('{n.id_nucleo}', '{n.Nombre}')
              COMMIT;";
-
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
 
             connection.Close();
 
@@ -101,6 +100,7 @@ namespace wfBiblioteca.Classes
 
                 }
             }
+            connection.Close();
             return EstaOk;
         }
     }

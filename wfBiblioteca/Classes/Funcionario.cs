@@ -41,7 +41,7 @@ namespace wfBiblioteca.Classes
 
             string cad = $@"BEGIN TRANSACTION;
             INSERT INTO USUARIO(id_usuario,nombre_usuario,apellido_usuario,contraseña,correo_usuario)
-            VALUES('{f.Id}', '{f.Nombre}', {f.Apellido}, '{f.Contraseña}', {f.Correo})
+            VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Contraseña}', '{f.Correo}')
 
             INSERT INTO FUNCIONARIO(id_usuario,id_funcionario)
             VALUES('{f.Id}','{f.id_funcionario}')
@@ -51,6 +51,26 @@ namespace wfBiblioteca.Classes
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public void EditarFuncionario(Funcionario f)
+        {
+            connection.Open();
+            //Se tiene que probar 
+            string cad = $@"BEGIN TRANSACTION;
+            UPDATE FUNCIONARIO SET id_departamento='{f.Correo}'
+            WHERE id_usuario = '{f.Id}';
+
+            UPDATE USUARIO SET correo_usuario='{f.Correo}'
+            WHERE id_usuario = '{f.Id}';
+            COMMIT;";
+
+            //Hacer el caso en que se cambie de nucleo
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
 
             connection.Close();
         }
@@ -73,6 +93,7 @@ namespace wfBiblioteca.Classes
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+            queryInsert.ExecuteNonQuery();
 
             connection.Close();
         }

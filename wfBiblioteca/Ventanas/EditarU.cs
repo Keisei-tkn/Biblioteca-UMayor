@@ -13,23 +13,16 @@ using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Ventanas
 {
-    public partial class AgregarU : Form
+    public partial class EditarU : Form
     {
         string rut, nombre, apellido, correo, contra;
         string sede, nucleo, pinS, dep, estadoV;
         ConnectionDB connection = new ConnectionDB();
 
-        public AgregarU()
-        {
-            InitializeComponent();
-            DatosCbo();
-           
 
-
-        }
         private void ObtenerDatos()
         {
-            this.rut = this.txtRut.Text;
+
             this.nombre = this.txtNombre.Text;
             this.apellido = this.txtApellido.Text;
             this.correo = this.txtCorreo.Text;
@@ -42,7 +35,7 @@ namespace wfBiblioteca.Ventanas
         }
         private void Limpiar()
         {
-            this.txtRut.Text = string.Empty;
+
             this.txtNombre.Text = string.Empty;
             this.txtApellido.Text = string.Empty;
             this.txtCorreo.Text = string.Empty;
@@ -52,7 +45,7 @@ namespace wfBiblioteca.Ventanas
             this.txtVerificacion.Text = string.Empty;
             cboDep.SelectedIndex = 0;
             this.cboNucleo.SelectedIndex = 0;
-            this.txtRut.Focus();
+ 
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -71,16 +64,16 @@ namespace wfBiblioteca.Ventanas
                 this.lblConfirmacion.Visible = true;
                 this.txtContraSeguridad.Visible = true;
 
-            }  
+            }
         }
         private void btnRegistrar2_Click(object sender, EventArgs e)
         {
             //Falta Validador
             if (cboTipoU.SelectedItem.ToString() == "Funcionario")
             {
-                Funcionario f1 = new Funcionario(rut, nombre, apellido, contra, correo,pinS,dep);
+                Funcionario f1 = new Funcionario(rut, nombre, apellido, contra, correo, pinS, dep);
                 f1.AgregarFuncionario(f1);
-       
+
             }
             else if (cboTipoU.SelectedItem.ToString() == "Alumno")
             {
@@ -99,14 +92,14 @@ namespace wfBiblioteca.Ventanas
             {
                 Profesores p1 = new Profesores(rut, nombre, apellido, contra, correo, nucleo);
                 p1.AgregarProfesor(p1);
-             
+
             }
 
         }
         private void DatosComun()
         {
             this.lblRut.Visible = true;
-            this.txtRut.Visible = true;
+
             this.lblRut1.Visible = true;
             this.lblNombre.Visible = true;
             this.txtNombre.Visible = true;
@@ -231,6 +224,10 @@ namespace wfBiblioteca.Ventanas
 
             }
 
+        }
+        public EditarU()
+        {
+            InitializeComponent();
         }
     }
 }

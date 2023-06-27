@@ -45,7 +45,7 @@ namespace wfBiblioteca.Classes
              COMMIT;";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
-
+            queryInsert.ExecuteNonQuery();
             connection.Close();
         }
         public void EditarProfesor(Profesores p)
@@ -54,17 +54,19 @@ namespace wfBiblioteca.Classes
             connection.Open();
             //Se tiene que probar 
             string cad = $@"BEGIN TRANSACTION;
-            UPDATE USUARIO SET id_usuario='{p.Id}',nombre_usuario='{p.Nombre}',apellido_usuario='{p.Apellido}',contraseña='{p.Contraseña}',correo_usuario='{p.Correo}'
+            UPDATE USUARIO SET correo_usuario='{p.Correo}'
             WHERE id_usuario = '{p.Id}';
+
+            UPDATE PROFESOR SET id_nucleo='{p.Correo}'
+            WHERE id_usuario = '{p.Id}';
+
             COMMIT;";
-
-            //Hacer el caso en que se cambie de nucleo
-
             SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
             queryUpdate.ExecuteNonQuery();
 
             connection.Close();
         }
+
         public void EliminarProfesor(Profesores p)
         {
             ConnectionDB connection = new ConnectionDB();

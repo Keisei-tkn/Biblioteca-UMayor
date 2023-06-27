@@ -8,6 +8,7 @@ using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Classes
 {
+
     class Autor
     {
         public string Id;

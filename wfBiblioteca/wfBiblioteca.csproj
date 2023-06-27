@@ -107,6 +107,12 @@
     <Compile Include="Ventanas\EditarM.Designer.cs">
       <DependentUpon>EditarM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\EditarU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\EditarU.Designer.cs">
+      <DependentUpon>EditarU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\EditarM.resx">
       <DependentUpon>EditarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\EditarU.resx">
+      <DependentUpon>EditarU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

@@ -10,7 +10,6 @@ namespace wfBiblioteca.Classes
 {
     class AlumnoUM : Usuario
     {
-
         public string Sede { get; set; }
 
         public AlumnoUM(string id, string n, string a, string contra, string correo, string sede) : base(id, n, a, contra, correo)
@@ -23,36 +22,53 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO(id_usuario,nombre_usuario,apellido_usuario,contraseña,correo_usuario)
-            VALUES('{a.Id}', '{a.Nombre}', {a.Apellido}, '{a.Contraseña}', {a.Correo})
+            INSERT INTO USUARIO VALUES('{a.Id}', '{a.Nombre}', '{a.Apellido}', '{a.Contraseña}', '{a.Correo}')
 
-            INSERT INTO ALUMNO(id_usuario,sede)
-            VALUES('{a.Id}','{a.Sede}')
-             COMMIT;";
+            INSERT INTO ALUMNO VALUES('{a.Id}','{a.Sede}')
+            COMMIT;";
+            try
+            {
+                SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+                queryInsert.ExecuteNonQuery();
+                Console.WriteLine("Registro realizado correctamente");
+                connection.Close();
 
-            SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
-
-            connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+            
+            
         }
-
         public void EditarAlumno(AlumnoUM a)
         {
             ConnectionDB connection = new ConnectionDB();
             connection.Open();
             //Se tiene que probar 
             string cad = $@"BEGIN TRANSACTION;
-            UPDATE USUARIO SET id_usuario='{a.Id}',nombre_usuario='{a.Nombre}',apellido_usuario='{a.Apellido}',contraseña='{a.Contraseña}',correo_usuario='{a.Correo}
-            WHERE id_usuario = {a.Id};
+            UPDATE USUARIO SET correo_usuario='{a.Correo}'
+            WHERE id_usuario = '{a.Id}';
             
             UPDATE ALUMNO SET sede='{a.Sede}'
             WHERE id_usuario='{a.Id}'
 
             COMMIT;";
 
-            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
-            queryUpdate.ExecuteNonQuery();
+            try
+            {
+                SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+                queryUpdate.ExecuteNonQuery();
+                Console.WriteLine("Registro realizado correctamente");
+                connection.Close();
 
-            connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+
+            
         }
         public void EliminarAlumno(AlumnoUM u)
         {
@@ -60,17 +76,26 @@ namespace wfBiblioteca.Classes
             connection.Open();
             string cad = $@"BEGIN TRANSACTION;
             DELETE ALUMNO
-            WHERE id_usuario= {u.Id};
+            WHERE id_usuario= '{u.Id}';
 
             DELETE USUARIO
-            WHERE id_usuario= {u.Id};
+            WHERE id_usuario= '{u.Id}';
 
             COMMIT;";
 
-            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
-            queryUpdate.ExecuteNonQuery();
+            try
+            {
+                SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+                queryUpdate.ExecuteNonQuery();
+                Console.WriteLine("Registro realizado correctamente");
+                connection.Close();
 
-            connection.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+
         }
     }
 }

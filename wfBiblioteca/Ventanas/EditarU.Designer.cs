@@ -1,10 +1,10 @@
 ﻿
 namespace wfBiblioteca.Ventanas
 {
-    partial class AgregarU
-    { /// <summary>
-      /// Required designer variable.
-      /// </summary>
+    partial class EditarU
+    {/// <summary>
+     /// Required designer variable.
+     /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -32,7 +32,6 @@ namespace wfBiblioteca.Ventanas
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtRut = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
@@ -56,6 +55,9 @@ namespace wfBiblioteca.Ventanas
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.cboDep = new System.Windows.Forms.ComboBox();
             this.cboNucleo = new System.Windows.Forms.ComboBox();
+            this.lsvFuncionarios = new System.Windows.Forms.ListView();
+            this.Funcion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -66,9 +68,9 @@ namespace wfBiblioteca.Ventanas
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(240, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Agregar Usuarios";
+            this.label1.Text = "Editar Usuarios";
             // 
             // txtCorreo
             // 
@@ -99,16 +101,6 @@ namespace wfBiblioteca.Ventanas
             this.txtNombre.Size = new System.Drawing.Size(167, 26);
             this.txtNombre.TabIndex = 35;
             this.txtNombre.Visible = false;
-            // 
-            // txtRut
-            // 
-            this.txtRut.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRut.Location = new System.Drawing.Point(47, 176);
-            this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(167, 26);
-            this.txtRut.TabIndex = 34;
-            this.txtRut.Visible = false;
             // 
             // label5
             // 
@@ -408,13 +400,38 @@ namespace wfBiblioteca.Ventanas
             this.cboNucleo.TabIndex = 56;
             this.cboNucleo.Visible = false;
             // 
-            // AgregarU
+            // lsvFuncionarios
+            // 
+            this.lsvFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lsvFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Funcion,
+            this.columnHeader1});
+            this.lsvFuncionarios.HideSelection = false;
+            this.lsvFuncionarios.Location = new System.Drawing.Point(474, 94);
+            this.lsvFuncionarios.Name = "lsvFuncionarios";
+            this.lsvFuncionarios.Size = new System.Drawing.Size(212, 231);
+            this.lsvFuncionarios.TabIndex = 58;
+            this.lsvFuncionarios.UseCompatibleStateImageBehavior = false;
+            this.lsvFuncionarios.View = System.Windows.Forms.View.Details;
+            // 
+            // Funcion
+            // 
+            this.Funcion.Text = "Rut";
+            this.Funcion.Width = 86;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nombre";
+            this.columnHeader1.Width = 313;
+            // 
+            // EditarU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 456);
+            this.Controls.Add(this.lsvFuncionarios);
             this.Controls.Add(this.cboNucleo);
             this.Controls.Add(this.cboDep);
             this.Controls.Add(this.lblDepartamento);
@@ -435,7 +452,6 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtRut);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblApellido);
@@ -444,7 +460,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AgregarU";
+            this.Name = "EditarU";
             this.Text = "Edit2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -457,7 +473,6 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtRut;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblApellido;
@@ -481,5 +496,8 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label lblDepartamento;
         private System.Windows.Forms.ComboBox cboDep;
         private System.Windows.Forms.ComboBox cboNucleo;
+        private System.Windows.Forms.ListView lsvFuncionarios;
+        public System.Windows.Forms.ColumnHeader Funcion;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
