@@ -19,7 +19,7 @@ namespace wfBiblioteca
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AgregarDatos());
+            Application.Run(new Form1());
         }
     }
 }
