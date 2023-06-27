@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Classes
 {
@@ -11,6 +13,87 @@ namespace wfBiblioteca.Classes
         public string Id { get; set; }
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }
+        public string IdMaterial { get; set; }
+
+        public Prestamo()
+        {
+            Id = null;
+            FechaPrestamo = DateTime.MinValue;
+            FechaDevolucion = DateTime.MinValue;
+            IdMaterial = null;
+        }
+
+        public Prestamo(string id, DateTime fechaPrestamo, DateTime fechaDevolucion, string idMaterial)
+        {
+            Id = id;
+            FechaPrestamo = fechaPrestamo;
+            FechaDevolucion = fechaDevolucion;
+            IdMaterial = idMaterial;
+        }
+
+        public void InsertarPrestamo(Prestamo prs)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+
+            string cad = $@"INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo, fecha, devolucion, id_material) 
+            VALUES('{prs.Id}','{prs.FechaPrestamo.ToString()}', '{prs.FechaDevolucion.ToString()}','{prs.IdMaterial}');";
+
+            SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
+
+            queryInsert.ExecuteNonQuery();
+            connection.Close();
+        }
+
+        public List<Prestamo> ObtenerHistorial(string id_usuario)
+        {
+            List<Prestamo> Historial;
+            ConnectionDB connection = new ConnectionDB();
+            SqlDataReader registros = null;
+            connection.Open();
+            List<String> IdPrestamos = new List<string>();
+
+            SqlCommand querySel = new SqlCommand($@"SELECT HIS.id_prestamo FROM HISTORIAL AS HIS WHERE HIS.id_usuario = '{id_usuario}';", connection.connectDb);
+
+            registros = querySel.ExecuteReader();
+
+            while (registros.Read())
+            {
+                string registro = registros["id_prestamo"].ToString();
+                IdPrestamos.Add(registro);
+            }
+            connection.Close();
+            Historial = ObtenerPrestamos(IdPrestamos);
+            return Historial;
+        }
+
+        public List<Prestamo> ObtenerPrestamos(List<String> IdPrestamos)
+        {
+            List<Prestamo> ListaPrestamos = new List<Prestamo>();
+            ConnectionDB connection = new ConnectionDB();
+            SqlDataReader registros = null;
+            connection.Open();
+
+            foreach (string Id in IdPrestamos){
+                SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material FROM PRESTAMO AS PRS WHERE id_prestamo = '{Id}';", connection.connectDb);
+
+                registros = querySel.ExecuteReader();
+
+                while (registros.Read())
+                {
+                    var registro = new Prestamo()
+                    {
+                        Id = registros["id_prestamo"].ToString(),
+                        FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
+                        FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString()),
+                        IdMaterial = registros["id_material"].ToString()
+                    };
+                    ListaPrestamos.Add(registro);
+                }
+            }
+            connection.Close();
+            return ListaPrestamos;
+        }
     }
 }
  

@@ -34,16 +34,16 @@ namespace wfBiblioteca.Ventanas
             this.label8 = new System.Windows.Forms.Label();
             this.txtContraJefe = new System.Windows.Forms.TextBox();
             this.lblJefe = new System.Windows.Forms.Label();
-            this.btnAgregar2 = new System.Windows.Forms.Button();
+            this.btnAgregarAutor2 = new System.Windows.Forms.Button();
             this.btnAgregarAutor = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarMateria2 = new System.Windows.Forms.Button();
             this.btnAgregarMateria = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreMateria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregarEditorial2 = new System.Windows.Forms.Button();
             this.btnAgregarEditorial = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -109,26 +109,27 @@ namespace wfBiblioteca.Ventanas
             this.lblJefe.Text = "Ingrese Su Contraseña";
             this.lblJefe.Visible = false;
             // 
-            // btnAgregar2
+            // btnAgregarAutor2
             // 
-            this.btnAgregar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnAgregar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnAgregar2.FlatAppearance.BorderSize = 0;
-            this.btnAgregar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnAgregar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnAgregar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar2.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.btnAgregar2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar2.Location = new System.Drawing.Point(60, 357);
-            this.btnAgregar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAgregar2.Name = "btnAgregar2";
-            this.btnAgregar2.Size = new System.Drawing.Size(118, 37);
-            this.btnAgregar2.TabIndex = 93;
-            this.btnAgregar2.Text = "Agregar";
-            this.btnAgregar2.UseVisualStyleBackColor = false;
-            this.btnAgregar2.Visible = false;
+            this.btnAgregarAutor2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarAutor2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnAgregarAutor2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarAutor2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarAutor2.FlatAppearance.BorderSize = 0;
+            this.btnAgregarAutor2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarAutor2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAgregarAutor2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarAutor2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnAgregarAutor2.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarAutor2.Location = new System.Drawing.Point(60, 357);
+            this.btnAgregarAutor2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarAutor2.Name = "btnAgregarAutor2";
+            this.btnAgregarAutor2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarAutor2.TabIndex = 93;
+            this.btnAgregarAutor2.Text = "Agregar";
+            this.btnAgregarAutor2.UseVisualStyleBackColor = false;
+            this.btnAgregarAutor2.Visible = false;
+            this.btnAgregarAutor2.Click += new System.EventHandler(this.btnAgregarAutor2_Click);
             // 
             // btnAgregarAutor
             // 
@@ -151,26 +152,27 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarAutor.UseVisualStyleBackColor = false;
             this.btnAgregarAutor.Click += new System.EventHandler(this.btnAgregarAutor_Click);
             // 
-            // button1
+            // btnAgregarMateria2
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(298, 357);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 100;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.btnAgregarMateria2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarMateria2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnAgregarMateria2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarMateria2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarMateria2.FlatAppearance.BorderSize = 0;
+            this.btnAgregarMateria2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarMateria2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAgregarMateria2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarMateria2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnAgregarMateria2.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMateria2.Location = new System.Drawing.Point(298, 357);
+            this.btnAgregarMateria2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarMateria2.Name = "btnAgregarMateria2";
+            this.btnAgregarMateria2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarMateria2.TabIndex = 100;
+            this.btnAgregarMateria2.Text = "Agregar";
+            this.btnAgregarMateria2.UseVisualStyleBackColor = false;
+            this.btnAgregarMateria2.Visible = false;
+            this.btnAgregarMateria2.Click += new System.EventHandler(this.btnAgregarMateria2_Click);
             // 
             // btnAgregarMateria
             // 
@@ -250,26 +252,27 @@ namespace wfBiblioteca.Ventanas
             this.label4.Text = "Agregar Materia";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button3
+            // btnAgregarEditorial2
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(539, 357);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 37);
-            this.button3.TabIndex = 107;
-            this.button3.Text = "Agregar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
+            this.btnAgregarEditorial2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarEditorial2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnAgregarEditorial2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarEditorial2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarEditorial2.FlatAppearance.BorderSize = 0;
+            this.btnAgregarEditorial2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarEditorial2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnAgregarEditorial2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarEditorial2.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnAgregarEditorial2.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarEditorial2.Location = new System.Drawing.Point(539, 357);
+            this.btnAgregarEditorial2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarEditorial2.Name = "btnAgregarEditorial2";
+            this.btnAgregarEditorial2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarEditorial2.TabIndex = 107;
+            this.btnAgregarEditorial2.Text = "Agregar";
+            this.btnAgregarEditorial2.UseVisualStyleBackColor = false;
+            this.btnAgregarEditorial2.Visible = false;
+            this.btnAgregarEditorial2.Click += new System.EventHandler(this.btnAgregarEditorial2_Click);
             // 
             // btnAgregarEditorial
             // 
@@ -355,21 +358,21 @@ namespace wfBiblioteca.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 455);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAgregarEditorial2);
             this.Controls.Add(this.btnAgregarEditorial);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombreEditorial);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAgregarMateria2);
             this.Controls.Add(this.btnAgregarMateria);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombreMateria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnAgregar2);
+            this.Controls.Add(this.btnAgregarAutor2);
             this.Controls.Add(this.btnAgregarAutor);
             this.Controls.Add(this.txtContraJefe);
             this.Controls.Add(this.lblJefe);
@@ -392,16 +395,16 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtContraJefe;
         private System.Windows.Forms.Label lblJefe;
-        private System.Windows.Forms.Button btnAgregar2;
+        private System.Windows.Forms.Button btnAgregarAutor2;
         private System.Windows.Forms.Button btnAgregarAutor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarMateria2;
         private System.Windows.Forms.Button btnAgregarMateria;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombreMateria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAgregarEditorial2;
         private System.Windows.Forms.Button btnAgregarEditorial;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;

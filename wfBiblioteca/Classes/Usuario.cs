@@ -24,33 +24,5 @@ namespace wfBiblioteca.Classes
             Contraseña = contra;
             Correo = c;
         }
-
-        public List<Prestamo> ObtenerHistorial(Usuario usr)
-        {
-            List<Prestamo> historial = new List<Prestamo>();
-            ConnectionDB connection = new ConnectionDB();
-            SqlDataReader registros = null;
-            connection.Open();
-            SqlCommand querySel = new SqlCommand($@"SELECT * 
-                FROM PRESTAMO
-                WHERE PRESTAMO.id_material = '{usr.Id}'", connection.connectDb);
-
-            registros = querySel.ExecuteReader();
-
-            while (registros.Read())
-            {
-                var registro = new Prestamo()
-                {
-                    Id = registros["id_material"].ToString(),
-                   FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
-                   FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString())
-                };
-                historial.Add(registro);
-            }
-            connection.Close();
-
-            return historial;
-        }
-
     }
 }

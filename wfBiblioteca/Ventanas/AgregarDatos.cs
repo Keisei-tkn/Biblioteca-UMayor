@@ -24,7 +24,7 @@ namespace wfBiblioteca.Ventanas
                 Autor aut = new Autor(txtNombreAutor.Text);
                 aut.InsertarAutor(aut);
                 MessageBox.Show("Autor Agregado Correctamente");
-                txtNombreAutor.Text = "";
+                txtNombreAutor.Text = String.Empty;
             }
             else
             {
@@ -40,7 +40,7 @@ namespace wfBiblioteca.Ventanas
                 Materia mtr = new Materia(txtNombreMateria.Text);
                 mtr.InsertarMateria(mtr);
                 MessageBox.Show("Materia Agregada Correctamente");
-                txtNombreMateria.Text = "";
+                txtNombreMateria.Text = String.Empty;
             }
             else
             {
@@ -56,12 +56,27 @@ namespace wfBiblioteca.Ventanas
                 Editorial edt = new Editorial(txtNombreEditorial.Text);
                 edt.InsertarEditorial(edt);
                 MessageBox.Show("Editorial Agregada Correctamente");
-                txtNombreEditorial.Text = "";
+                txtNombreEditorial.Text = String.Empty;
             }
             else
             {
                 MessageBox.Show("Por favor ingrese una Editorial.");
             }
+
+        }
+
+        private void btnAgregarAutor2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarMateria2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarEditorial2_Click(object sender, EventArgs e)
+        {
 
         }
     }
