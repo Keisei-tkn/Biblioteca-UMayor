@@ -99,7 +99,46 @@ namespace wfBiblioteca.Classes
             connection.Close();
             return ListaPrestamos;
         }
+        public List<Prestamo> ObtenerAllPrestamos()
+        {
+            List<Prestamo> ListaPrestamos = new List<Prestamo>();
+            ConnectionDB connection = new ConnectionDB();
+            SqlDataReader registros = null;
+            connection.Open();
 
+            SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material FROM PRESTAMO AS PRS;", connection.connectDb);
+
+            registros = querySel.ExecuteReader();
+
+            while (registros.Read())
+            {
+                var registro = new Prestamo()
+                {
+                    Id = registros["id_prestamo"].ToString(),
+                    FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
+                    FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString()),
+                    IdMaterial = registros["id_material"].ToString()
+                };
+                ListaPrestamos.Add(registro);
+            }
+
+            connection.Close();
+            return ListaPrestamos;
+        }
+
+        public Boolean CheckAtraso()
+        {
+            Boolean Atrasado;
+            if(FechaDevolucion < DateTime.Now)
+            {
+                Atrasado = true;
+            }
+            else
+            {
+                Atrasado = false;
+            }
+            return Atrasado;
+        }
         private string GeneradorId()
         {
             Random random = new Random();
