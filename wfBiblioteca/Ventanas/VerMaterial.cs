@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wfBiblioteca.Ventanas
 {
-    public partial class Material : Form
+    public partial class VerMaterial : Form
     {
-        public Material()
+        public VerMaterial()
         {
             InitializeComponent();
         }

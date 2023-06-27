@@ -14,6 +14,7 @@ namespace wfBiblioteca.Classes
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }
         public string IdMaterial { get; set; }
+        public Boolean activo { get; set; }
 
         public Prestamo()
         {

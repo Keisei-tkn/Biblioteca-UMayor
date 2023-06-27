@@ -12,7 +12,7 @@ namespace wfBiblioteca.Classes
     {
         public string Categoria { get; set; }
 
-        public Otro()
+        public Otro():base()
         {
             this.Categoria = null;
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace wfBiblioteca.Ventanas
 {
-    partial class Material
+    partial class VerMaterial
     {
         /// <summary>
         /// Required designer variable.
