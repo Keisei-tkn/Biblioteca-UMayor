@@ -103,11 +103,11 @@ namespace wfBiblioteca
             int borderRadius = 20; // Ajusta este valor para cambiar el grado de redondeo
 
             buttonPath.AddArc(0, 0, borderRadius, borderRadius, 180, 90);
-            buttonPath.AddArc(btnAccede.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
-            buttonPath.AddArc(btnAccede.Width - borderRadius, btnAccede.Height - borderRadius, borderRadius, borderRadius, 0, 90);
-            buttonPath.AddArc(0, btnAccede.Height - borderRadius, borderRadius, borderRadius, 90, 90);
+            buttonPath.AddArc(btnAcceder.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
+            buttonPath.AddArc(btnAcceder.Width - borderRadius, btnAcceder.Height - borderRadius, borderRadius, borderRadius, 0, 90);
+            buttonPath.AddArc(0, btnAcceder.Height - borderRadius, borderRadius, borderRadius, 90, 90);
 
-            btnAccede.Region = new System.Drawing.Region(buttonPath);
+            btnAcceder.Region = new System.Drawing.Region(buttonPath);
         }
 
         private void btnVolver_Paint(object sender, PaintEventArgs e)
@@ -116,11 +116,11 @@ namespace wfBiblioteca
             int borderRadius = 20; // Ajusta este valor para cambiar el grado de redondeo
 
             buttonPath.AddArc(0, 0, borderRadius, borderRadius, 180, 90);
-            buttonPath.AddArc(btnVolve.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
-            buttonPath.AddArc(btnVolve.Width - borderRadius, btnVolve.Height - borderRadius, borderRadius, borderRadius, 0, 90);
-            buttonPath.AddArc(0, btnVolve.Height - borderRadius, borderRadius, borderRadius, 90, 90);
+            buttonPath.AddArc(btnVolver.Width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
+            buttonPath.AddArc(btnVolver.Width - borderRadius, btnVolver.Height - borderRadius, borderRadius, borderRadius, 0, 90);
+            buttonPath.AddArc(0, btnVolver.Height - borderRadius, borderRadius, borderRadius, 90, 90);
 
-            btnVolve.Region = new System.Drawing.Region(buttonPath);
+            btnVolver.Region = new System.Drawing.Region(buttonPath);
         }
 
         private void btnAccede_Click_1(object sender, EventArgs e)
