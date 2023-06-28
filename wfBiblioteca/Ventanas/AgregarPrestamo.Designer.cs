@@ -42,6 +42,13 @@ namespace wfBiblioteca.Ventanas
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cboTipoMaterial = new System.Windows.Forms.ComboBox();
+            this.LblMaterial = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblM = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnPrestamo1 = new System.Windows.Forms.Button();
+            this.txtContraSeguridad = new System.Windows.Forms.TextBox();
+            this.lblConfirmacion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,12 +70,13 @@ namespace wfBiblioteca.Ventanas
             this.cTitulo});
             this.lsvMaterial.HideSelection = false;
             this.lsvMaterial.Location = new System.Drawing.Point(41, 294);
-            this.lsvMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lsvMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.lsvMaterial.Name = "lsvMaterial";
             this.lsvMaterial.Size = new System.Drawing.Size(338, 107);
             this.lsvMaterial.TabIndex = 5;
             this.lsvMaterial.UseCompatibleStateImageBehavior = false;
             this.lsvMaterial.View = System.Windows.Forms.View.Details;
+            this.lsvMaterial.Click += new System.EventHandler(this.lsvMaterial_Click);
             // 
             // cCodigo
             // 
@@ -88,12 +96,13 @@ namespace wfBiblioteca.Ventanas
             this.cApellido});
             this.lsvUsuarios.HideSelection = false;
             this.lsvUsuarios.Location = new System.Drawing.Point(41, 126);
-            this.lsvUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lsvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.lsvUsuarios.Name = "lsvUsuarios";
             this.lsvUsuarios.Size = new System.Drawing.Size(338, 107);
             this.lsvUsuarios.TabIndex = 6;
             this.lsvUsuarios.UseCompatibleStateImageBehavior = false;
             this.lsvUsuarios.View = System.Windows.Forms.View.Details;
+            this.lsvUsuarios.Click += new System.EventHandler(this.lsvUsuarios_Click);
             // 
             // cRut
             // 
@@ -122,21 +131,21 @@ namespace wfBiblioteca.Ventanas
             this.btnPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrestamo.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnPrestamo.Location = new System.Drawing.Point(510, 359);
+            this.btnPrestamo.Location = new System.Drawing.Point(456, 325);
             this.btnPrestamo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrestamo.Name = "btnPrestamo";
-            this.btnPrestamo.Size = new System.Drawing.Size(118, 42);
+            this.btnPrestamo.Size = new System.Drawing.Size(149, 66);
             this.btnPrestamo.TabIndex = 93;
-            this.btnPrestamo.Text = "Registrar";
+            this.btnPrestamo.Text = "Registrar Prestamo";
             this.btnPrestamo.UseVisualStyleBackColor = false;
-            this.btnPrestamo.Visible = false;
+            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
             // 
             // cboTipoUsuario
             // 
             this.cboTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoUsuario.FormattingEnabled = true;
             this.cboTipoUsuario.Location = new System.Drawing.Point(41, 82);
-            this.cboTipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoUsuario.Name = "cboTipoUsuario";
             this.cboTipoUsuario.Size = new System.Drawing.Size(136, 25);
             this.cboTipoUsuario.TabIndex = 94;
@@ -171,11 +180,103 @@ namespace wfBiblioteca.Ventanas
             this.cboTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoMaterial.FormattingEnabled = true;
             this.cboTipoMaterial.Location = new System.Drawing.Point(40, 258);
-            this.cboTipoMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTipoMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.cboTipoMaterial.Name = "cboTipoMaterial";
             this.cboTipoMaterial.Size = new System.Drawing.Size(137, 25);
             this.cboTipoMaterial.TabIndex = 96;
             this.cboTipoMaterial.SelectedIndexChanged += new System.EventHandler(this.cboTipoMaterial_SelectedIndexChanged);
+            // 
+            // LblMaterial
+            // 
+            this.LblMaterial.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LblMaterial.AutoSize = true;
+            this.LblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMaterial.ForeColor = System.Drawing.Color.White;
+            this.LblMaterial.Location = new System.Drawing.Point(452, 203);
+            this.LblMaterial.Name = "LblMaterial";
+            this.LblMaterial.Size = new System.Drawing.Size(165, 20);
+            this.LblMaterial.TabIndex = 101;
+            this.LblMaterial.Text = "Material Seleccionado";
+            // 
+            // lblUser
+            // 
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.Location = new System.Drawing.Point(453, 126);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(164, 20);
+            this.lblUser.TabIndex = 100;
+            this.lblUser.Text = "Usuario Seleccionado";
+            // 
+            // lblM
+            // 
+            this.lblM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblM.BackColor = System.Drawing.Color.White;
+            this.lblM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblM.ForeColor = System.Drawing.Color.Black;
+            this.lblM.Location = new System.Drawing.Point(453, 223);
+            this.lblM.Name = "lblM";
+            this.lblM.Size = new System.Drawing.Size(156, 28);
+            this.lblM.TabIndex = 102;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(453, 146);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(156, 28);
+            this.lblUsuario.TabIndex = 103;
+            // 
+            // btnPrestamo1
+            // 
+            this.btnPrestamo1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPrestamo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
+            this.btnPrestamo1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrestamo1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.btnPrestamo1.FlatAppearance.BorderSize = 0;
+            this.btnPrestamo1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnPrestamo1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnPrestamo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestamo1.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.btnPrestamo1.ForeColor = System.Drawing.Color.White;
+            this.btnPrestamo1.Location = new System.Drawing.Point(456, 325);
+            this.btnPrestamo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrestamo1.Name = "btnPrestamo1";
+            this.btnPrestamo1.Size = new System.Drawing.Size(149, 66);
+            this.btnPrestamo1.TabIndex = 104;
+            this.btnPrestamo1.Text = "Registrar Prestamo";
+            this.btnPrestamo1.UseVisualStyleBackColor = false;
+            this.btnPrestamo1.Visible = false;
+            this.btnPrestamo1.Click += new System.EventHandler(this.btnPrestamo1_Click);
+            // 
+            // txtContraSeguridad
+            // 
+            this.txtContraSeguridad.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtContraSeguridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraSeguridad.Location = new System.Drawing.Point(450, 294);
+            this.txtContraSeguridad.Name = "txtContraSeguridad";
+            this.txtContraSeguridad.Size = new System.Drawing.Size(167, 26);
+            this.txtContraSeguridad.TabIndex = 106;
+            this.txtContraSeguridad.Visible = false;
+            this.txtContraSeguridad.Enter += new System.EventHandler(this.txtContraSeguridad_Enter);
+            // 
+            // lblConfirmacion
+            // 
+            this.lblConfirmacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblConfirmacion.AutoSize = true;
+            this.lblConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmacion.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmacion.Location = new System.Drawing.Point(446, 271);
+            this.lblConfirmacion.Name = "lblConfirmacion";
+            this.lblConfirmacion.Size = new System.Drawing.Size(174, 20);
+            this.lblConfirmacion.TabIndex = 105;
+            this.lblConfirmacion.Text = "Ingrese Su Contraseña";
+            this.lblConfirmacion.Visible = false;
             // 
             // AgregarPrestamo
             // 
@@ -184,6 +285,13 @@ namespace wfBiblioteca.Ventanas
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(703, 456);
+            this.Controls.Add(this.txtContraSeguridad);
+            this.Controls.Add(this.lblConfirmacion);
+            this.Controls.Add(this.btnPrestamo1);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.lblM);
+            this.Controls.Add(this.LblMaterial);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboTipoMaterial);
             this.Controls.Add(this.label2);
@@ -193,7 +301,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.lsvMaterial);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarPrestamo";
             this.Text = "AgregarPrestamo";
             this.ResumeLayout(false);
@@ -216,5 +324,12 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboTipoMaterial;
         private System.Windows.Forms.ColumnHeader cApellido;
+        private System.Windows.Forms.Label LblMaterial;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblM;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnPrestamo1;
+        private System.Windows.Forms.TextBox txtContraSeguridad;
+        private System.Windows.Forms.Label lblConfirmacion;
     }
 }

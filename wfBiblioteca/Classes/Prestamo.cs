@@ -24,6 +24,14 @@ namespace wfBiblioteca.Classes
             IdMaterial = null;
             Activo = false;
         }
+        public Prestamo(Prestamo p)
+        {
+            Id = p.Id;
+            FechaPrestamo = p.FechaPrestamo;
+            FechaDevolucion = p.FechaDevolucion;
+            IdMaterial = p.IdMaterial;
+            Activo = p.Activo;
+        }
 
         public Prestamo(Material mat)
         {
@@ -36,6 +44,7 @@ namespace wfBiblioteca.Classes
                 FechaDevolucion = FechaPrestamo.AddDays(1);
             }
             IdMaterial = mat.Id;
+            Activo = true;
         }
 
         public void InsertarPrestamo(Prestamo prs)

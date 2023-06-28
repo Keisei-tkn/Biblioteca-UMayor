@@ -168,7 +168,6 @@ namespace wfBiblioteca.Ventanas
         private void btnEliminar2_Click(object sender, EventArgs e)
         {
             ObtenerDatos();
-            ObtenerDatos();
             string claveBD = buscarClave(idFun);
             if (this.txtContraSeguridad.Text == claveBD)
             {
@@ -235,7 +234,7 @@ namespace wfBiblioteca.Ventanas
             }
            
         }
-        private String buscarClave(String clave)
+        private string buscarClave(string clave)
         {
             string cadena;
             cadena = "Select u.id_usuario,u.nombre_usuario,f.contraseña_c from USUARIO as U inner join FUNCIONARIO as f on u.id_usuario =f.id_usuario WHERE u.id_usuario='" + clave + "'";
