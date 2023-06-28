@@ -250,6 +250,11 @@ namespace wfBiblioteca
             AbrirFormEnPanel(new AgregarPrestamo(rut));
         }
 
+        private void btnInformesEstadisticos_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new MostrarEstadisticas());
+        }
+
         private Form formularioactivo = null;
         private void OpenChildForm(Form childForm)
         {

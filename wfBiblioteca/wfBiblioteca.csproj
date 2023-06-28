@@ -167,6 +167,12 @@
     <Compile Include="Ventanas\MostrarEstadisticas.Designer.cs">
       <DependentUpon>MostrarEstadisticas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\MostrarPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\MostrarPrestamos.Designer.cs">
+      <DependentUpon>MostrarPrestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\VerMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </Compile>
     <EmbeddedResource Include="Ventanas\MostrarEstadisticas.resx">
       <DependentUpon>MostrarEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\MostrarPrestamos.resx">
+      <DependentUpon>MostrarPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

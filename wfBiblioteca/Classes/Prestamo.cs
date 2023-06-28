@@ -199,6 +199,39 @@ namespace wfBiblioteca.Classes
             connection.Close();
             return EstaOk;
         }
+
+
+
+
+
+
+        public List<Prestamo> ObtenerAllPrestamosActivos()
+        {
+            List<Prestamo> ListaPrestamos = new List<Prestamo>();
+            ConnectionDB connection = new ConnectionDB();
+            SqlDataReader registros = null;
+            connection.Open();
+
+            SqlCommand querySel = new SqlCommand($@"SELECT PRS.id_prestamo, PRS.fecha_prestamo, PRS.fecha_devolucion, PRS.id_material, PRS.activo FROM PRESTAMO AS PRS WHERE PRS.activo = 1;", connection.connectDb);
+
+            registros = querySel.ExecuteReader();
+
+            while (registros.Read())
+            {
+                var registro = new Prestamo()
+                {
+                    Id = registros["id_prestamo"].ToString(),
+                    FechaPrestamo = DateTime.Parse(registros["fecha_prestamo"].ToString()),
+                    FechaDevolucion = DateTime.Parse(registros["fecha_devolucion"].ToString()),
+                    IdMaterial = registros["id_material"].ToString(),
+                    Activo = (bool)registros["activo"]
+                };
+                ListaPrestamos.Add(registro);
+            }
+
+            connection.Close();
+            return ListaPrestamos;
+        }
     }
 }
  

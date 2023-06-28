@@ -421,6 +421,7 @@ namespace wfBiblioteca
             this.btnInformesEstadisticos.TabIndex = 18;
             this.btnInformesEstadisticos.Text = "Informes Estadísticos";
             this.btnInformesEstadisticos.UseVisualStyleBackColor = false;
+            this.btnInformesEstadisticos.Click += new System.EventHandler(this.btnInformesEstadisticos_Click);
             // 
             // btnBuscarMaterial
             // 
@@ -468,7 +469,7 @@ namespace wfBiblioteca
             this.panel8.Controls.Add(this.btnCartelera);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(201, 133);
             this.panel8.TabIndex = 0;
@@ -489,7 +490,7 @@ namespace wfBiblioteca
             // P_contenido
             // 
             this.P_contenido.Location = new System.Drawing.Point(218, 41);
-            this.P_contenido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.P_contenido.Margin = new System.Windows.Forms.Padding(2);
             this.P_contenido.Name = "P_contenido";
             this.P_contenido.Size = new System.Drawing.Size(682, 403);
             this.P_contenido.TabIndex = 2;
@@ -526,7 +527,7 @@ namespace wfBiblioteca
             // 
             this.btnvolver.Image = global::wfBiblioteca.Properties.Resources.hogar;
             this.btnvolver.Location = new System.Drawing.Point(5, 6);
-            this.btnvolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnvolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnvolver.Name = "btnvolver";
             this.btnvolver.Size = new System.Drawing.Size(49, 32);
             this.btnvolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -545,7 +546,7 @@ namespace wfBiblioteca
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.btnMin);
             this.panel1.Location = new System.Drawing.Point(218, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 42);
             this.panel1.TabIndex = 3;
@@ -563,7 +564,7 @@ namespace wfBiblioteca
             this.btnIniciarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnIniciarSesion.Location = new System.Drawing.Point(480, 6);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(128, 32);
             this.btnIniciarSesion.TabIndex = 10;
@@ -584,7 +585,7 @@ namespace wfBiblioteca
             this.btnCerrarSes.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSes.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSes.Location = new System.Drawing.Point(480, 6);
-            this.btnCerrarSes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSes.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSes.Name = "btnCerrarSes";
             this.btnCerrarSes.Size = new System.Drawing.Size(128, 32);
             this.btnCerrarSes.TabIndex = 11;
