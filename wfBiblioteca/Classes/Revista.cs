@@ -19,7 +19,7 @@ namespace wfBiblioteca.Classes
             this.Volumen = 0;
         }
 
-        public Revista(string id, string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, int numero, int volumen) : base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        public Revista( string nombre, string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial,string imagen, int numero, int volumen) : base( nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial, imagen)
         {
             this.Numero = numero;
             this.Volumen = volumen;

@@ -19,7 +19,7 @@ namespace wfBiblioteca.Classes
             NumPag = 0;
         }
 
-        public Libro(string id, string nombre,string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial, string isbn, int num_pag):base(id, nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial)
+        public Libro( string nombre,string autor, string materia, string descripcion, Boolean estado, string dep_rev, string idioma, DateTime fecha, int un, string editorial,string imagen, string isbn, int num_pag):base(nombre, autor, materia, descripcion, estado, dep_rev, idioma, fecha, un, editorial, imagen)
         {
             this.Isbn = isbn;
             this.NumPag = num_pag;
