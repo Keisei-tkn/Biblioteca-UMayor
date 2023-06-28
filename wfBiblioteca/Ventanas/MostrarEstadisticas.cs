@@ -4,12 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
 using wfBiblioteca.Classes;
+using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Ventanas
 {
@@ -22,6 +25,7 @@ namespace wfBiblioteca.Ventanas
             Estadisticas est = new Estadisticas();
 
             lblMulta.Text = est.DineroTotalMultas.ToString("C0");
+            picTopMaterial.ImageLocation = SearchMaterial(est.MaterialMasPedido[0].Nombre);
             string atr;
             if(est.CantidadAtrasos == 1)
             {
@@ -96,5 +100,44 @@ namespace wfBiblioteca.Ventanas
 
         }
 
+        public string SearchMaterial(string nombre)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            string titulo;
+            string ruta = null ;
+            titulo = nombre;
+            string cadena = $@"select MATERIAL.titulo ,EDITORIAL.nombre ,AUTOR.nombre ,MATERIAL.fecha_publicacion,MATERIAL.unidades_existentes, MATERIAL.id_material, MATERIAL.descripcion, MATERIAL.portada
+                               FROM MATERIAL INNER JOIN EDITORIAL ON MATERIAL.id_editorial = EDITORIAL.id_editorial
+                               INNER JOIN AUTOR ON MATERIAL.id_autor = AUTOR.id_autor
+                               INNER JOIN MATERIA ON MATERIAL.id_materia = MATERIA.id_materia
+                               WHERE MATERIAL.titulo COLLATE Latin1_General_CI_AI like '%{titulo}%';";
+            connection.Open();
+            try
+            {
+                SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+                SqlDataReader lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    ruta = ObtenerRuta(lector.GetValue(7).ToString());
+                }
+                connection.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", "Mensaje Error" + ex.Message);
+            };
+            return ruta;
+        }
+
+        private string ObtenerRuta(string rutaBd)
+        {
+            string rutabuscar = Directory.GetCurrentDirectory();
+            string[] campo;
+            string str = "bin";
+            campo = rutabuscar.Split(new string[] { str }, StringSplitOptions.None);
+            rutaBd = campo[0] + rutaBd;
+            return rutaBd;
+        }
     }
 }

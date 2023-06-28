@@ -165,6 +165,7 @@ namespace wfBiblioteca.Ventanas
             this.picTopMaterial.Location = new System.Drawing.Point(493, 87);
             this.picTopMaterial.Name = "picTopMaterial";
             this.picTopMaterial.Size = new System.Drawing.Size(148, 146);
+            this.picTopMaterial.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTopMaterial.TabIndex = 40;
             this.picTopMaterial.TabStop = false;
             // 
