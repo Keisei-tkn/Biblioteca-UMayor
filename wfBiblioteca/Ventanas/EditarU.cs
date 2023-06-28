@@ -15,12 +15,14 @@ namespace wfBiblioteca.Ventanas
 {
     public partial class EditarU : Form
     {
+
         string rut,id, nombre, apellido, correo;
-        string sede, nucleo, dep, estadoV,idfun;
+        string sede, nucleo, dep, estadoV,idfun,idFun;
 
         ConnectionDB connection = new ConnectionDB();
-        public EditarU()
+        public EditarU(string id)
         {
+            idFun = id;
             InitializeComponent();
             DatosCbo();
         }
@@ -72,41 +74,70 @@ namespace wfBiblioteca.Ventanas
         private void btnActualizar2_Click(object sender, EventArgs e)
         {
             ObtenerDatos();
-            //Falta Validador
-            if (cboTipoU.SelectedItem.ToString() == "Funcionario")
+            string claveBD = buscarClave(idFun);
+            if (this.txtContraSeguridad.Text == claveBD)
             {
-                Funcionario f1 = new Funcionario(rut, correo, dep,idfun);
-                f1.EditarFuncionario(f1);
-                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
+                if (cboTipoU.SelectedItem.ToString() == "Funcionario")
+                {
+                    Funcionario f1 = new Funcionario(rut, correo, dep, idfun);
+                    f1.EditarFuncionario(f1);
+                    MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
 
-            }
-            else if (cboTipoU.SelectedItem.ToString() == "Alumno")
-            {
-                AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
-                a1.EditarAlumno(a1);
-                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
-            }
-            else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
-            {
-                Externos e1 = new Externos(id, correo, estadoV);
-                e1.EditarExterno(e1);
-                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
+                }
+                else if (cboTipoU.SelectedItem.ToString() == "Alumno")
+                {
+                    AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
+                    a1.EditarAlumno(a1);
+                    MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+                }
+                else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
+                {
+                    Externos e1 = new Externos(id, correo, estadoV);
+                    e1.EditarExterno(e1);
+                    MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+                }
+                else
+                {
+                    Profesores p1 = new Profesores(id, correo, nucleo);
+                    p1.EditarProfesor(p1);
+                    MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+
+                }
             }
             else
             {
-                Profesores p1 = new Profesores(id, correo, nucleo);
-                p1.EditarProfesor(p1);
-                MessageBox.Show("USUARIO ACTUALIZADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
-
+                MessageBox.Show("Contraseña No coincide con la base de datos ");
+                this.txtContraSeguridad.Text = string.Empty;
             }
+           
 
         }
 
@@ -137,41 +168,96 @@ namespace wfBiblioteca.Ventanas
         private void btnEliminar2_Click(object sender, EventArgs e)
         {
             ObtenerDatos();
-            //Falta Validador
-            if (cboTipoU.SelectedItem.ToString() == "Funcionario")
+            ObtenerDatos();
+            string claveBD = buscarClave(idFun);
+            if (this.txtContraSeguridad.Text == claveBD)
             {
-                Funcionario f1 = new Funcionario(rut, correo, dep,idfun);
-                f1.EliminarFuncionario(f1);
-                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
+                //Falta Validador
+                if (cboTipoU.SelectedItem.ToString() == "Funcionario")
+                {
+                    Funcionario f1 = new Funcionario(rut, correo, dep, idfun);
+                    f1.EliminarFuncionario(f1);
+                    MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
 
-            }
-            else if (cboTipoU.SelectedItem.ToString() == "Alumno")
-            {
-                AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
-                a1.EliminarAlumno(a1);
-                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
-            }
-            else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
-            {
-                Externos e1 = new Externos(id, correo, estadoV);
-                e1.EliminarExterno(e1);
-                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
+                }
+                else if (cboTipoU.SelectedItem.ToString() == "Alumno")
+                {
+                    AlumnoUM a1 = new AlumnoUM(rut, correo, sede);
+                    a1.EliminarAlumno(a1);
+                    MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+                }
+                else if (cboTipoU.SelectedItem.ToString() == "Alumno Externo")
+                {
+                    Externos e1 = new Externos(id, correo, estadoV);
+                    e1.EliminarExterno(e1);
+                    MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+                }
+                else
+                {
+                    Profesores p1 = new Profesores(id, correo, nucleo);
+                    p1.EliminarProfesor(p1);
+                    MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
+                    Limpiar();
+                    CargarListView();
+                    this.btnEliminar2.Visible = false;
+                    this.btnEliminar.Visible = true;
+                    this.txtContraSeguridad.Visible = false;
+                    this.btnActualizar.Visible = true;
+                    this.btnActualizar2.Visible = true;
+
+                }
             }
             else
             {
-                Profesores p1 = new Profesores(id, correo, nucleo);
-                p1.EliminarProfesor(p1);
-                MessageBox.Show("USUARIO ELIMINADO EXITOSAMENTE", "EXITO");
-                Limpiar();
-                CargarListView();
+                MessageBox.Show("Contraseña No coincide con la base de datos ");
+                this.txtContraSeguridad.Text = string.Empty;
+            }
+           
+        }
+        private String buscarClave(String clave)
+        {
+            string cadena;
+            cadena = "Select u.id_usuario,u.nombre_usuario,f.contraseña_c from USUARIO as U inner join FUNCIONARIO as f on u.id_usuario =f.id_usuario WHERE u.id_usuario='" + clave + "'";
+            SqlDataReader registros = null;
+            connection.Open();
+            SqlCommand comando = new SqlCommand(cadena, connection.connectDb);
+            registros = comando.ExecuteReader();
+            string idBuscado;
+            while (registros.Read())
+            {
+                idBuscado = registros.GetString(0).ToString();
+                if (clave == idBuscado)
+                {
+                    clave = registros.GetString(2).ToString();
+                    connection.Close();
+                    return clave;
+
+                }
 
             }
+            connection.Close();
+            return clave;
         }
 
         private void DatosComun()

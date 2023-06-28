@@ -85,6 +85,7 @@ namespace wfBiblioteca
 
 
 
+
             private void P_titulo_MouseDown(object sender, MouseEventArgs e)
             {
                 ReleaseCapture();
@@ -206,6 +207,47 @@ namespace wfBiblioteca
         {
             PictureBox pictureBox = (PictureBox)sender;
             pictureBox.BackColor = Color.FromArgb(255, 194, 13);
+        }
+
+        private void btnDatosMat_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new AgregarDatos(rut));
+        }
+
+        private void btnRegistarUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new AgregarU(rut));
+        }
+
+        private void btnRegistarPresupuesto_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new AgregarD(rut));
+        }
+
+        private void btnEUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new EditarU(rut));
+        }
+
+        private void btnEMat_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new EditarM());
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnRegistarMaterial_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRegistrarPrestamo_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new AgregarPrestamo(rut));
         }
 
         private Form formularioactivo = null;

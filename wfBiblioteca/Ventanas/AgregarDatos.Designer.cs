@@ -32,21 +32,21 @@ namespace wfBiblioteca.Ventanas
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreAutor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtContraJefe = new System.Windows.Forms.TextBox();
-            this.lblJefe = new System.Windows.Forms.Label();
+            this.txtContraA = new System.Windows.Forms.TextBox();
+            this.lblContraA1 = new System.Windows.Forms.Label();
             this.btnAgregarAutor2 = new System.Windows.Forms.Button();
             this.btnAgregarAutor = new System.Windows.Forms.Button();
             this.btnAgregarMateria2 = new System.Windows.Forms.Button();
             this.btnAgregarMateria = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtContraM = new System.Windows.Forms.TextBox();
+            this.lblContraM1 = new System.Windows.Forms.Label();
             this.txtNombreMateria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAgregarEditorial2 = new System.Windows.Forms.Button();
             this.btnAgregarEditorial = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtContraE = new System.Windows.Forms.TextBox();
+            this.lblContraE11 = new System.Windows.Forms.Label();
             this.txtNombreEditorial = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 54);
+            this.label2.Location = new System.Drawing.Point(50, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 31);
             this.label2.TabIndex = 3;
@@ -69,7 +69,7 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtNombreAutor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombreAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreAutor.Location = new System.Drawing.Point(44, 164);
+            this.txtNombreAutor.Location = new System.Drawing.Point(55, 164);
             this.txtNombreAutor.Name = "txtNombreAutor";
             this.txtNombreAutor.Size = new System.Drawing.Size(163, 26);
             this.txtNombreAutor.TabIndex = 89;
@@ -80,34 +80,35 @@ namespace wfBiblioteca.Ventanas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(41, 117);
+            this.label8.Location = new System.Drawing.Point(52, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 20);
             this.label8.TabIndex = 88;
             this.label8.Text = "Nombre";
             // 
-            // txtContraJefe
+            // txtContraA
             // 
-            this.txtContraJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtContraJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraJefe.Location = new System.Drawing.Point(44, 280);
-            this.txtContraJefe.Name = "txtContraJefe";
-            this.txtContraJefe.Size = new System.Drawing.Size(167, 26);
-            this.txtContraJefe.TabIndex = 91;
-            this.txtContraJefe.Visible = false;
+            this.txtContraA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtContraA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraA.Location = new System.Drawing.Point(55, 280);
+            this.txtContraA.Name = "txtContraA";
+            this.txtContraA.Size = new System.Drawing.Size(167, 26);
+            this.txtContraA.TabIndex = 91;
+            this.txtContraA.Visible = false;
+            this.txtContraA.Enter += new System.EventHandler(this.txtContraA_Enter);
             // 
-            // lblJefe
+            // lblContraA1
             // 
-            this.lblJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblJefe.AutoSize = true;
-            this.lblJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJefe.ForeColor = System.Drawing.Color.White;
-            this.lblJefe.Location = new System.Drawing.Point(40, 233);
-            this.lblJefe.Name = "lblJefe";
-            this.lblJefe.Size = new System.Drawing.Size(174, 20);
-            this.lblJefe.TabIndex = 90;
-            this.lblJefe.Text = "Ingrese Su Contraseña";
-            this.lblJefe.Visible = false;
+            this.lblContraA1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContraA1.AutoSize = true;
+            this.lblContraA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraA1.ForeColor = System.Drawing.Color.White;
+            this.lblContraA1.Location = new System.Drawing.Point(51, 243);
+            this.lblContraA1.Name = "lblContraA1";
+            this.lblContraA1.Size = new System.Drawing.Size(174, 20);
+            this.lblContraA1.TabIndex = 90;
+            this.lblContraA1.Text = "Ingrese Su Contraseña";
+            this.lblContraA1.Visible = false;
             // 
             // btnAgregarAutor2
             // 
@@ -121,12 +122,12 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarAutor2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarAutor2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarAutor2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAutor2.Location = new System.Drawing.Point(60, 357);
+            this.btnAgregarAutor2.Location = new System.Drawing.Point(63, 319);
             this.btnAgregarAutor2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarAutor2.Name = "btnAgregarAutor2";
-            this.btnAgregarAutor2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarAutor2.Size = new System.Drawing.Size(147, 37);
             this.btnAgregarAutor2.TabIndex = 93;
-            this.btnAgregarAutor2.Text = "Agregar";
+            this.btnAgregarAutor2.Text = "Agregar Autor";
             this.btnAgregarAutor2.UseVisualStyleBackColor = false;
             this.btnAgregarAutor2.Visible = false;
             this.btnAgregarAutor2.Click += new System.EventHandler(this.btnAgregarAutor2_Click);
@@ -134,7 +135,7 @@ namespace wfBiblioteca.Ventanas
             // btnAgregarAutor
             // 
             this.btnAgregarAutor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregarAutor.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.btnAgregarAutor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarAutor.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAgregarAutor.FlatAppearance.BorderSize = 0;
@@ -143,12 +144,12 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarAutor.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarAutor.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAutor.Location = new System.Drawing.Point(60, 357);
+            this.btnAgregarAutor.Location = new System.Drawing.Point(63, 319);
             this.btnAgregarAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarAutor.Name = "btnAgregarAutor";
-            this.btnAgregarAutor.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarAutor.Size = new System.Drawing.Size(147, 37);
             this.btnAgregarAutor.TabIndex = 92;
-            this.btnAgregarAutor.Text = "Agregar";
+            this.btnAgregarAutor.Text = "Agregar Autor";
             this.btnAgregarAutor.UseVisualStyleBackColor = false;
             this.btnAgregarAutor.Click += new System.EventHandler(this.btnAgregarAutor_Click);
             // 
@@ -164,12 +165,12 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarMateria2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMateria2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarMateria2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMateria2.Location = new System.Drawing.Point(298, 357);
+            this.btnAgregarMateria2.Location = new System.Drawing.Point(282, 319);
             this.btnAgregarMateria2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarMateria2.Name = "btnAgregarMateria2";
-            this.btnAgregarMateria2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarMateria2.Size = new System.Drawing.Size(164, 37);
             this.btnAgregarMateria2.TabIndex = 100;
-            this.btnAgregarMateria2.Text = "Agregar";
+            this.btnAgregarMateria2.Text = "Agregar Materia";
             this.btnAgregarMateria2.UseVisualStyleBackColor = false;
             this.btnAgregarMateria2.Visible = false;
             this.btnAgregarMateria2.Click += new System.EventHandler(this.btnAgregarMateria2_Click);
@@ -177,7 +178,7 @@ namespace wfBiblioteca.Ventanas
             // btnAgregarMateria
             // 
             this.btnAgregarMateria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregarMateria.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarMateria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.btnAgregarMateria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarMateria.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAgregarMateria.FlatAppearance.BorderSize = 0;
@@ -186,37 +187,38 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarMateria.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarMateria.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMateria.Location = new System.Drawing.Point(298, 357);
+            this.btnAgregarMateria.Location = new System.Drawing.Point(282, 319);
             this.btnAgregarMateria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarMateria.Name = "btnAgregarMateria";
-            this.btnAgregarMateria.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarMateria.Size = new System.Drawing.Size(164, 37);
             this.btnAgregarMateria.TabIndex = 99;
-            this.btnAgregarMateria.Text = "Agregar";
+            this.btnAgregarMateria.Text = "Agregar Materia";
             this.btnAgregarMateria.UseVisualStyleBackColor = false;
             this.btnAgregarMateria.Click += new System.EventHandler(this.btnAgregarMateria_Click);
             // 
-            // textBox1
+            // txtContraM
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(282, 280);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 26);
-            this.textBox1.TabIndex = 98;
-            this.textBox1.Visible = false;
+            this.txtContraM.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtContraM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraM.Location = new System.Drawing.Point(282, 280);
+            this.txtContraM.Name = "txtContraM";
+            this.txtContraM.Size = new System.Drawing.Size(167, 26);
+            this.txtContraM.TabIndex = 98;
+            this.txtContraM.Visible = false;
+            this.txtContraM.Enter += new System.EventHandler(this.txtContraM_Enter);
             // 
-            // label1
+            // lblContraM1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(278, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 20);
-            this.label1.TabIndex = 97;
-            this.label1.Text = "Ingrese Su Contraseña";
-            this.label1.Visible = false;
+            this.lblContraM1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContraM1.AutoSize = true;
+            this.lblContraM1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraM1.ForeColor = System.Drawing.Color.White;
+            this.lblContraM1.Location = new System.Drawing.Point(278, 243);
+            this.lblContraM1.Name = "lblContraM1";
+            this.lblContraM1.Size = new System.Drawing.Size(174, 20);
+            this.lblContraM1.TabIndex = 97;
+            this.lblContraM1.Text = "Ingrese Su Contraseña";
+            this.lblContraM1.Visible = false;
             // 
             // txtNombreMateria
             // 
@@ -264,12 +266,12 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarEditorial2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarEditorial2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarEditorial2.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEditorial2.Location = new System.Drawing.Point(539, 357);
+            this.btnAgregarEditorial2.Location = new System.Drawing.Point(507, 319);
             this.btnAgregarEditorial2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarEditorial2.Name = "btnAgregarEditorial2";
-            this.btnAgregarEditorial2.Size = new System.Drawing.Size(118, 37);
+            this.btnAgregarEditorial2.Size = new System.Drawing.Size(170, 37);
             this.btnAgregarEditorial2.TabIndex = 107;
-            this.btnAgregarEditorial2.Text = "Agregar";
+            this.btnAgregarEditorial2.Text = "Agregar Editorial";
             this.btnAgregarEditorial2.UseVisualStyleBackColor = false;
             this.btnAgregarEditorial2.Visible = false;
             this.btnAgregarEditorial2.Click += new System.EventHandler(this.btnAgregarEditorial2_Click);
@@ -277,7 +279,7 @@ namespace wfBiblioteca.Ventanas
             // btnAgregarEditorial
             // 
             this.btnAgregarEditorial.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregarEditorial.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAgregarEditorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
             this.btnAgregarEditorial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarEditorial.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAgregarEditorial.FlatAppearance.BorderSize = 0;
@@ -286,43 +288,44 @@ namespace wfBiblioteca.Ventanas
             this.btnAgregarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarEditorial.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnAgregarEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEditorial.Location = new System.Drawing.Point(539, 357);
+            this.btnAgregarEditorial.Location = new System.Drawing.Point(523, 319);
             this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarEditorial.Name = "btnAgregarEditorial";
             this.btnAgregarEditorial.Size = new System.Drawing.Size(118, 37);
             this.btnAgregarEditorial.TabIndex = 106;
-            this.btnAgregarEditorial.Text = "Agregar";
+            this.btnAgregarEditorial.Text = "Agregar Editorial";
             this.btnAgregarEditorial.UseVisualStyleBackColor = false;
             this.btnAgregarEditorial.Click += new System.EventHandler(this.btnAgregarEditorial_Click);
             // 
-            // textBox3
+            // txtContraE
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(523, 280);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 26);
-            this.textBox3.TabIndex = 105;
-            this.textBox3.Visible = false;
+            this.txtContraE.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtContraE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraE.Location = new System.Drawing.Point(507, 280);
+            this.txtContraE.Name = "txtContraE";
+            this.txtContraE.Size = new System.Drawing.Size(167, 26);
+            this.txtContraE.TabIndex = 105;
+            this.txtContraE.Visible = false;
+            this.txtContraE.Enter += new System.EventHandler(this.txtContraE_Enter);
             // 
-            // label5
+            // lblContraE11
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(519, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 20);
-            this.label5.TabIndex = 104;
-            this.label5.Text = "Ingrese Su Contraseña";
-            this.label5.Visible = false;
+            this.lblContraE11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblContraE11.AutoSize = true;
+            this.lblContraE11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraE11.ForeColor = System.Drawing.Color.White;
+            this.lblContraE11.Location = new System.Drawing.Point(503, 243);
+            this.lblContraE11.Name = "lblContraE11";
+            this.lblContraE11.Size = new System.Drawing.Size(174, 20);
+            this.lblContraE11.TabIndex = 104;
+            this.lblContraE11.Text = "Ingrese Su Contraseña";
+            this.lblContraE11.Visible = false;
             // 
             // txtNombreEditorial
             // 
             this.txtNombreEditorial.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombreEditorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreEditorial.Location = new System.Drawing.Point(523, 164);
+            this.txtNombreEditorial.Location = new System.Drawing.Point(507, 164);
             this.txtNombreEditorial.Name = "txtNombreEditorial";
             this.txtNombreEditorial.Size = new System.Drawing.Size(163, 26);
             this.txtNombreEditorial.TabIndex = 103;
@@ -333,7 +336,7 @@ namespace wfBiblioteca.Ventanas
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(520, 117);
+            this.label6.Location = new System.Drawing.Point(504, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 20);
             this.label6.TabIndex = 102;
@@ -345,7 +348,7 @@ namespace wfBiblioteca.Ventanas
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(496, 54);
+            this.label7.Location = new System.Drawing.Point(480, 54);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(215, 31);
             this.label7.TabIndex = 101;
@@ -356,26 +359,27 @@ namespace wfBiblioteca.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 455);
             this.Controls.Add(this.btnAgregarEditorial2);
             this.Controls.Add(this.btnAgregarEditorial);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtContraE);
+            this.Controls.Add(this.lblContraE11);
             this.Controls.Add(this.txtNombreEditorial);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAgregarMateria2);
             this.Controls.Add(this.btnAgregarMateria);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtContraM);
+            this.Controls.Add(this.lblContraM1);
             this.Controls.Add(this.txtNombreMateria);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAgregarAutor2);
             this.Controls.Add(this.btnAgregarAutor);
-            this.Controls.Add(this.txtContraJefe);
-            this.Controls.Add(this.lblJefe);
+            this.Controls.Add(this.txtContraA);
+            this.Controls.Add(this.lblContraA1);
             this.Controls.Add(this.txtNombreAutor);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
@@ -393,21 +397,21 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreAutor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtContraJefe;
-        private System.Windows.Forms.Label lblJefe;
+        private System.Windows.Forms.TextBox txtContraA;
+        private System.Windows.Forms.Label lblContraA1;
         private System.Windows.Forms.Button btnAgregarAutor2;
         private System.Windows.Forms.Button btnAgregarAutor;
         private System.Windows.Forms.Button btnAgregarMateria2;
         private System.Windows.Forms.Button btnAgregarMateria;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtContraM;
+        private System.Windows.Forms.Label lblContraM1;
         private System.Windows.Forms.TextBox txtNombreMateria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAgregarEditorial2;
         private System.Windows.Forms.Button btnAgregarEditorial;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtContraE;
+        private System.Windows.Forms.Label lblContraE11;
         private System.Windows.Forms.TextBox txtNombreEditorial;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
