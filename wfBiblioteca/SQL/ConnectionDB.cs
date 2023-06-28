@@ -8,7 +8,7 @@ namespace wfBiblioteca.SQL
 {
     public class ConnectionDB
     {
-        string Cad = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=BibliotecaMayor; Integrated Security=True";
+        string Cad = "Data Source=COMPUSEBA\\SQLEXPRESS; Initial Catalog=BibliotecaMayor; Integrated Security=True";
 
         public SqlConnection connectDb = new SqlConnection();
 

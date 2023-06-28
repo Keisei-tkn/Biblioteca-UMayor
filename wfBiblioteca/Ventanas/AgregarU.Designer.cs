@@ -64,9 +64,10 @@ namespace wfBiblioteca.Ventanas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(240, 44);
+            this.label1.Location = new System.Drawing.Point(320, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.Size = new System.Drawing.Size(225, 31);
             this.label1.TabIndex = 12;
             this.label1.Text = "Agregar Usuarios";
             // 
@@ -74,9 +75,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(45, 299);
+            this.txtCorreo.Location = new System.Drawing.Point(60, 368);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(167, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(221, 30);
             this.txtCorreo.TabIndex = 37;
             this.txtCorreo.Visible = false;
             // 
@@ -84,9 +86,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtApellido.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(272, 242);
+            this.txtApellido.Location = new System.Drawing.Point(363, 298);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(167, 26);
+            this.txtApellido.Size = new System.Drawing.Size(221, 30);
             this.txtApellido.TabIndex = 36;
             this.txtApellido.Visible = false;
             // 
@@ -94,9 +97,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(45, 242);
+            this.txtNombre.Location = new System.Drawing.Point(60, 298);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(167, 26);
+            this.txtNombre.Size = new System.Drawing.Size(221, 30);
             this.txtNombre.TabIndex = 35;
             this.txtNombre.Visible = false;
             // 
@@ -104,9 +108,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtRut.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRut.Location = new System.Drawing.Point(47, 176);
+            this.txtRut.Location = new System.Drawing.Point(63, 217);
+            this.txtRut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRut.Name = "txtRut";
-            this.txtRut.Size = new System.Drawing.Size(167, 26);
+            this.txtRut.Size = new System.Drawing.Size(221, 30);
             this.txtRut.TabIndex = 34;
             this.txtRut.Visible = false;
             // 
@@ -116,9 +121,10 @@ namespace wfBiblioteca.Ventanas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(43, 88);
+            this.label5.Location = new System.Drawing.Point(57, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 20);
+            this.label5.Size = new System.Drawing.Size(164, 25);
             this.label5.TabIndex = 31;
             this.label5.Text = "Tipo de Usuario:*";
             // 
@@ -128,9 +134,10 @@ namespace wfBiblioteca.Ventanas
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(41, 276);
+            this.lblCorreo.Location = new System.Drawing.Point(55, 340);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(67, 20);
+            this.lblCorreo.Size = new System.Drawing.Size(86, 25);
             this.lblCorreo.TabIndex = 30;
             this.lblCorreo.Text = "Correo:*";
             this.lblCorreo.Visible = false;
@@ -141,9 +148,10 @@ namespace wfBiblioteca.Ventanas
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(268, 219);
+            this.lblApellido.Location = new System.Drawing.Point(357, 270);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(75, 20);
+            this.lblApellido.Size = new System.Drawing.Size(96, 25);
             this.lblApellido.TabIndex = 29;
             this.lblApellido.Text = "Apellido:*";
             this.lblApellido.Visible = false;
@@ -154,9 +162,10 @@ namespace wfBiblioteca.Ventanas
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(41, 219);
+            this.lblNombre.Location = new System.Drawing.Point(55, 270);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(75, 20);
+            this.lblNombre.Size = new System.Drawing.Size(95, 25);
             this.lblNombre.TabIndex = 28;
             this.lblNombre.Text = "Nombre:*";
             this.lblNombre.Visible = false;
@@ -167,9 +176,10 @@ namespace wfBiblioteca.Ventanas
             this.lblRut.AutoSize = true;
             this.lblRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRut.ForeColor = System.Drawing.Color.White;
-            this.lblRut.Location = new System.Drawing.Point(43, 153);
+            this.lblRut.Location = new System.Drawing.Point(57, 188);
+            this.lblRut.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRut.Name = "lblRut";
-            this.lblRut.Size = new System.Drawing.Size(45, 20);
+            this.lblRut.Size = new System.Drawing.Size(55, 25);
             this.lblRut.TabIndex = 27;
             this.lblRut.Text = "Rut:*";
             this.lblRut.Visible = false;
@@ -186,10 +196,10 @@ namespace wfBiblioteca.Ventanas
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(506, 403);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(675, 496);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(118, 37);
+            this.btnRegistrar.Size = new System.Drawing.Size(157, 46);
             this.btnRegistrar.TabIndex = 26;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -199,9 +209,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(272, 299);
+            this.txtContraseña.Location = new System.Drawing.Point(363, 368);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(167, 26);
+            this.txtContraseña.Size = new System.Drawing.Size(221, 30);
             this.txtContraseña.TabIndex = 40;
             this.txtContraseña.Visible = false;
             // 
@@ -211,9 +222,10 @@ namespace wfBiblioteca.Ventanas
             this.lblContra.AutoSize = true;
             this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.Color.White;
-            this.lblContra.Location = new System.Drawing.Point(268, 276);
+            this.lblContra.Location = new System.Drawing.Point(357, 340);
+            this.lblContra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(102, 20);
+            this.lblContra.Size = new System.Drawing.Size(128, 25);
             this.lblContra.TabIndex = 39;
             this.lblContra.Text = "Contraseña:*";
             this.lblContra.Visible = false;
@@ -224,9 +236,10 @@ namespace wfBiblioteca.Ventanas
             this.cboTipoU.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipoU.FormattingEnabled = true;
-            this.cboTipoU.Location = new System.Drawing.Point(45, 111);
+            this.cboTipoU.Location = new System.Drawing.Point(60, 137);
+            this.cboTipoU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboTipoU.Name = "cboTipoU";
-            this.cboTipoU.Size = new System.Drawing.Size(169, 28);
+            this.cboTipoU.Size = new System.Drawing.Size(224, 33);
             this.cboTipoU.TabIndex = 41;
             this.cboTipoU.SelectedIndexChanged += new System.EventHandler(this.cboTipoU_SelectedIndexChanged);
             // 
@@ -237,9 +250,10 @@ namespace wfBiblioteca.Ventanas
             this.lblRut1.BackColor = System.Drawing.Color.Transparent;
             this.lblRut1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRut1.ForeColor = System.Drawing.Color.White;
-            this.lblRut1.Location = new System.Drawing.Point(224, 182);
+            this.lblRut1.Location = new System.Drawing.Point(299, 224);
+            this.lblRut1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRut1.Name = "lblRut1";
-            this.lblRut1.Size = new System.Drawing.Size(215, 15);
+            this.lblRut1.Size = new System.Drawing.Size(257, 18);
             this.lblRut1.TabIndex = 42;
             this.lblRut1.Text = "Escribir Rut de la Forma 11.111.111-1";
             this.lblRut1.Visible = false;
@@ -256,10 +270,10 @@ namespace wfBiblioteca.Ventanas
             this.btnRegistrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnRegistrar2.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar2.Location = new System.Drawing.Point(506, 403);
-            this.btnRegistrar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrar2.Location = new System.Drawing.Point(675, 496);
+            this.btnRegistrar2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistrar2.Name = "btnRegistrar2";
-            this.btnRegistrar2.Size = new System.Drawing.Size(118, 37);
+            this.btnRegistrar2.Size = new System.Drawing.Size(157, 46);
             this.btnRegistrar2.TabIndex = 43;
             this.btnRegistrar2.Text = "Registrar";
             this.btnRegistrar2.UseVisualStyleBackColor = false;
@@ -270,9 +284,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraSeguridad.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraSeguridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraSeguridad.Location = new System.Drawing.Point(487, 360);
+            this.txtContraSeguridad.Location = new System.Drawing.Point(649, 443);
+            this.txtContraSeguridad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraSeguridad.Name = "txtContraSeguridad";
-            this.txtContraSeguridad.Size = new System.Drawing.Size(167, 26);
+            this.txtContraSeguridad.Size = new System.Drawing.Size(221, 30);
             this.txtContraSeguridad.TabIndex = 45;
             this.txtContraSeguridad.Visible = false;
             this.txtContraSeguridad.Enter += new System.EventHandler(this.txtContraSeguridad_Enter);
@@ -283,9 +298,10 @@ namespace wfBiblioteca.Ventanas
             this.lblConfirmacion.AutoSize = true;
             this.lblConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmacion.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmacion.Location = new System.Drawing.Point(483, 337);
+            this.lblConfirmacion.Location = new System.Drawing.Point(644, 415);
+            this.lblConfirmacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfirmacion.Name = "lblConfirmacion";
-            this.lblConfirmacion.Size = new System.Drawing.Size(174, 20);
+            this.lblConfirmacion.Size = new System.Drawing.Size(214, 25);
             this.lblConfirmacion.TabIndex = 44;
             this.lblConfirmacion.Text = "Ingrese Su Contraseña";
             this.lblConfirmacion.Visible = false;
@@ -296,9 +312,10 @@ namespace wfBiblioteca.Ventanas
             this.lblSede.AutoSize = true;
             this.lblSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSede.ForeColor = System.Drawing.Color.White;
-            this.lblSede.Location = new System.Drawing.Point(43, 339);
+            this.lblSede.Location = new System.Drawing.Point(57, 417);
+            this.lblSede.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSede.Name = "lblSede";
-            this.lblSede.Size = new System.Drawing.Size(57, 20);
+            this.lblSede.Size = new System.Drawing.Size(73, 25);
             this.lblSede.TabIndex = 46;
             this.lblSede.Text = "Sede:*";
             this.lblSede.Visible = false;
@@ -307,9 +324,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtSede.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSede.Location = new System.Drawing.Point(47, 362);
+            this.txtSede.Location = new System.Drawing.Point(63, 446);
+            this.txtSede.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSede.Name = "txtSede";
-            this.txtSede.Size = new System.Drawing.Size(167, 26);
+            this.txtSede.Size = new System.Drawing.Size(221, 30);
             this.txtSede.TabIndex = 47;
             this.txtSede.Visible = false;
             // 
@@ -319,9 +337,10 @@ namespace wfBiblioteca.Ventanas
             this.lblNucleo.AutoSize = true;
             this.lblNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNucleo.ForeColor = System.Drawing.Color.White;
-            this.lblNucleo.Location = new System.Drawing.Point(43, 339);
+            this.lblNucleo.Location = new System.Drawing.Point(57, 417);
+            this.lblNucleo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNucleo.Name = "lblNucleo";
-            this.lblNucleo.Size = new System.Drawing.Size(68, 20);
+            this.lblNucleo.Size = new System.Drawing.Size(87, 25);
             this.lblNucleo.TabIndex = 48;
             this.lblNucleo.Text = "Nucleo:*";
             this.lblNucleo.Visible = false;
@@ -330,9 +349,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtVerificacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtVerificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVerificacion.Location = new System.Drawing.Point(47, 362);
+            this.txtVerificacion.Location = new System.Drawing.Point(63, 446);
+            this.txtVerificacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtVerificacion.Name = "txtVerificacion";
-            this.txtVerificacion.Size = new System.Drawing.Size(167, 26);
+            this.txtVerificacion.Size = new System.Drawing.Size(221, 30);
             this.txtVerificacion.TabIndex = 51;
             this.txtVerificacion.Visible = false;
             // 
@@ -342,9 +362,10 @@ namespace wfBiblioteca.Ventanas
             this.lblVerificacion.AutoSize = true;
             this.lblVerificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerificacion.ForeColor = System.Drawing.Color.White;
-            this.lblVerificacion.Location = new System.Drawing.Point(43, 339);
+            this.lblVerificacion.Location = new System.Drawing.Point(57, 417);
+            this.lblVerificacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVerificacion.Name = "lblVerificacion";
-            this.lblVerificacion.Size = new System.Drawing.Size(160, 20);
+            this.lblVerificacion.Size = new System.Drawing.Size(198, 25);
             this.lblVerificacion.TabIndex = 50;
             this.lblVerificacion.Text = "Estado Verificacion: *";
             this.lblVerificacion.Visible = false;
@@ -353,9 +374,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txt2daClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt2daClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2daClave.Location = new System.Drawing.Point(47, 362);
+            this.txt2daClave.Location = new System.Drawing.Point(63, 446);
+            this.txt2daClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt2daClave.Name = "txt2daClave";
-            this.txt2daClave.Size = new System.Drawing.Size(167, 26);
+            this.txt2daClave.Size = new System.Drawing.Size(221, 30);
             this.txt2daClave.TabIndex = 53;
             this.txt2daClave.Visible = false;
             // 
@@ -365,9 +387,10 @@ namespace wfBiblioteca.Ventanas
             this.lbl2daClav.AutoSize = true;
             this.lbl2daClav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2daClav.ForeColor = System.Drawing.Color.White;
-            this.lbl2daClav.Location = new System.Drawing.Point(43, 339);
+            this.lbl2daClav.Location = new System.Drawing.Point(57, 417);
+            this.lbl2daClav.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2daClav.Name = "lbl2daClav";
-            this.lbl2daClav.Size = new System.Drawing.Size(119, 20);
+            this.lbl2daClav.Size = new System.Drawing.Size(150, 25);
             this.lbl2daClav.TabIndex = 52;
             this.lbl2daClav.Text = "Pin seguridad :*";
             this.lbl2daClav.Visible = false;
@@ -378,9 +401,10 @@ namespace wfBiblioteca.Ventanas
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartamento.ForeColor = System.Drawing.Color.White;
-            this.lblDepartamento.Location = new System.Drawing.Point(268, 339);
+            this.lblDepartamento.Location = new System.Drawing.Point(357, 417);
+            this.lblDepartamento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(122, 20);
+            this.lblDepartamento.Size = new System.Drawing.Size(149, 25);
             this.lblDepartamento.TabIndex = 54;
             this.lblDepartamento.Text = "Departamento:*";
             this.lblDepartamento.Visible = false;
@@ -391,9 +415,10 @@ namespace wfBiblioteca.Ventanas
             this.cboDep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDep.FormattingEnabled = true;
-            this.cboDep.Location = new System.Drawing.Point(270, 362);
+            this.cboDep.Location = new System.Drawing.Point(360, 446);
+            this.cboDep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboDep.Name = "cboDep";
-            this.cboDep.Size = new System.Drawing.Size(169, 28);
+            this.cboDep.Size = new System.Drawing.Size(224, 33);
             this.cboDep.TabIndex = 55;
             this.cboDep.Visible = false;
             // 
@@ -403,19 +428,20 @@ namespace wfBiblioteca.Ventanas
             this.cboNucleo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNucleo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNucleo.FormattingEnabled = true;
-            this.cboNucleo.Location = new System.Drawing.Point(47, 362);
+            this.cboNucleo.Location = new System.Drawing.Point(63, 446);
+            this.cboNucleo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboNucleo.Name = "cboNucleo";
-            this.cboNucleo.Size = new System.Drawing.Size(169, 28);
+            this.cboNucleo.Size = new System.Drawing.Size(224, 33);
             this.cboNucleo.TabIndex = 56;
             this.cboNucleo.Visible = false;
             // 
             // AgregarU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(716, 456);
+            this.ClientSize = new System.Drawing.Size(955, 561);
             this.Controls.Add(this.cboNucleo);
             this.Controls.Add(this.cboDep);
             this.Controls.Add(this.lblDepartamento);
@@ -445,6 +471,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AgregarU";
             this.Text = "Edit2";
             this.ResumeLayout(false);

@@ -74,10 +74,10 @@ namespace wfBiblioteca.Ventanas
             this.btnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExaminar.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnExaminar.ForeColor = System.Drawing.Color.White;
-            this.btnExaminar.Location = new System.Drawing.Point(45, 314);
-            this.btnExaminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExaminar.Location = new System.Drawing.Point(60, 386);
+            this.btnExaminar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(118, 40);
+            this.btnExaminar.Size = new System.Drawing.Size(157, 49);
             this.btnExaminar.TabIndex = 85;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.UseVisualStyleBackColor = false;
@@ -86,9 +86,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.ptbPoster.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ptbPoster.BackColor = System.Drawing.Color.Transparent;
-            this.ptbPoster.Location = new System.Drawing.Point(22, 74);
+            this.ptbPoster.Location = new System.Drawing.Point(29, 91);
+            this.ptbPoster.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptbPoster.Name = "ptbPoster";
-            this.ptbPoster.Size = new System.Drawing.Size(156, 231);
+            this.ptbPoster.Size = new System.Drawing.Size(208, 284);
             this.ptbPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbPoster.TabIndex = 84;
             this.ptbPoster.TabStop = false;
@@ -99,9 +100,10 @@ namespace wfBiblioteca.Ventanas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(234, 20);
+            this.label1.Location = new System.Drawing.Point(312, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 25);
+            this.label1.Size = new System.Drawing.Size(306, 31);
             this.label1.TabIndex = 86;
             this.label1.Text = "Editar/Modificar Material";
             // 
@@ -112,9 +114,10 @@ namespace wfBiblioteca.Ventanas
             this.Ccodigo,
             this.Ctitulo});
             this.lsvPeliculas.HideSelection = false;
-            this.lsvPeliculas.Location = new System.Drawing.Point(519, 75);
+            this.lsvPeliculas.Location = new System.Drawing.Point(692, 92);
+            this.lsvPeliculas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lsvPeliculas.Name = "lsvPeliculas";
-            this.lsvPeliculas.Size = new System.Drawing.Size(208, 255);
+            this.lsvPeliculas.Size = new System.Drawing.Size(276, 313);
             this.lsvPeliculas.TabIndex = 87;
             this.lsvPeliculas.UseCompatibleStateImageBehavior = false;
             this.lsvPeliculas.View = System.Windows.Forms.View.Details;
@@ -141,10 +144,10 @@ namespace wfBiblioteca.Ventanas
             this.btnEliminar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnEliminar2.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar2.Location = new System.Drawing.Point(375, 392);
-            this.btnEliminar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar2.Location = new System.Drawing.Point(500, 482);
+            this.btnEliminar2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEliminar2.Name = "btnEliminar2";
-            this.btnEliminar2.Size = new System.Drawing.Size(118, 37);
+            this.btnEliminar2.Size = new System.Drawing.Size(157, 46);
             this.btnEliminar2.TabIndex = 91;
             this.btnEliminar2.Text = "Eliminar";
             this.btnEliminar2.UseVisualStyleBackColor = false;
@@ -162,10 +165,10 @@ namespace wfBiblioteca.Ventanas
             this.btnActualizar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar2.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnActualizar2.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar2.Location = new System.Drawing.Point(517, 392);
-            this.btnActualizar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar2.Location = new System.Drawing.Point(689, 482);
+            this.btnActualizar2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnActualizar2.Name = "btnActualizar2";
-            this.btnActualizar2.Size = new System.Drawing.Size(118, 37);
+            this.btnActualizar2.Size = new System.Drawing.Size(157, 46);
             this.btnActualizar2.TabIndex = 90;
             this.btnActualizar2.Text = "Actualizar";
             this.btnActualizar2.UseVisualStyleBackColor = false;
@@ -183,10 +186,10 @@ namespace wfBiblioteca.Ventanas
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(515, 392);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(687, 482);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(118, 37);
+            this.btnActualizar.Size = new System.Drawing.Size(157, 46);
             this.btnActualizar.TabIndex = 89;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -203,10 +206,10 @@ namespace wfBiblioteca.Ventanas
             this.brnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brnEliminar.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.brnEliminar.ForeColor = System.Drawing.Color.White;
-            this.brnEliminar.Location = new System.Drawing.Point(375, 392);
-            this.brnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.brnEliminar.Location = new System.Drawing.Point(500, 482);
+            this.brnEliminar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.brnEliminar.Name = "brnEliminar";
-            this.brnEliminar.Size = new System.Drawing.Size(118, 37);
+            this.brnEliminar.Size = new System.Drawing.Size(157, 46);
             this.brnEliminar.TabIndex = 88;
             this.brnEliminar.Text = "Eliminar";
             this.brnEliminar.UseVisualStyleBackColor = false;
@@ -217,9 +220,10 @@ namespace wfBiblioteca.Ventanas
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(206, 65);
+            this.label8.Location = new System.Drawing.Point(275, 80);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.Size = new System.Drawing.Size(65, 25);
             this.label8.TabIndex = 92;
             this.label8.Text = "Titulo ";
             // 
@@ -228,9 +232,10 @@ namespace wfBiblioteca.Ventanas
             this.cboEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(210, 142);
+            this.cboEstado.Location = new System.Drawing.Point(280, 175);
+            this.cboEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(148, 28);
+            this.cboEstado.Size = new System.Drawing.Size(196, 33);
             this.cboEstado.TabIndex = 95;
             // 
             // label4
@@ -239,9 +244,10 @@ namespace wfBiblioteca.Ventanas
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(206, 121);
+            this.label4.Location = new System.Drawing.Point(275, 149);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
+            this.label4.Size = new System.Drawing.Size(81, 25);
             this.label4.TabIndex = 94;
             this.label4.Text = "Editorial";
             // 
@@ -249,9 +255,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtContraJefe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraJefe.Location = new System.Drawing.Point(210, 251);
+            this.txtContraJefe.Location = new System.Drawing.Point(280, 309);
+            this.txtContraJefe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContraJefe.Name = "txtContraJefe";
-            this.txtContraJefe.Size = new System.Drawing.Size(148, 26);
+            this.txtContraJefe.Size = new System.Drawing.Size(196, 30);
             this.txtContraJefe.TabIndex = 97;
             this.txtContraJefe.Visible = false;
             // 
@@ -261,9 +268,10 @@ namespace wfBiblioteca.Ventanas
             this.lblJefe.AutoSize = true;
             this.lblJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJefe.ForeColor = System.Drawing.Color.White;
-            this.lblJefe.Location = new System.Drawing.Point(207, 226);
+            this.lblJefe.Location = new System.Drawing.Point(276, 278);
+            this.lblJefe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblJefe.Name = "lblJefe";
-            this.lblJefe.Size = new System.Drawing.Size(57, 20);
+            this.lblJefe.Size = new System.Drawing.Size(70, 25);
             this.lblJefe.TabIndex = 96;
             this.lblJefe.Text = "Idioma";
             this.lblJefe.Visible = false;
@@ -273,9 +281,10 @@ namespace wfBiblioteca.Ventanas
             this.cboCat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(210, 198);
+            this.cboCat.Location = new System.Drawing.Point(280, 244);
+            this.cboCat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboCat.Name = "cboCat";
-            this.cboCat.Size = new System.Drawing.Size(148, 28);
+            this.cboCat.Size = new System.Drawing.Size(196, 33);
             this.cboCat.TabIndex = 99;
             // 
             // label5
@@ -284,9 +293,10 @@ namespace wfBiblioteca.Ventanas
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(208, 175);
+            this.label5.Location = new System.Drawing.Point(277, 215);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 20);
+            this.label5.Size = new System.Drawing.Size(77, 25);
             this.label5.TabIndex = 98;
             this.label5.Text = "Materia";
             // 
@@ -294,9 +304,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.txtPremios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPremios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPremios.Location = new System.Drawing.Point(365, 198);
+            this.txtPremios.Location = new System.Drawing.Point(487, 244);
+            this.txtPremios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPremios.Name = "txtPremios";
-            this.txtPremios.Size = new System.Drawing.Size(147, 26);
+            this.txtPremios.Size = new System.Drawing.Size(195, 30);
             this.txtPremios.TabIndex = 101;
             // 
             // label12
@@ -305,9 +316,10 @@ namespace wfBiblioteca.Ventanas
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(361, 175);
+            this.label12.Location = new System.Drawing.Point(481, 215);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(155, 20);
+            this.label12.Size = new System.Drawing.Size(190, 25);
             this.label12.TabIndex = 100;
             this.label12.Text = "Unidades Existentes";
             // 
@@ -316,9 +328,10 @@ namespace wfBiblioteca.Ventanas
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.BackColor = System.Drawing.Color.White;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(210, 92);
+            this.lblTitulo.Location = new System.Drawing.Point(280, 113);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(279, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(372, 32);
             this.lblTitulo.TabIndex = 102;
             // 
             // cboRestriccion
@@ -326,9 +339,10 @@ namespace wfBiblioteca.Ventanas
             this.cboRestriccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cboRestriccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRestriccion.FormattingEnabled = true;
-            this.cboRestriccion.Location = new System.Drawing.Point(369, 141);
+            this.cboRestriccion.Location = new System.Drawing.Point(492, 174);
+            this.cboRestriccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboRestriccion.Name = "cboRestriccion";
-            this.cboRestriccion.Size = new System.Drawing.Size(113, 28);
+            this.cboRestriccion.Size = new System.Drawing.Size(149, 33);
             this.cboRestriccion.TabIndex = 104;
             // 
             // label10
@@ -337,9 +351,10 @@ namespace wfBiblioteca.Ventanas
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(365, 119);
+            this.label10.Location = new System.Drawing.Point(487, 146);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 20);
+            this.label10.Size = new System.Drawing.Size(80, 25);
             this.label10.TabIndex = 103;
             this.label10.Text = "Autores";
             // 
@@ -353,9 +368,10 @@ namespace wfBiblioteca.Ventanas
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(12, 413);
+            this.label6.Location = new System.Drawing.Point(16, 508);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(251, 16);
+            this.label6.Size = new System.Drawing.Size(311, 20);
             this.label6.TabIndex = 105;
             this.label6.Text = "Nota: Siempre volver a cargar la portada";
             // 
@@ -363,9 +379,10 @@ namespace wfBiblioteca.Ventanas
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(209, 303);
+            this.textBox1.Location = new System.Drawing.Point(279, 373);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(303, 26);
+            this.textBox1.Size = new System.Drawing.Size(403, 30);
             this.textBox1.TabIndex = 107;
             this.textBox1.Visible = false;
             // 
@@ -375,18 +392,20 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(209, 276);
+            this.label2.Location = new System.Drawing.Point(279, 340);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(114, 25);
             this.label2.TabIndex = 106;
             this.label2.Text = "Descripcion";
             this.label2.Visible = false;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(210, 358);
+            this.dateTimePicker1.Location = new System.Drawing.Point(280, 441);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(264, 22);
             this.dateTimePicker1.TabIndex = 108;
             // 
             // label3
@@ -395,9 +414,10 @@ namespace wfBiblioteca.Ventanas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(210, 330);
+            this.label3.Location = new System.Drawing.Point(280, 406);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 20);
+            this.label3.Size = new System.Drawing.Size(172, 25);
             this.label3.TabIndex = 109;
             this.label3.Text = "Fecha Publicacion";
             this.label3.Visible = false;
@@ -408,9 +428,10 @@ namespace wfBiblioteca.Ventanas
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(363, 228);
+            this.label7.Location = new System.Drawing.Point(484, 281);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 20);
+            this.label7.Size = new System.Drawing.Size(176, 25);
             this.label7.TabIndex = 110;
             this.label7.Text = "Tipo de Prestamos";
             this.label7.Visible = false;
@@ -420,17 +441,18 @@ namespace wfBiblioteca.Ventanas
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(364, 250);
+            this.comboBox1.Location = new System.Drawing.Point(485, 308);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 28);
+            this.comboBox1.Size = new System.Drawing.Size(196, 33);
             this.comboBox1.TabIndex = 111;
             // 
             // EditarM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(750, 456);
+            this.ClientSize = new System.Drawing.Size(1000, 561);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -459,6 +481,7 @@ namespace wfBiblioteca.Ventanas
             this.Controls.Add(this.btnExaminar);
             this.Controls.Add(this.ptbPoster);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditarM";
             this.Text = "EditarP";
             ((System.ComponentModel.ISupportInitialize)(this.ptbPoster)).EndInit();

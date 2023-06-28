@@ -255,6 +255,11 @@ namespace wfBiblioteca
             AbrirFormEnPanel(new MostrarEstadisticas());
         }
 
+        private void btnBuscarMaterial_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new BuscarMaterial());
+        }
+
         private Form formularioactivo = null;
         private void OpenChildForm(Form childForm)
         {

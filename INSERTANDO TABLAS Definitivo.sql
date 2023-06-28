@@ -81,12 +81,12 @@ VALUES('ZQW779','Informática'),
 
 --AGREGANDO MATERIAL
 INSERT INTO MATERIAL(id_material,titulo,descripcion,fecha_publicacion,unidades_existentes,deposito_o_reserva,idioma,disponible,portada,id_autor,id_editorial,id_materia)
-VALUES('ESM176','Cálculo Tomo 1','Libro de cálculo 1','2004/12/05',3,'Deposito','Español',1,'','UJQ726','PDR182','ZWA707'),
-       ('JKA118','Administración de sistemas GNU/Linux','Libro informatica sobre GNU/Linux','2010/10/05',2,'Deposito','Español',1,'','LAL192','DDR457','ZQW779'),
-	   ('GFT723','Muy interesante','Revista cientifica','2023/06/02',4,'Reserva','Español',1,'','RLA637','AFV030','OEI519'),
-	   ('QFW883','Nature','Revista cientifica','2023/06/02',4,'Reserva','Ingles',1,'','RLA637','AFV030','OEI519'),
-	   ('BNH199','New York festivals','Grand award y medallas de oro 02/03','2002/07/03',1,'Deposito','español',1,'','KAS192','VGS492','PQL223'),
-	   ('QIW723','Diccionario traducción ingles','Diccionario de traduccion de ingles-español / español-ingles','2001/02/21',8,'Deposito','español',1,'','OOP123','JQW332','PQL223');
+VALUES('ESM176','Cálculo Tomo 1','Libro de cálculo 1','2004/12/05',3,'Deposito','Español',1,'Multimedia\calculo1.jpg','UJQ726','PDR182','ZWA707'),
+       ('JKA118','Administración de sistemas GNU/Linux','Libro informatica sobre GNU/Linux','2010/10/05',2,'Deposito','Español',1,'Multimedia\Administracion.jpg','LAL192','DDR457','ZQW779'),
+	   ('GFT723','Muy interesante','Revista cientifica','2023/06/02',4,'Reserva','Español',1,'Multimedia\muy interesante.jpg','RLA637','AFV030','OEI519'),
+	   ('QFW883','Nature','Revista cientifica','2023/06/02',4,'Reserva','Ingles',1,'Multimedia\nature.jpg','RLA637','AFV030','OEI519'),
+	   ('BNH199','New York festivals','Grand award y medallas de oro 02/03','2002/07/03',1,'Deposito','español',1,'Multimedia\newyork.jpg','KAS192','VGS492','PQL223'),
+	   ('QIW723','Diccionario traducción ingles','Diccionario de traduccion de ingles-español / español-ingles','2001/02/21',8,'Deposito','español',1,'Multimedia\diccionario.png','OOP123','JQW332','PQL223');
 
 --AGREGANDO LIBROS
 INSERT INTO LIBRO(id_material,num_pag,isbn)

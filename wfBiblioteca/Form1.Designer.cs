@@ -91,9 +91,9 @@ namespace wfBiblioteca
             this.P_Menu.Controls.Add(this.panel8);
             this.P_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.P_Menu.Location = new System.Drawing.Point(0, 0);
-            this.P_Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.P_Menu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.P_Menu.Name = "P_Menu";
-            this.P_Menu.Size = new System.Drawing.Size(218, 444);
+            this.P_Menu.Size = new System.Drawing.Size(291, 546);
             this.P_Menu.TabIndex = 1;
             this.P_Menu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.P_Menu_MouseDown);
             // 
@@ -107,18 +107,20 @@ namespace wfBiblioteca
             this.pSubmenu2.Controls.Add(this.btnEUsuario);
             this.pSubmenu2.Controls.Add(this.btnEMat);
             this.pSubmenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pSubmenu2.Location = new System.Drawing.Point(0, 539);
+            this.pSubmenu2.Location = new System.Drawing.Point(0, 665);
+            this.pSubmenu2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pSubmenu2.Name = "pSubmenu2";
-            this.pSubmenu2.Size = new System.Drawing.Size(201, 127);
+            this.pSubmenu2.Size = new System.Drawing.Size(270, 156);
             this.pSubmenu2.TabIndex = 19;
             this.pSubmenu2.Visible = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel2.Location = new System.Drawing.Point(20, 85);
+            this.panel2.Location = new System.Drawing.Point(27, 105);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 37);
+            this.panel2.Size = new System.Drawing.Size(7, 46);
             this.panel2.TabIndex = 16;
             // 
             // btnEpre
@@ -132,10 +134,10 @@ namespace wfBiblioteca
             this.btnEpre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEpre.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEpre.ForeColor = System.Drawing.Color.White;
-            this.btnEpre.Location = new System.Drawing.Point(23, 85);
-            this.btnEpre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEpre.Location = new System.Drawing.Point(31, 105);
+            this.btnEpre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEpre.Name = "btnEpre";
-            this.btnEpre.Size = new System.Drawing.Size(180, 37);
+            this.btnEpre.Size = new System.Drawing.Size(240, 46);
             this.btnEpre.TabIndex = 15;
             this.btnEpre.Text = "Presupuesto";
             this.btnEpre.UseVisualStyleBackColor = false;
@@ -144,17 +146,19 @@ namespace wfBiblioteca
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel3.Location = new System.Drawing.Point(19, 45);
+            this.panel3.Location = new System.Drawing.Point(25, 55);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 37);
+            this.panel3.Size = new System.Drawing.Size(7, 46);
             this.panel3.TabIndex = 14;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel4.Location = new System.Drawing.Point(19, 5);
+            this.panel4.Location = new System.Drawing.Point(25, 6);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 37);
+            this.panel4.Size = new System.Drawing.Size(7, 46);
             this.panel4.TabIndex = 13;
             // 
             // btnEUsuario
@@ -168,10 +172,10 @@ namespace wfBiblioteca
             this.btnEUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEUsuario.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnEUsuario.Location = new System.Drawing.Point(22, 5);
-            this.btnEUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEUsuario.Location = new System.Drawing.Point(29, 6);
+            this.btnEUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEUsuario.Name = "btnEUsuario";
-            this.btnEUsuario.Size = new System.Drawing.Size(180, 37);
+            this.btnEUsuario.Size = new System.Drawing.Size(240, 46);
             this.btnEUsuario.TabIndex = 11;
             this.btnEUsuario.Text = "Usuario";
             this.btnEUsuario.UseVisualStyleBackColor = false;
@@ -188,10 +192,10 @@ namespace wfBiblioteca
             this.btnEMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEMat.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEMat.ForeColor = System.Drawing.Color.White;
-            this.btnEMat.Location = new System.Drawing.Point(22, 45);
-            this.btnEMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEMat.Location = new System.Drawing.Point(29, 55);
+            this.btnEMat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEMat.Name = "btnEMat";
-            this.btnEMat.Size = new System.Drawing.Size(180, 37);
+            this.btnEMat.Size = new System.Drawing.Size(240, 46);
             this.btnEMat.TabIndex = 12;
             this.btnEMat.Text = "Material";
             this.btnEMat.UseVisualStyleBackColor = false;
@@ -209,10 +213,10 @@ namespace wfBiblioteca
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(0, 491);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditar.Location = new System.Drawing.Point(0, 606);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(201, 48);
+            this.btnEditar.Size = new System.Drawing.Size(270, 59);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar/Eliminar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -232,18 +236,20 @@ namespace wfBiblioteca
             this.pSubMenu.Controls.Add(this.btnRegistarUsuario);
             this.pSubMenu.Controls.Add(this.btnRegistarMaterial);
             this.pSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pSubMenu.Location = new System.Drawing.Point(0, 281);
+            this.pSubMenu.Location = new System.Drawing.Point(0, 348);
+            this.pSubMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pSubMenu.Name = "pSubMenu";
-            this.pSubMenu.Size = new System.Drawing.Size(201, 210);
+            this.pSubMenu.Size = new System.Drawing.Size(270, 258);
             this.pSubMenu.TabIndex = 17;
             this.pSubMenu.Visible = false;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel6.Location = new System.Drawing.Point(18, 84);
+            this.panel6.Location = new System.Drawing.Point(24, 103);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 37);
+            this.panel6.Size = new System.Drawing.Size(7, 46);
             this.panel6.TabIndex = 20;
             // 
             // btnDatosMat
@@ -257,10 +263,10 @@ namespace wfBiblioteca
             this.btnDatosMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDatosMat.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatosMat.ForeColor = System.Drawing.Color.White;
-            this.btnDatosMat.Location = new System.Drawing.Point(22, 84);
-            this.btnDatosMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDatosMat.Location = new System.Drawing.Point(29, 103);
+            this.btnDatosMat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnDatosMat.Name = "btnDatosMat";
-            this.btnDatosMat.Size = new System.Drawing.Size(180, 37);
+            this.btnDatosMat.Size = new System.Drawing.Size(240, 46);
             this.btnDatosMat.TabIndex = 19;
             this.btnDatosMat.Text = "Datos Material";
             this.btnDatosMat.UseVisualStyleBackColor = false;
@@ -270,9 +276,10 @@ namespace wfBiblioteca
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel5.Location = new System.Drawing.Point(18, 164);
+            this.panel5.Location = new System.Drawing.Point(24, 202);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 37);
+            this.panel5.Size = new System.Drawing.Size(7, 46);
             this.panel5.TabIndex = 18;
             // 
             // btnRegistrarPrestamo
@@ -286,10 +293,10 @@ namespace wfBiblioteca
             this.btnRegistrarPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarPrestamo.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarPrestamo.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarPrestamo.Location = new System.Drawing.Point(22, 164);
-            this.btnRegistrarPrestamo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarPrestamo.Location = new System.Drawing.Point(29, 202);
+            this.btnRegistrarPrestamo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistrarPrestamo.Name = "btnRegistrarPrestamo";
-            this.btnRegistrarPrestamo.Size = new System.Drawing.Size(180, 37);
+            this.btnRegistrarPrestamo.Size = new System.Drawing.Size(240, 46);
             this.btnRegistrarPrestamo.TabIndex = 17;
             this.btnRegistrarPrestamo.Text = "Préstamo";
             this.btnRegistrarPrestamo.UseVisualStyleBackColor = false;
@@ -299,9 +306,10 @@ namespace wfBiblioteca
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel13.Location = new System.Drawing.Point(18, 124);
+            this.panel13.Location = new System.Drawing.Point(24, 153);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(5, 37);
+            this.panel13.Size = new System.Drawing.Size(7, 46);
             this.panel13.TabIndex = 16;
             // 
             // btnRegistarPresupuesto
@@ -315,10 +323,10 @@ namespace wfBiblioteca
             this.btnRegistarPresupuesto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistarPresupuesto.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistarPresupuesto.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarPresupuesto.Location = new System.Drawing.Point(22, 124);
-            this.btnRegistarPresupuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistarPresupuesto.Location = new System.Drawing.Point(29, 153);
+            this.btnRegistarPresupuesto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistarPresupuesto.Name = "btnRegistarPresupuesto";
-            this.btnRegistarPresupuesto.Size = new System.Drawing.Size(180, 37);
+            this.btnRegistarPresupuesto.Size = new System.Drawing.Size(240, 46);
             this.btnRegistarPresupuesto.TabIndex = 15;
             this.btnRegistarPresupuesto.Text = "Departamento/Núcleo";
             this.btnRegistarPresupuesto.UseVisualStyleBackColor = false;
@@ -328,17 +336,19 @@ namespace wfBiblioteca
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel14.Location = new System.Drawing.Point(19, 44);
+            this.panel14.Location = new System.Drawing.Point(25, 54);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 37);
+            this.panel14.Size = new System.Drawing.Size(7, 46);
             this.panel14.TabIndex = 14;
             // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel15.Location = new System.Drawing.Point(19, 3);
+            this.panel15.Location = new System.Drawing.Point(25, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(5, 37);
+            this.panel15.Size = new System.Drawing.Size(7, 46);
             this.panel15.TabIndex = 13;
             // 
             // btnRegistarUsuario
@@ -352,10 +362,10 @@ namespace wfBiblioteca
             this.btnRegistarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistarUsuario.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarUsuario.Location = new System.Drawing.Point(22, 3);
-            this.btnRegistarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistarUsuario.Location = new System.Drawing.Point(29, 4);
+            this.btnRegistarUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistarUsuario.Name = "btnRegistarUsuario";
-            this.btnRegistarUsuario.Size = new System.Drawing.Size(180, 37);
+            this.btnRegistarUsuario.Size = new System.Drawing.Size(240, 46);
             this.btnRegistarUsuario.TabIndex = 11;
             this.btnRegistarUsuario.Text = "Usuario";
             this.btnRegistarUsuario.UseVisualStyleBackColor = false;
@@ -372,10 +382,10 @@ namespace wfBiblioteca
             this.btnRegistarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistarMaterial.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnRegistarMaterial.Location = new System.Drawing.Point(22, 44);
-            this.btnRegistarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistarMaterial.Location = new System.Drawing.Point(29, 54);
+            this.btnRegistarMaterial.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistarMaterial.Name = "btnRegistarMaterial";
-            this.btnRegistarMaterial.Size = new System.Drawing.Size(180, 37);
+            this.btnRegistarMaterial.Size = new System.Drawing.Size(240, 46);
             this.btnRegistarMaterial.TabIndex = 12;
             this.btnRegistarMaterial.Text = "Material";
             this.btnRegistarMaterial.UseVisualStyleBackColor = false;
@@ -393,10 +403,10 @@ namespace wfBiblioteca
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 244);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 302);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(201, 37);
+            this.btnRegistrar.Size = new System.Drawing.Size(270, 46);
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -414,10 +424,10 @@ namespace wfBiblioteca
             this.btnInformesEstadisticos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformesEstadisticos.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInformesEstadisticos.ForeColor = System.Drawing.Color.White;
-            this.btnInformesEstadisticos.Location = new System.Drawing.Point(0, 207);
-            this.btnInformesEstadisticos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInformesEstadisticos.Location = new System.Drawing.Point(0, 256);
+            this.btnInformesEstadisticos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnInformesEstadisticos.Name = "btnInformesEstadisticos";
-            this.btnInformesEstadisticos.Size = new System.Drawing.Size(201, 37);
+            this.btnInformesEstadisticos.Size = new System.Drawing.Size(270, 46);
             this.btnInformesEstadisticos.TabIndex = 18;
             this.btnInformesEstadisticos.Text = "Informes Estadísticos";
             this.btnInformesEstadisticos.UseVisualStyleBackColor = false;
@@ -435,13 +445,14 @@ namespace wfBiblioteca
             this.btnBuscarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarMaterial.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarMaterial.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarMaterial.Location = new System.Drawing.Point(0, 170);
-            this.btnBuscarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscarMaterial.Location = new System.Drawing.Point(0, 210);
+            this.btnBuscarMaterial.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnBuscarMaterial.Name = "btnBuscarMaterial";
-            this.btnBuscarMaterial.Size = new System.Drawing.Size(201, 37);
+            this.btnBuscarMaterial.Size = new System.Drawing.Size(270, 46);
             this.btnBuscarMaterial.TabIndex = 18;
             this.btnBuscarMaterial.Text = "Buscar Material";
             this.btnBuscarMaterial.UseVisualStyleBackColor = false;
+            this.btnBuscarMaterial.Click += new System.EventHandler(this.btnBuscarMaterial_Click);
             // 
             // btnPrestamos
             // 
@@ -455,10 +466,10 @@ namespace wfBiblioteca
             this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrestamos.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamos.ForeColor = System.Drawing.Color.White;
-            this.btnPrestamos.Location = new System.Drawing.Point(0, 133);
-            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrestamos.Location = new System.Drawing.Point(0, 164);
+            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnPrestamos.Name = "btnPrestamos";
-            this.btnPrestamos.Size = new System.Drawing.Size(201, 37);
+            this.btnPrestamos.Size = new System.Drawing.Size(270, 46);
             this.btnPrestamos.TabIndex = 18;
             this.btnPrestamos.Text = "Historial de préstamo";
             this.btnPrestamos.UseVisualStyleBackColor = false;
@@ -469,9 +480,9 @@ namespace wfBiblioteca
             this.panel8.Controls.Add(this.btnCartelera);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(201, 133);
+            this.panel8.Size = new System.Drawing.Size(270, 164);
             this.panel8.TabIndex = 0;
             // 
             // btnCartelera
@@ -479,20 +490,20 @@ namespace wfBiblioteca
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
-            this.btnCartelera.Location = new System.Drawing.Point(64, 24);
-            this.btnCartelera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCartelera.Location = new System.Drawing.Point(85, 30);
+            this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";
-            this.btnCartelera.Size = new System.Drawing.Size(87, 89);
+            this.btnCartelera.Size = new System.Drawing.Size(116, 110);
             this.btnCartelera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCartelera.TabIndex = 0;
             this.btnCartelera.TabStop = false;
             // 
             // P_contenido
             // 
-            this.P_contenido.Location = new System.Drawing.Point(218, 41);
-            this.P_contenido.Margin = new System.Windows.Forms.Padding(2);
+            this.P_contenido.Location = new System.Drawing.Point(291, 50);
+            this.P_contenido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.P_contenido.Name = "P_contenido";
-            this.P_contenido.Size = new System.Drawing.Size(682, 403);
+            this.P_contenido.Size = new System.Drawing.Size(909, 496);
             this.P_contenido.TabIndex = 2;
             // 
             // btnMin
@@ -500,10 +511,10 @@ namespace wfBiblioteca
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Image = global::wfBiblioteca.Properties.Resources.minimizar_signo;
-            this.btnMin.Location = new System.Drawing.Point(614, 9);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMin.Location = new System.Drawing.Point(819, 11);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(21, 22);
+            this.btnMin.Size = new System.Drawing.Size(28, 27);
             this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMin.TabIndex = 2;
             this.btnMin.TabStop = false;
@@ -514,10 +525,10 @@ namespace wfBiblioteca
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::wfBiblioteca.Properties.Resources.cerrar1;
-            this.btnCerrar.Location = new System.Drawing.Point(652, 9);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(869, 11);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(21, 22);
+            this.btnCerrar.Size = new System.Drawing.Size(28, 27);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
@@ -526,10 +537,10 @@ namespace wfBiblioteca
             // btnvolver
             // 
             this.btnvolver.Image = global::wfBiblioteca.Properties.Resources.hogar;
-            this.btnvolver.Location = new System.Drawing.Point(5, 6);
-            this.btnvolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnvolver.Location = new System.Drawing.Point(7, 7);
+            this.btnvolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnvolver.Name = "btnvolver";
-            this.btnvolver.Size = new System.Drawing.Size(49, 32);
+            this.btnvolver.Size = new System.Drawing.Size(65, 39);
             this.btnvolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnvolver.TabIndex = 10;
             this.btnvolver.TabStop = false;
@@ -545,10 +556,10 @@ namespace wfBiblioteca
             this.panel1.Controls.Add(this.btnCerrarSes);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.btnMin);
-            this.panel1.Location = new System.Drawing.Point(218, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(291, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 42);
+            this.panel1.Size = new System.Drawing.Size(909, 52);
             this.panel1.TabIndex = 3;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -563,10 +574,10 @@ namespace wfBiblioteca
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(480, 6);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(640, 7);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(128, 32);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(171, 39);
             this.btnIniciarSesion.TabIndex = 10;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.TextColor = System.Drawing.Color.Black;
@@ -584,10 +595,10 @@ namespace wfBiblioteca
             this.btnCerrarSes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSes.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSes.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSes.Location = new System.Drawing.Point(480, 6);
-            this.btnCerrarSes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarSes.Location = new System.Drawing.Point(640, 7);
+            this.btnCerrarSes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSes.Name = "btnCerrarSes";
-            this.btnCerrarSes.Size = new System.Drawing.Size(128, 32);
+            this.btnCerrarSes.Size = new System.Drawing.Size(171, 39);
             this.btnCerrarSes.TabIndex = 11;
             this.btnCerrarSes.Text = "Cerrar Sesión";
             this.btnCerrarSes.TextColor = System.Drawing.Color.Black;
@@ -596,14 +607,14 @@ namespace wfBiblioteca
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 444);
+            this.ClientSize = new System.Drawing.Size(1200, 546);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.P_contenido);
             this.Controls.Add(this.P_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
