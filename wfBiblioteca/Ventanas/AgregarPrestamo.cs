@@ -156,38 +156,42 @@ namespace wfBiblioteca.Ventanas
             ListViewItem item = new ListViewItem();
             if (cboTipoMaterial.SelectedItem.ToString() == "Libro")
             {
-                foreach(var a in m1.ObtenerLibro())
+                List<Material> l1 = m1.ObtenerLibro();
+                for(int i=0; i < l1.Count; i++)
                 {
-                    item = lsvMaterial.Items.Add(a.Id);
-                    item.SubItems.Add(a.Nombre);
+                    item = lsvMaterial.Items.Add(l1[i].Id);
+                    item.SubItems.Add(l1[i].Nombre);
                 }
 
             }
             else if (cboTipoMaterial.SelectedItem.ToString() == "Revista")
             {
-                
-                foreach (var a in m1.ObtenerRevista())
+
+                List<Material> l1 = m1.ObtenerRevista();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    item = lsvMaterial.Items.Add(a.Id);
-                    item.SubItems.Add(a.Nombre);
+                    item = lsvMaterial.Items.Add(l1[i].Id);
+                    item.SubItems.Add(l1[i].Nombre);
                 }
             }
             else if (cboTipoMaterial.SelectedItem.ToString() == "Audiovisual")
             {
-                
-                foreach (var a in m1.ObtenerAudiovisual())
+
+                List<Material> l1 = m1.ObtenerAudiovisual();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    item = lsvMaterial.Items.Add(a.Id);
-                    item.SubItems.Add(a.Nombre);
+                    item = lsvMaterial.Items.Add(l1[i].Id);
+                    item.SubItems.Add(l1[i].Nombre);
                 }
             }
             else
             {
-                
-                foreach (var a in m1.ObtenerOtro())
+
+                List<Material> l1 = m1.ObtenerOtro();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    item = lsvMaterial.Items.Add(a.Id);
-                    item.SubItems.Add(a.Nombre);
+                    item = lsvMaterial.Items.Add(l1[i].Id);
+                    item.SubItems.Add(l1[i].Nombre);
                 }
             }
         }
@@ -306,55 +310,79 @@ namespace wfBiblioteca.Ventanas
             {
                 if (cboTipoMaterial.SelectedItem.ToString() == "Libro")
                 {
-                    foreach (var a in m1.ObtenerLibro())
+                    List<Material> l1 = m1.ObtenerLibro();
+                    for (int i = 0; i < l1.Count; i++)
                     {
-                        if (this.LblMaterial.Text == a.Nombre)
+                        while (this.LblMaterial.Text != l1[i].Nombre)
                         {
-                            p1 = new Prestamo(a);
+                            p1 = new Prestamo(l1[i]);
+                            p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
+                            this.btnPrestamo.Visible = true;
+                            this.btnPrestamo1.Visible = false;
+                            this.txtContraSeguridad.Visible = false;
+                            this.lblConfirmacion.Visible = false;
                         }
                     }
 
                 }
                 else if (cboTipoMaterial.SelectedItem.ToString() == "Revista")
                 {
-
-                    foreach (var a in m1.ObtenerRevista())
+                    List<Material> l1 = m1.ObtenerRevista();
+                    for (int i = 0; i < l1.Count; i++)
                     {
-                        if (this.LblMaterial.Text == a.Nombre)
+                        while (this.LblMaterial.Text != l1[i].Nombre)
                         {
-                            p1 = new Prestamo(a);
+                            p1 = new Prestamo(l1[i]);
+                            p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
+                            this.btnPrestamo.Visible = true;
+                            this.btnPrestamo1.Visible = false;
+                            this.txtContraSeguridad.Visible = false;
+                            this.lblConfirmacion.Visible = false;
                         }
                     }
                 }
                 else if (cboTipoMaterial.SelectedItem.ToString() == "Audiovisual")
                 {
-
-                    foreach (var a in m1.ObtenerAudiovisual())
+                    List<Material> l1 = m1.ObtenerAudiovisual();
+                    for (int i = 0; i < l1.Count; i++)
                     {
-                        if (this.LblMaterial.Text == a.Nombre)
+                        while (this.LblMaterial.Text != l1[i].Nombre)
                         {
-                            p1 = new Prestamo(a);
+                            p1 = new Prestamo(l1[i]);
+                            p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
+                            this.btnPrestamo.Visible = true;
+                            this.btnPrestamo1.Visible = false;
+                            this.txtContraSeguridad.Visible = false;
+                            this.lblConfirmacion.Visible = false;
                         }
                     }
                 }
                 else
                 {
 
-                    foreach (var a in m1.ObtenerOtro())
+                    List<Material> l1 = m1.ObtenerOtro();
+                    for (int i = 0; i < l1.Count; i++)
                     {
-                        if (this.LblMaterial.Text == a.Nombre)
+                        while (this.LblMaterial.Text != l1[i].Nombre)
                         {
-                            p1 = new Prestamo(a);
+                            p1 = new Prestamo(l1[i]);
+                            p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
+                            this.btnPrestamo.Visible = true;
+                            this.btnPrestamo1.Visible = false;
+                            this.txtContraSeguridad.Visible = false;
+                            this.lblConfirmacion.Visible = false;
                         }
                     }
+
+                    
                 }
                 
             }
@@ -363,10 +391,7 @@ namespace wfBiblioteca.Ventanas
                 MessageBox.Show("Contraseña No coincide con la base de datos ");
                 this.txtContraSeguridad.Text = string.Empty;
             }
-            this.btnPrestamo.Visible = true;
-            this.btnPrestamo1.Visible = false;
-            this.txtContraSeguridad.Visible = false;
-            this.lblConfirmacion.Visible = false;
+       
 
         }
 
@@ -442,34 +467,41 @@ namespace wfBiblioteca.Ventanas
         {
             if (cboTipoMaterial.SelectedItem.ToString() == "Libro")
             {
-                foreach (var a in m1.ObtenerLibro())
+                List<Material> l1 = m1.ObtenerLibro();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    this.lblM.Text = a.Nombre;
+                    this.lblM.Text = l1[i].Nombre;
                 }
 
             }
             else if (cboTipoMaterial.SelectedItem.ToString() == "Revista")
             {
 
-                foreach (var a in m1.ObtenerRevista())
+                List<Material> l1 = m1.ObtenerRevista();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    this.lblM.Text = a.Nombre;
+                    this.lblM.Text = l1[i].Nombre;
                 }
             }
             else if (cboTipoMaterial.SelectedItem.ToString() == "Audiovisual")
             {
-                foreach (var a in m1.ObtenerAudiovisual())
+
+                List<Material> l1 = m1.ObtenerAudiovisual();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    this.lblM.Text = a.Nombre;
+                    this.lblM.Text = l1[i].Nombre;
                 }
             }
             else
             {
-                foreach (var a in m1.ObtenerOtro())
+
+                List<Material> l1 = m1.ObtenerOtro();
+                for (int i = 0; i < l1.Count; i++)
                 {
-                    this.lblM.Text = a.Nombre;
+                    this.lblM.Text = l1[i].Nombre;
                 }
             }
+            
         }
 
 

@@ -19,11 +19,16 @@ namespace wfBiblioteca.Ventanas
     {
         string titulo, autor, materia, ruta, RutaOb, categoria;
         string unidades, idioma, tipoPrestamo, editorial, idFun;
-        string descripcion, fecha, numeropaginas, isbn, contraseña;
+        string descripcion, numeropaginas, isbn, contraseña;
         int edicion, vol, duracion;
         DateTime f;
 
-       
+        public AgregarM(string id)
+        {
+            this.idFun = id;
+            InitializeComponent();
+            CargarCboTipo();
+        }
 
         private void cboTipo_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -104,13 +109,6 @@ namespace wfBiblioteca.Ventanas
             }
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ObtenerDatos();
@@ -176,12 +174,7 @@ namespace wfBiblioteca.Ventanas
 
         
         ConnectionDB connection = new ConnectionDB();
-        public AgregarM(string id)
-        {
-            this.idFun = id;
-            InitializeComponent();
-            CargarCboTipo();
-        }
+    
         private void ObtenerDatos()
         {
             this.titulo = this.txtTitulo.Text;

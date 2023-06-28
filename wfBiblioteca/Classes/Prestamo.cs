@@ -18,11 +18,11 @@ namespace wfBiblioteca.Classes
 
         public Prestamo()
         {
-            Id = null;
+            Id = GeneradorId();
             FechaPrestamo = DateTime.MinValue;
             FechaDevolucion = DateTime.MinValue;
             IdMaterial = null;
-            Activo = false;
+            Activo = true;
         }
         public Prestamo(Prestamo p)
         {
@@ -37,7 +37,8 @@ namespace wfBiblioteca.Classes
         {
             Id = GeneradorId();
             FechaPrestamo = DateTime.Now;
-            if (mat.Deposito_reserva.Equals("Deposito")){
+            if (mat.Deposito_reserva.Equals("Deposito"))
+            {
                 FechaDevolucion = FechaPrestamo.AddDays(7);
             }else
             {
@@ -52,8 +53,8 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             connection.Open();
 
-            string cad = $@"INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo, fecha, devolucion, id_material) 
-            VALUES('{prs.Id}','{prs.FechaPrestamo.ToString()}', '{prs.FechaDevolucion.ToString()}','{prs.IdMaterial}');";
+            string cad = $@"INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo, fecha_devolucion, id_material) 
+            VALUES('{prs.Id}','{prs.FechaPrestamo.ToString("yyyyMMdd")}', '{prs.FechaDevolucion.ToString("yyyyMMdd")}','{prs.IdMaterial}');";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
 

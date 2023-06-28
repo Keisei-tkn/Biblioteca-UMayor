@@ -32,7 +32,7 @@ namespace wfBiblioteca.Classes
             this.Materia = null;
             this.Descripcion = null;
             this.Estado = false;
-            this.Deposito_reserva = null;
+            this.Deposito_reserva = "Deposito";
             this.Idioma = null;
             this.FechaPublicacion = DateTime.MinValue;
             this.Unidades = 0;

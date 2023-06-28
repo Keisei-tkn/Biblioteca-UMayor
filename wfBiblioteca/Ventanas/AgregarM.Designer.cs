@@ -565,7 +565,7 @@ namespace wfBiblioteca.Ventanas
             this.lblCategoria.TabIndex = 145;
             this.lblCategoria.Text = "Categoria";
             this.lblCategoria.Visible = false;
-            this.lblCategoria.Click += new System.EventHandler(this.label17_Click);
+
             // 
             // txtCategoria
             // 
