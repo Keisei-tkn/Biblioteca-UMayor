@@ -30,8 +30,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion) 
-            VALUES('{lib.Id}', '{lib.FechaPublicacion.ToString("yyyyMMdd")}', {lib.Unidades}, '{lib.Deposito_reserva}', {(lib.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{lib.Descripcion}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,portada,id_autor,id_editorial,id_materia, descripcion) 
+            VALUES('{lib.Id}', '{lib.FechaPublicacion.ToString("yyyyMMdd")}', {lib.Unidades}, '{lib.Deposito_reserva}', {(lib.Estado == true ? 1 : 0)},'{lib.Imagen}' ,'{idAutor}','{idEditorial}','{idMateria}','{lib.Descripcion}')
             
             INSERT INTO LIBRO(isbn, num_pag)
             VALUES('{lib.Isbn}',{lib.NumPag})

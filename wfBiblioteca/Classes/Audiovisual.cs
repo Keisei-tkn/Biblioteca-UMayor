@@ -29,8 +29,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion ) 
-            VALUES('{aud.Id}', '{aud.FechaPublicacion.ToString("yyyyMMdd")}', {aud.Unidades}, '{aud.Deposito_reserva}', {(aud.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}', '{aud.Descripcion}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,portada,id_autor,id_editorial,id_materia, descripcion ) 
+            VALUES('{aud.Id}', '{aud.FechaPublicacion.ToString("yyyyMMdd")}', {aud.Unidades}, '{aud.Deposito_reserva}', {(aud.Estado == true ? 1 : 0)},'{aud.Imagen}' ,'{idAutor}','{idEditorial}','{idMateria}', '{aud.Descripcion}')
             
             INSERT INTO AUDIOVISUAL(duracion)
             VALUES({aud.Duracion})

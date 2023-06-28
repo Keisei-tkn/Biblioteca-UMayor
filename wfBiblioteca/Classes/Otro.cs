@@ -28,8 +28,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia, descripcion) 
-            VALUES('{otr.Id}', '{otr.FechaPublicacion.ToString("yyyyMMdd")}', {otr.Unidades}, '{otr.Deposito_reserva}', {(otr.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{otr.Descripcion}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,portada,id_autor,id_editorial,id_materia, descripcion) 
+            VALUES('{otr.Id}', '{otr.FechaPublicacion.ToString("yyyyMMdd")}', {otr.Unidades}, '{otr.Deposito_reserva}', '{otr.Imagen}',{(otr.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{otr.Descripcion}')
             
             INSERT INTO OTRO(categoria)
             VALUES('{otr.Categoria}')

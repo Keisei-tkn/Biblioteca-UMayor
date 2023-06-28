@@ -31,8 +31,8 @@ namespace wfBiblioteca.Classes
             connection.Open();
 
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,id_autor,id_editorial,id_materia,descripcion) 
-            VALUES('{rev.Id}', '{rev.FechaPublicacion.ToString("yyyyMMdd")}', {rev.Unidades}, '{rev.Deposito_reserva}', {(rev.Estado == true ? 1 : 0)}, '{idAutor}','{idEditorial}','{idMateria}','{rev.Descripcion}')
+            INSERT INTO MATERIAL(id_material,titulo,fecha_publicacion,unidades_existentes,deposito_o_reserva,estado,portada,id_autor,id_editorial,id_materia,descripcion) 
+            VALUES('{rev.Id}', '{rev.FechaPublicacion.ToString("yyyyMMdd")}', {rev.Unidades}, '{rev.Deposito_reserva}', {(rev.Estado == true ? 1 : 0)}, '{rev.Imagen}','{idAutor}','{idEditorial}','{idMateria}','{rev.Descripcion}')
             
             INSERT INTO REVISTA(num_revista, vol_revista)
             VALUES('{rev.Numero}',{rev.Volumen})

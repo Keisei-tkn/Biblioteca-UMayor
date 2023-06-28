@@ -14,7 +14,7 @@ using wfBiblioteca.SQL;
 
 namespace wfBiblioteca.Ventanas
 {
-    //falta esconder y mostrar txt y lbl y la validacion de la contraseña
+    
     public partial class AgregarM : Form
     {
         string titulo, autor, materia, ruta, RutaOb, categoria;
@@ -22,6 +22,8 @@ namespace wfBiblioteca.Ventanas
         string descripcion, fecha, numeropaginas, isbn, contraseña;
         int edicion, vol, duracion;
         DateTime f;
+
+       
 
         private void cboTipo_SelectedIndexChanged_1(object sender, EventArgs e)
         {

@@ -184,6 +184,7 @@ namespace wfBiblioteca.Ventanas
             this.btnExaminar.TabIndex = 83;
             this.btnExaminar.Text = "Examinar";
             this.btnExaminar.UseVisualStyleBackColor = false;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
             // 
             // openFileDialog1
             // 
