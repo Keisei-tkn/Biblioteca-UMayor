@@ -185,6 +185,9 @@
     <EmbeddedResource Include="Ventanas\AgregarM.resx">
       <DependentUpon>AgregarM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\AgregarPrestamo.resx">
+      <DependentUpon>AgregarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\AgregarU.resx">
       <DependentUpon>AgregarU.cs</DependentUpon>
     </EmbeddedResource>

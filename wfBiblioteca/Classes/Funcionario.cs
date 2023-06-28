@@ -47,14 +47,13 @@ namespace wfBiblioteca.Classes
 
         public void AgregarFuncionario(Funcionario f)
         {
-            
+            connection.Close();
             connection.Open();
-
             string cad = $@"BEGIN TRANSACTION;
-            INSERT INTO USUARIO VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Correo}', '{f.Contraseña}',,'{f.Tipo}')
+            INSERT INTO USUARIO VALUES('{f.Id}', '{f.Nombre}', '{f.Apellido}', '{f.Correo}', '{f.Contraseña}','{f.Tipo}')
 
-            INSERT INTO FUNCIONARIO(id_usuario,id_funcionario)
-            VALUES('{f.Id}','{f.id_funcionario}')
+            INSERT INTO FUNCIONARIO(id_usuario,id_funcionario,contraseña_c)
+            VALUES('{f.Id}','{f.id_funcionario}','{f.contraseña_c}')
 
             INSERT INTO RELACION_FUNCIONARIO_DEPARTAMENTO(id_departamento,id_funcionario)
             VALUES('{f.departamento}','{f.id_funcionario}')
@@ -63,6 +62,8 @@ namespace wfBiblioteca.Classes
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
             queryInsert.ExecuteNonQuery();
             connection.Close();
+
+
         }
 
         public void EditarFuncionario(Funcionario f)

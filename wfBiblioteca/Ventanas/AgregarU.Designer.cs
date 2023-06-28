@@ -275,6 +275,7 @@ namespace wfBiblioteca.Ventanas
             this.txtContraSeguridad.Size = new System.Drawing.Size(167, 26);
             this.txtContraSeguridad.TabIndex = 45;
             this.txtContraSeguridad.Visible = false;
+            this.txtContraSeguridad.Enter += new System.EventHandler(this.txtContraSeguridad_Enter);
             // 
             // lblConfirmacion
             // 
