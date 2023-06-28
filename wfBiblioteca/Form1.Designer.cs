@@ -34,12 +34,8 @@ namespace wfBiblioteca
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.P_Menu = new System.Windows.Forms.Panel();
             this.pSubmenu2 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEpre = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnEUsuario = new System.Windows.Forms.Button();
-            this.btnEMat = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pSubMenu = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -100,57 +96,15 @@ namespace wfBiblioteca
             // pSubmenu2
             // 
             this.pSubmenu2.BackColor = System.Drawing.Color.Transparent;
-            this.pSubmenu2.Controls.Add(this.panel2);
-            this.pSubmenu2.Controls.Add(this.btnEpre);
-            this.pSubmenu2.Controls.Add(this.panel3);
             this.pSubmenu2.Controls.Add(this.panel4);
             this.pSubmenu2.Controls.Add(this.btnEUsuario);
-            this.pSubmenu2.Controls.Add(this.btnEMat);
             this.pSubmenu2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pSubmenu2.Location = new System.Drawing.Point(0, 665);
             this.pSubmenu2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pSubmenu2.Name = "pSubmenu2";
-            this.pSubmenu2.Size = new System.Drawing.Size(270, 156);
+            this.pSubmenu2.Size = new System.Drawing.Size(270, 58);
             this.pSubmenu2.TabIndex = 19;
             this.pSubmenu2.Visible = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel2.Location = new System.Drawing.Point(27, 105);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(7, 46);
-            this.panel2.TabIndex = 16;
-            // 
-            // btnEpre
-            // 
-            this.btnEpre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnEpre.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnEpre.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEpre.FlatAppearance.BorderSize = 0;
-            this.btnEpre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnEpre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnEpre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEpre.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEpre.ForeColor = System.Drawing.Color.White;
-            this.btnEpre.Location = new System.Drawing.Point(31, 105);
-            this.btnEpre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnEpre.Name = "btnEpre";
-            this.btnEpre.Size = new System.Drawing.Size(240, 46);
-            this.btnEpre.TabIndex = 15;
-            this.btnEpre.Text = "Presupuesto";
-            this.btnEpre.UseVisualStyleBackColor = false;
-            this.btnEpre.UseWaitCursor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel3.Location = new System.Drawing.Point(25, 55);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 46);
-            this.panel3.TabIndex = 14;
             // 
             // panel4
             // 
@@ -180,26 +134,6 @@ namespace wfBiblioteca
             this.btnEUsuario.Text = "Usuario";
             this.btnEUsuario.UseVisualStyleBackColor = false;
             this.btnEUsuario.Click += new System.EventHandler(this.btnEUsuario_Click);
-            // 
-            // btnEMat
-            // 
-            this.btnEMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(99)))), ((int)(((byte)(107)))));
-            this.btnEMat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEMat.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnEMat.FlatAppearance.BorderSize = 0;
-            this.btnEMat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnEMat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnEMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEMat.Font = new System.Drawing.Font("Franklin Gothic Demi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEMat.ForeColor = System.Drawing.Color.White;
-            this.btnEMat.Location = new System.Drawing.Point(29, 55);
-            this.btnEMat.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnEMat.Name = "btnEMat";
-            this.btnEMat.Size = new System.Drawing.Size(240, 46);
-            this.btnEMat.TabIndex = 12;
-            this.btnEMat.Text = "Material";
-            this.btnEMat.UseVisualStyleBackColor = false;
-            this.btnEMat.Click += new System.EventHandler(this.btnEMat_Click);
             // 
             // btnEditar
             // 
@@ -490,7 +424,7 @@ namespace wfBiblioteca
             this.btnCartelera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
             this.btnCartelera.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCartelera.Image = ((System.Drawing.Image)(resources.GetObject("btnCartelera.Image")));
-            this.btnCartelera.Location = new System.Drawing.Point(85, 30);
+            this.btnCartelera.Location = new System.Drawing.Point(81, 23);
             this.btnCartelera.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnCartelera.Name = "btnCartelera";
             this.btnCartelera.Size = new System.Drawing.Size(116, 110);
@@ -500,10 +434,10 @@ namespace wfBiblioteca
             // 
             // P_contenido
             // 
-            this.P_contenido.Location = new System.Drawing.Point(291, 50);
+            this.P_contenido.Location = new System.Drawing.Point(298, 50);
             this.P_contenido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.P_contenido.Name = "P_contenido";
-            this.P_contenido.Size = new System.Drawing.Size(909, 496);
+            this.P_contenido.Size = new System.Drawing.Size(902, 496);
             this.P_contenido.TabIndex = 2;
             // 
             // btnMin
@@ -636,12 +570,8 @@ namespace wfBiblioteca
         private Panel P_contenido;
         private PictureBox btnCartelera;
         private Panel pSubmenu2;
-        private Panel panel2;
-        public Button btnEpre;
-        private Panel panel3;
         private Panel panel4;
         public Button btnEUsuario;
-        public Button btnEMat;
         public Button btnEditar;
         private Panel pSubMenu;
         private Panel panel13;

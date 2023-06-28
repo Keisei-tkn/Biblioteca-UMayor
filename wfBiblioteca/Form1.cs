@@ -158,7 +158,7 @@ namespace wfBiblioteca
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Home());
+            AbrirFormEnPanel(new Historial());
 
         }
 
@@ -242,7 +242,7 @@ namespace wfBiblioteca
 
         private void btnRegistarMaterial_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormEnPanel(new AgregarM(rut));
         }
 
         private void btnRegistrarPrestamo_Click(object sender, EventArgs e)

@@ -42,10 +42,9 @@ namespace wfBiblioteca.Ventanas
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(718, 44);
+            this.label1.Size = new System.Drawing.Size(957, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Historial";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,10 +55,10 @@ namespace wfBiblioteca.Ventanas
             this.cFecha,
             this.cTitulo});
             this.lsvHistorial.HideSelection = false;
-            this.lsvHistorial.Location = new System.Drawing.Point(284, 81);
-            this.lsvHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.lsvHistorial.Location = new System.Drawing.Point(379, 100);
+            this.lsvHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lsvHistorial.Name = "lsvHistorial";
-            this.lsvHistorial.Size = new System.Drawing.Size(389, 339);
+            this.lsvHistorial.Size = new System.Drawing.Size(496, 371);
             this.lsvHistorial.TabIndex = 1;
             this.lsvHistorial.UseCompatibleStateImageBehavior = false;
             this.lsvHistorial.View = System.Windows.Forms.View.Details;
@@ -75,20 +74,19 @@ namespace wfBiblioteca.Ventanas
             // txtIdUsuario
             // 
             this.txtIdUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdUsuario.Location = new System.Drawing.Point(53, 138);
-            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdUsuario.Location = new System.Drawing.Point(77, 177);
+            this.txtIdUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(160, 26);
+            this.txtIdUsuario.Size = new System.Drawing.Size(212, 30);
             this.txtIdUsuario.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(76, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 26);
+            this.label2.Size = new System.Drawing.Size(213, 32);
             this.label2.TabIndex = 6;
             this.label2.Text = "ID Usuario";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,10 +103,10 @@ namespace wfBiblioteca.Ventanas
             this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorial.Font = new System.Drawing.Font("Segoe UI", 15F);
             this.btnHistorial.ForeColor = System.Drawing.Color.White;
-            this.btnHistorial.Location = new System.Drawing.Point(73, 225);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHistorial.Location = new System.Drawing.Point(105, 241);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Size = new System.Drawing.Size(118, 42);
+            this.btnHistorial.Size = new System.Drawing.Size(155, 49);
             this.btnHistorial.TabIndex = 94;
             this.btnHistorial.Text = "Mostrar";
             this.btnHistorial.UseVisualStyleBackColor = false;
@@ -116,17 +114,17 @@ namespace wfBiblioteca.Ventanas
             // 
             // Historial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(716, 456);
+            this.ClientSize = new System.Drawing.Size(902, 496);
             this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.lsvHistorial);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Historial";
             this.Text = "Historial";
             this.ResumeLayout(false);
