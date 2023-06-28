@@ -31,11 +31,12 @@ namespace wfBiblioteca.Ventanas
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lsvPrestamos = new System.Windows.Forms.ListView();
+            this.cID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cMaterial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cFechaDevolucion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cAtrasado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cMulta = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +58,8 @@ namespace wfBiblioteca.Ventanas
             this.cUsuario,
             this.cMaterial,
             this.cFechaDevolucion,
-            this.cAtrasado});
+            this.cAtrasado,
+            this.cMulta});
             this.lsvPrestamos.HideSelection = false;
             this.lsvPrestamos.Location = new System.Drawing.Point(45, 56);
             this.lsvPrestamos.Name = "lsvPrestamos";
@@ -65,31 +67,37 @@ namespace wfBiblioteca.Ventanas
             this.lsvPrestamos.TabIndex = 3;
             this.lsvPrestamos.UseCompatibleStateImageBehavior = false;
             this.lsvPrestamos.View = System.Windows.Forms.View.Details;
-            // 
-            // cUsuario
-            // 
-            this.cUsuario.Text = "Usuario";
-            this.cUsuario.Width = 126;
-            // 
-            // cMaterial
-            // 
-            this.cMaterial.Text = "Material";
-            this.cMaterial.Width = 126;
-            // 
-            // cFechaDevolucion
-            // 
-            this.cFechaDevolucion.Text = "Fecha Devolucion";
-            this.cFechaDevolucion.Width = 126;
-            // 
-            // cAtrasado
-            // 
-            this.cAtrasado.Text = "¿Atrasado?";
-            this.cAtrasado.Width = 126;
+            this.lsvPrestamos.Click += new System.EventHandler(this.lsvPrestamos_SelectedIndexChanged);
             // 
             // cID
             // 
             this.cID.Text = "ID";
-            this.cID.Width = 126;
+            this.cID.Width = 105;
+            // 
+            // cUsuario
+            // 
+            this.cUsuario.Text = "Usuario";
+            this.cUsuario.Width = 105;
+            // 
+            // cMaterial
+            // 
+            this.cMaterial.Text = "Material";
+            this.cMaterial.Width = 105;
+            // 
+            // cFechaDevolucion
+            // 
+            this.cFechaDevolucion.Text = "Fecha Devolucion";
+            this.cFechaDevolucion.Width = 105;
+            // 
+            // cAtrasado
+            // 
+            this.cAtrasado.Text = "¿Atrasado?";
+            this.cAtrasado.Width = 105;
+            // 
+            // cMulta
+            // 
+            this.cMulta.Text = "Multa";
+            this.cMulta.Width = 105;
             // 
             // MostrarPrestamos
             // 
@@ -116,5 +124,6 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.ColumnHeader cMaterial;
         private System.Windows.Forms.ColumnHeader cFechaDevolucion;
         private System.Windows.Forms.ColumnHeader cAtrasado;
+        private System.Windows.Forms.ColumnHeader cMulta;
     }
 }

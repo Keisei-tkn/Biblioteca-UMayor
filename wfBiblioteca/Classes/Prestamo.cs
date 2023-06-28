@@ -210,7 +210,25 @@ namespace wfBiblioteca.Classes
         }
 
 
+        public void UpdatePrestamo(Prestamo prs)
+        {
+            ConnectionDB connection = new ConnectionDB();
+            connection.Open();
+            string cad = $@"BEGIN TRANSACTION;
+            UPDATE PRESTAMO
+            SET activo = '{0}'
+            WHERE id_prestamo = '{prs.Id}';
 
+            UPDATE ATRASO
+            SET pagado = '{1}'
+            WHERE id_prestamo = '{prs.Id}';
+            COMMIT;";
+
+            SqlCommand queryUpdate = new SqlCommand(cad, connection.connectDb);
+            queryUpdate.ExecuteNonQuery();
+
+            connection.Close();
+        }
 
 
 
