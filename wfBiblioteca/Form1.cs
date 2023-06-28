@@ -31,6 +31,11 @@ namespace wfBiblioteca
             {
                 InitializeComponent();
                 OpenChildForm(new Home());
+                btnPrestamos.Visible = false;
+                btnInformesEstadisticos.Visible = false;
+                btnBuscarMaterial.Visible = true;
+                btnEditar.Visible = false;
+                btnRegistrar.Visible = false;
             }
             else if (tipo=="Alumno"|| tipo == "Profesor" || tipo == "Externo")
             {
@@ -149,19 +154,6 @@ namespace wfBiblioteca
             fh.Show();
 
         }
-        private void CerrarSesion()
-        {
-            //Emp = string.Empty;
-            //EmpCon = string.Empty;
-            //Cli = string.Empty;
-            //CliContra = string.Empty;
-            //cargo=string.Empty;
-            //Form1 frm = new Form1(Emp,EmpCon,Cli,CliContra,cargo);
-            //AddOwnedForm(frm);
-            //frm.Show();
-            this.Hide();
-            MessageBox.Show("Sesión Cerrada Con Éxito","Cerrar Sesión");
-        }
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
@@ -171,7 +163,7 @@ namespace wfBiblioteca
 
         private void btnvolver_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Home());
+            AbrirFormEnPanel(new Home());
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -189,7 +181,31 @@ namespace wfBiblioteca
 
         private void btnCerrarSes_Click(object sender, EventArgs e)
         {
-            CerrarSesion();
+            rut = "";
+            nombre = "";
+            pass = "";
+            btnPrestamos.Visible = false;
+            btnRegistrar.Visible = false;
+            btnInformesEstadisticos.Visible = false;
+            btnEditar.Visible = false;
+            MessageBox.Show("Se ha cerrado sesión correctamente");
+            btnIniciarSesion.Visible = true;
+            Form1 frm = new Form1(rut, nombre, apellido, c, pass, tipo);
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnvolver_MouseEnter(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)sender;
+            pictureBox.BackColor = Color.LightGray;
+        }
+
+        private void btnvolver_MouseLeave(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)sender;
+            pictureBox.BackColor = Color.FromArgb(255, 194, 13);
         }
 
         private Form formularioactivo = null;

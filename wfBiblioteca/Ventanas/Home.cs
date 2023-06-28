@@ -30,7 +30,7 @@ namespace wfBiblioteca.Ventanas
 
             if (Aaa.Text == "200" || rdbDos.Checked == true)
             {
-                imagen1.ImageLocation = Application.StartupPath + "\\imageneshome\\i2.jpg";
+                imagen1.ImageLocation = Application.StartupPath + "\\imageneshome\\i2.png";
                 rdbUno.Checked = false;
                 rdbDos.Checked = true;
                 rdbTres.Checked = false;
@@ -38,7 +38,7 @@ namespace wfBiblioteca.Ventanas
             }
             if (Aaa.Text == "400" || rdbTres.Checked == true)
             {
-                imagen1.ImageLocation = Application.StartupPath + "\\imageneshome\\i3.jpg";
+                imagen1.ImageLocation = Application.StartupPath + "\\imageneshome\\i3.png";
                 rdbUno.Checked = false;
                 rdbDos.Checked = false;
                 rdbTres.Checked = true;
@@ -59,7 +59,6 @@ namespace wfBiblioteca.Ventanas
                 timer1.Start();
             }
         }
-
 
 
     }
