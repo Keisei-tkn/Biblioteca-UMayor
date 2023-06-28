@@ -31,8 +31,11 @@ namespace wfBiblioteca.Ventanas
             }
             else if(Validar_id(txtIdUsuario.Text)){
                 List<Prestamo> ListaPrestamo = prs.ObtenerHistorial(txtIdUsuario.Text);
-                lsvHistorial.Clear();
-                foreach(Prestamo p in ListaPrestamo)
+                while (lsvHistorial.Items.Count > 0)
+                {
+                    lsvHistorial.Items.RemoveAt(0);
+                }
+                foreach (Prestamo p in ListaPrestamo)
                 {
                     Material matSpec = ListaMat.Find(Material => Material.Id == p.IdMaterial);
 
@@ -44,7 +47,10 @@ namespace wfBiblioteca.Ventanas
             else
             {
                 txtIdUsuario.Clear();
-                lsvHistorial.Clear();
+                while (lsvHistorial.Items.Count > 0)
+                {
+                    lsvHistorial.Items.RemoveAt(0);
+                }
                 MessageBox.Show("ID ingresada no existe.");
             }
         }
