@@ -13,7 +13,7 @@ namespace wfBiblioteca.Classes
         public int CantidadPedidosRevista;
         public int CantidadPedidosAudiovisual;
         public int CantidadPedidosOtro;
-        public string MaterialMasPedido;
+        public Material MaterialMasPedido;
 
         public decimal DineroTotalMultas;
         public int CantidadAtrasos;
@@ -29,7 +29,7 @@ namespace wfBiblioteca.Classes
             CantidadPedidosRevista = (int)cantidades[2];
             CantidadPedidosAudiovisual = (int)cantidades[3];
             CantidadPedidosOtro = (int)cantidades[4];
-            MaterialMasPedido = cantidades[5].ToString();
+            MaterialMasPedido = (Material)cantidades[5];
 
             DineroTotalMultas = (decimal)multa_atrasos[0];
             CantidadAtrasos = (int)multa_atrasos[1];
@@ -45,17 +45,20 @@ namespace wfBiblioteca.Classes
             int contAud = 0;
             int contOtr = 0;
             MaterialDB mat = new MaterialDB();
+            Prestamo prs = new Prestamo();
+            List<Prestamo> ListaPrestamo = prs.ObtenerAllPrestamos();
             Dictionary<string, int> nameCounts = new Dictionary<string, int>();
-            foreach (Material m in mat.ListaMaterial)
+            foreach (Prestamo p in ListaPrestamo)
             {
+                Material material = mat.ListaMaterial.Find(m => m.Id == p.IdMaterial);
                 contMat++;
-                if(m is Libro)
+                if(material is Libro)
                 {
                     contLib++;
-                }else if (m is Revista)
+                }else if (material is Revista)
                 {
                     contRev++;
-                }else if(m is Audiovisual)
+                }else if(material is Audiovisual)
                 {
                     contAud++;
                 }
@@ -64,22 +67,22 @@ namespace wfBiblioteca.Classes
                     contOtr++;
                 }
 
-                string name = m.Nombre;
+                string id = material.Id;
 
-                if (nameCounts.ContainsKey(name))
-                    nameCounts[name]++;
+                if (nameCounts.ContainsKey(id))
+                    nameCounts[id]++;
                 else
-                    nameCounts[name] = 1;
+                    nameCounts[id] = 1;
 
             }
-            var mostCommonName = nameCounts.OrderByDescending(x => x.Value).First().Key;
-
+            string mostCommonId = nameCounts.OrderByDescending(x => x.Value).First().Key;
+            Material mostCommonMaterial = mat.ListaMaterial.Find(mc => mc.Id == mostCommonId);
             cantidades[0] = contMat;
             cantidades[1] = contLib;
             cantidades[2] = contRev;
             cantidades[3] = contAud;
             cantidades[4] = contOtr;
-            cantidades[5] = mostCommonName;
+            cantidades[5] = mostCommonMaterial;
 
             return cantidades;
         }

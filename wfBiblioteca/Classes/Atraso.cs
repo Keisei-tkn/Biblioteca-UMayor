@@ -122,7 +122,7 @@ namespace wfBiblioteca.Classes
                     Id = registros["id_atraso"].ToString(),
                     IdPrestamo = registros["id_prestamo"].ToString(),
                     Multa = (decimal)registros["multa"],
-                    Pagado = (bool)registros["estado"]
+                    Pagado = (bool)registros["pagado"]
                 };
                 ListaAtraso.Add(registro);
             }

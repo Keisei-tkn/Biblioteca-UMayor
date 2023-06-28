@@ -28,7 +28,7 @@ namespace wfBiblioteca
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(usuario, nom, apellido, password, correo,tipo));
+            Application.Run(new MostrarEstadisticas());
         }
     }
 }
