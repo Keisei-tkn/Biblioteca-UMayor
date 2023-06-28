@@ -37,7 +37,6 @@ namespace wfBiblioteca
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkPregunta = new System.Windows.Forms.LinkLabel();
             this.btnMin = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnAcceder = new wfBiblioteca.Classes.BotonesPersonalizados();
@@ -135,19 +134,6 @@ namespace wfBiblioteca
             this.label1.TabIndex = 3;
             this.label1.Text = "Ingresar";
             // 
-            // linkPregunta
-            // 
-            this.linkPregunta.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(13)))));
-            this.linkPregunta.AutoSize = true;
-            this.linkPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPregunta.LinkColor = System.Drawing.Color.White;
-            this.linkPregunta.Location = new System.Drawing.Point(431, 281);
-            this.linkPregunta.Name = "linkPregunta";
-            this.linkPregunta.Size = new System.Drawing.Size(164, 18);
-            this.linkPregunta.TabIndex = 0;
-            this.linkPregunta.TabStop = true;
-            this.linkPregunta.Text = "¿Olvido su contraseña?";
-            // 
             // btnMin
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,6 +200,7 @@ namespace wfBiblioteca
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.TextColor = System.Drawing.Color.White;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Login
             // 
@@ -225,7 +212,6 @@ namespace wfBiblioteca
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.linkPregunta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -253,7 +239,6 @@ namespace wfBiblioteca
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkPregunta;
         private System.Windows.Forms.PictureBox btnMin;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label2;

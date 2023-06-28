@@ -30,38 +30,33 @@ namespace wfBiblioteca
             if (rut == string.Empty && password == string.Empty)
             {
                 InitializeComponent();
+                OpenChildForm(new Home());
             }
             else if (tipo=="Alumno"|| tipo == "Profesor" || tipo == "Externo")
             {
                 InitializeComponent();
+                OpenChildForm(new Home());
                 btnIniciarSesion.Visible = false;
                 btnPrestamos.Visible = true;
                 btnInformesEstadisticos.Visible = true;
-                btnRegistrarMaterial.Visible = false;
-                btnRegistrarPresupuesto.Visible = false;
-                btnAbrirSubM.Visible = false;
-                btnRegistrarUsuario.Visible = false;
                 btnBuscarMaterial.Visible = true;
-                btnUEditar.Visible = false;
-                btnMatEditar.Visible = false;
-                btnEditar.Visible = false;
-                btnPresuEditar.Visible = false;
+                btnEditar.Visible = true;
+                btnRegistrar.Visible = true;
+                btnEditar.Enabled = false;
+                btnRegistrar.Enabled = false;
             }
             else if (tipo == "Funcionario")
             {
                 InitializeComponent();
+                OpenChildForm(new Home());
                 btnIniciarSesion.Visible = false;
                 btnPrestamos.Visible = true;
                 btnInformesEstadisticos.Visible = true;
-                btnRegistrarMaterial.Visible = true;
-                btnRegistrarPresupuesto.Visible = true;
-                btnAbrirSubM.Visible = true;
-                btnRegistrarUsuario.Visible = true;
                 btnBuscarMaterial.Visible = true;
-                btnUEditar.Visible = true;
-                btnMatEditar.Visible = true;
                 btnEditar.Visible = true;
-                btnPresuEditar.Visible = true;
+                btnRegistrar.Visible = true;
+                btnEditar.Enabled = true;
+                btnRegistrar.Enabled = true;
             }
             
            
@@ -139,7 +134,7 @@ namespace wfBiblioteca
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnPrestamos_Click(null, e);
+            AbrirFormEnPanel(new Home());
         }
 
         private void AbrirFormEnPanel(object formhija)
@@ -154,9 +149,6 @@ namespace wfBiblioteca
             fh.Show();
 
         }
-
-
-        
         private void CerrarSesion()
         {
             //Emp = string.Empty;
@@ -173,7 +165,6 @@ namespace wfBiblioteca
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-         
             AbrirFormEnPanel(new Home());
 
         }
@@ -189,6 +180,11 @@ namespace wfBiblioteca
             AddOwnedForm(frm);
             frm.Show();
             this.Hide();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(pSubMenu);
         }
 
         private void btnCerrarSes_Click(object sender, EventArgs e)
@@ -213,12 +209,25 @@ namespace wfBiblioteca
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            this.pSubmenu2.Visible = true;
+            MostrarSubmenu(pSubmenu2);
         }
 
         private void Ocultarsubmenu()
         {
-           //
+            if (pSubMenu.Visible == true)
+                pSubMenu.Visible = false;
+            if (pSubmenu2.Visible == true)
+                pSubmenu2.Visible = false;
+        }
+        private void MostrarSubmenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                Ocultarsubmenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
         }
     }
 }

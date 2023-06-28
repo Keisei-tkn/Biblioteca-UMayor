@@ -72,6 +72,12 @@ namespace wfBiblioteca
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+            usuario = "";
+            nom = "";
+            apellido = "";
+            correo = "";
+            password = "";
+            tipo = "";
             Form1 frm = new Form1(usuario,nom,apellido,correo,password,tipo);
             AddOwnedForm(frm);
             frm.Show();
@@ -106,6 +112,20 @@ namespace wfBiblioteca
             buttonPath.AddArc(0, btnAcceder.Height - borderRadius, borderRadius, borderRadius, 90, 90);
 
             btnAcceder.Region = new System.Drawing.Region(buttonPath);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            usuario = "";
+            nom = "";
+            apellido = "";
+            correo = "";
+            password = "";
+            tipo = "";
+            Form1 frm = new Form1(usuario, nom, apellido, correo, password, tipo);
+            AddOwnedForm(frm);
+            frm.Show();
+            this.Hide();
         }
 
         private void btnVolver_Paint(object sender, PaintEventArgs e)
