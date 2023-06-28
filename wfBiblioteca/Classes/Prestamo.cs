@@ -53,8 +53,8 @@ namespace wfBiblioteca.Classes
             ConnectionDB connection = new ConnectionDB();
             connection.Open();
 
-            string cad = $@"INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo, fecha_devolucion, id_material) 
-            VALUES('{prs.Id}','{prs.FechaPrestamo.ToString("yyyyMMdd")}', '{prs.FechaDevolucion.ToString("yyyyMMdd")}','{prs.IdMaterial}');";
+            string cad = $@"INSERT INTO PRESTAMO(id_prestamo,fecha_prestamo, fecha_devolucion, id_material, activo) 
+            VALUES('{prs.Id}','{prs.FechaPrestamo.ToString("yyyyMMdd")}', '{prs.FechaDevolucion.ToString("yyyyMMdd")}','{prs.IdMaterial}', {1});";
 
             SqlCommand queryInsert = new SqlCommand(cad, connection.connectDb);
 

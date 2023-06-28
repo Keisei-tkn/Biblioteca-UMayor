@@ -311,11 +311,11 @@ namespace wfBiblioteca.Ventanas
                 if (cboTipoMaterial.SelectedItem.ToString() == "Libro")
                 {
                     List<Material> l1 = m1.ObtenerLibro();
-                    for (int i = 0; i < l1.Count; i++)
+                    foreach (Material m in l1)
                     {
-                        while (this.LblMaterial.Text != l1[i].Nombre)
+                        if (this.lblM.Text.Equals(m.Nombre))
                         {
-                            p1 = new Prestamo(l1[i]);
+                            p1 = new Prestamo(m);
                             p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
@@ -330,11 +330,11 @@ namespace wfBiblioteca.Ventanas
                 else if (cboTipoMaterial.SelectedItem.ToString() == "Revista")
                 {
                     List<Material> l1 = m1.ObtenerRevista();
-                    for (int i = 0; i < l1.Count; i++)
+                    foreach (Material m in l1)
                     {
-                        while (this.LblMaterial.Text != l1[i].Nombre)
+                        if (this.lblM.Text == m.Nombre)
                         {
-                            p1 = new Prestamo(l1[i]);
+                            p1 = new Prestamo(m);
                             p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
@@ -348,11 +348,11 @@ namespace wfBiblioteca.Ventanas
                 else if (cboTipoMaterial.SelectedItem.ToString() == "Audiovisual")
                 {
                     List<Material> l1 = m1.ObtenerAudiovisual();
-                    for (int i = 0; i < l1.Count; i++)
+                    foreach (Material m in l1)
                     {
-                        while (this.LblMaterial.Text != l1[i].Nombre)
+                        if (this.lblM.Text == m.Nombre)
                         {
-                            p1 = new Prestamo(l1[i]);
+                            p1 = new Prestamo(m);
                             p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
@@ -367,11 +367,11 @@ namespace wfBiblioteca.Ventanas
                 {
 
                     List<Material> l1 = m1.ObtenerOtro();
-                    for (int i = 0; i < l1.Count; i++)
+                    foreach (Material m in l1)
                     {
-                        while (this.LblMaterial.Text != l1[i].Nombre)
+                        if (this.lblM.Text == m.Nombre)
                         {
-                            p1 = new Prestamo(l1[i]);
+                            p1 = new Prestamo(m);
                             p1.InsertarPrestamo(p1);
                             InsertarPrestamo(idBd, p1);
                             MessageBox.Show("Prestamo Registrado Exitosamente");
@@ -382,7 +382,7 @@ namespace wfBiblioteca.Ventanas
                         }
                     }
 
-                    
+
                 }
                 
             }
