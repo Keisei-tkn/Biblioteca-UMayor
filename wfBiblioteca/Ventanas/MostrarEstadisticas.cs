@@ -67,6 +67,33 @@ namespace wfBiblioteca.Ventanas
                 Separator = new Separator { Step = 1 },
                 LabelFormatter = value => value.ToString("N0")
             });
+
+
+
+            cartesianChart2.Series = new SeriesCollection
+            {
+                new RowSeries
+                {
+                    Title = "Cantidad de Pedidos",
+                    Values = new ChartValues<double> {est.CantMaterialMasPedido[0], est.CantMaterialMasPedido[1], est.CantMaterialMasPedido[2] },
+                    Fill = brush
+
+                }
+            };
+
+            cartesianChart2.AxisX.Add(new Axis
+            {
+                Title = "Cantidad de Prestamos",
+                Separator = new Separator { Step = 1 },
+                LabelFormatter = value => value.ToString("N0")
+            });
+
+            cartesianChart2.AxisY.Add(new Axis
+            {
+                Labels = new[] { est.MaterialMasPedido[0].Nombre, est.MaterialMasPedido[1].Nombre, est.MaterialMasPedido[2].Nombre },
+                Separator = new Separator { Step = 1 }
+            });
+
         }
 
     }

@@ -37,6 +37,11 @@ namespace wfBiblioteca.Ventanas
             this.lblMulta = new System.Windows.Forms.Label();
             this.lblAtrasos = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.cartTopMaterial = new System.Windows.Forms.Integration.ElementHost();
+            this.cartesianChart2 = new LiveCharts.Wpf.CartesianChart();
+            this.label4 = new System.Windows.Forms.Label();
+            this.picTopMaterial = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picTopMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +61,7 @@ namespace wfBiblioteca.Ventanas
             this.cartesianChart1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cartesianChart1.Location = new System.Drawing.Point(16, 87);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(380, 187);
+            this.cartesianChart1.Size = new System.Drawing.Size(380, 146);
             this.cartesianChart1.TabIndex = 2;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -78,11 +83,12 @@ namespace wfBiblioteca.Ventanas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(501, 64);
+            this.label2.Location = new System.Drawing.Point(489, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
+            this.label2.Size = new System.Drawing.Size(152, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Libro más Pedido";
+            this.label2.Text = "Material más Pedido";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -90,7 +96,7 @@ namespace wfBiblioteca.Ventanas
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(472, 237);
+            this.label3.Location = new System.Drawing.Point(472, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 20);
             this.label3.TabIndex = 34;
@@ -102,7 +108,7 @@ namespace wfBiblioteca.Ventanas
             this.lblMulta.AutoSize = true;
             this.lblMulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMulta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMulta.Location = new System.Drawing.Point(484, 266);
+            this.lblMulta.Location = new System.Drawing.Point(498, 290);
             this.lblMulta.Name = "lblMulta";
             this.lblMulta.Size = new System.Drawing.Size(0, 39);
             this.lblMulta.TabIndex = 35;
@@ -113,7 +119,7 @@ namespace wfBiblioteca.Ventanas
             this.lblAtrasos.AutoSize = true;
             this.lblAtrasos.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtrasos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAtrasos.Location = new System.Drawing.Point(484, 380);
+            this.lblAtrasos.Location = new System.Drawing.Point(484, 395);
             this.lblAtrasos.Name = "lblAtrasos";
             this.lblAtrasos.Size = new System.Drawing.Size(0, 39);
             this.lblAtrasos.TabIndex = 37;
@@ -125,12 +131,42 @@ namespace wfBiblioteca.Ventanas
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(487, 350);
+            this.label6.Location = new System.Drawing.Point(487, 365);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 20);
             this.label6.TabIndex = 36;
             this.label6.Text = "Cantidad de Atrasos";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cartTopMaterial
+            // 
+            this.cartTopMaterial.Location = new System.Drawing.Point(16, 275);
+            this.cartTopMaterial.Name = "cartTopMaterial";
+            this.cartTopMaterial.Size = new System.Drawing.Size(380, 152);
+            this.cartTopMaterial.TabIndex = 38;
+            this.cartTopMaterial.Text = "elementHost1";
+            this.cartTopMaterial.Child = this.cartesianChart2;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(91, 252);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(241, 20);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Top 3 Materiales mas Solicitados";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picTopMaterial
+            // 
+            this.picTopMaterial.Location = new System.Drawing.Point(493, 87);
+            this.picTopMaterial.Name = "picTopMaterial";
+            this.picTopMaterial.Size = new System.Drawing.Size(148, 146);
+            this.picTopMaterial.TabIndex = 40;
+            this.picTopMaterial.TabStop = false;
             // 
             // MostrarEstadisticas
             // 
@@ -138,6 +174,9 @@ namespace wfBiblioteca.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(716, 456);
+            this.Controls.Add(this.picTopMaterial);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cartTopMaterial);
             this.Controls.Add(this.lblAtrasos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblMulta);
@@ -150,6 +189,7 @@ namespace wfBiblioteca.Ventanas
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MostrarEstadisticas";
             this.Text = "MostrarEstadisticas";
+            ((System.ComponentModel.ISupportInitialize)(this.picTopMaterial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +205,9 @@ namespace wfBiblioteca.Ventanas
         private System.Windows.Forms.Label lblMulta;
         private System.Windows.Forms.Label lblAtrasos;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Integration.ElementHost cartTopMaterial;
+        private System.Windows.Forms.Label label4;
+        private LiveCharts.Wpf.CartesianChart cartesianChart2;
+        private System.Windows.Forms.PictureBox picTopMaterial;
     }
 }

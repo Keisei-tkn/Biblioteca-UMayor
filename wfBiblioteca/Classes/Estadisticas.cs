@@ -13,7 +13,8 @@ namespace wfBiblioteca.Classes
         public int CantidadPedidosRevista;
         public int CantidadPedidosAudiovisual;
         public int CantidadPedidosOtro;
-        public Material MaterialMasPedido;
+        public List<Material> MaterialMasPedido;
+        public List<int> CantMaterialMasPedido;
 
         public decimal DineroTotalMultas;
         public int CantidadAtrasos;
@@ -29,7 +30,8 @@ namespace wfBiblioteca.Classes
             CantidadPedidosRevista = (int)cantidades[2];
             CantidadPedidosAudiovisual = (int)cantidades[3];
             CantidadPedidosOtro = (int)cantidades[4];
-            MaterialMasPedido = (Material)cantidades[5];
+            MaterialMasPedido = (List<Material>)cantidades[5];
+            CantMaterialMasPedido = (List<int>)cantidades[6];
 
             DineroTotalMultas = (decimal)multa_atrasos[0];
             CantidadAtrasos = (int)multa_atrasos[1];
@@ -38,7 +40,7 @@ namespace wfBiblioteca.Classes
 
         public object[] ObtenerCantidades()
         {
-            object[] cantidades = new object[6];
+            object[] cantidades = new object[7];
             int contMat = 0;
             int contLib = 0;
             int contRev = 0;
@@ -46,6 +48,8 @@ namespace wfBiblioteca.Classes
             int contOtr = 0;
             MaterialDB mat = new MaterialDB();
             Prestamo prs = new Prestamo();
+            List<Material> TopMaterial = new List<Material>();
+            List<int> IntTopMaterial = new List<int>();
             List<Prestamo> ListaPrestamo = prs.ObtenerAllPrestamos();
             Dictionary<string, int> nameCounts = new Dictionary<string, int>();
             foreach (Prestamo p in ListaPrestamo)
@@ -76,13 +80,32 @@ namespace wfBiblioteca.Classes
 
             }
             string mostCommonId = nameCounts.OrderByDescending(x => x.Value).First().Key;
+            string secondId = nameCounts.OrderByDescending(x => x.Value).ElementAt(1).Key;
+            string thirdId = nameCounts.OrderByDescending(x => x.Value).ElementAt(2).Key;
+
+            int intMostCommonId = nameCounts.OrderByDescending(x => x.Value).First().Value;
+            int intSecondId = nameCounts.OrderByDescending(x => x.Value).ElementAt(1).Value;
+            int intThirdId = nameCounts.OrderByDescending(x => x.Value).ElementAt(2).Value;
+
             Material mostCommonMaterial = mat.ListaMaterial.Find(mc => mc.Id == mostCommonId);
+            Material secondMaterial = mat.ListaMaterial.Find(ms => ms.Id == secondId);
+            Material thirdMaterial = mat.ListaMaterial.Find(mt => mt.Id == thirdId);
+
+            TopMaterial.Add(mostCommonMaterial);
+            TopMaterial.Add(secondMaterial);
+            TopMaterial.Add(thirdMaterial);
+
+            IntTopMaterial.Add(intMostCommonId);
+            IntTopMaterial.Add(intSecondId);
+            IntTopMaterial.Add(intThirdId);
+
             cantidades[0] = contMat;
             cantidades[1] = contLib;
             cantidades[2] = contRev;
             cantidades[3] = contAud;
             cantidades[4] = contOtr;
-            cantidades[5] = mostCommonMaterial;
+            cantidades[5] = TopMaterial;
+            cantidades[6] = IntTopMaterial;
 
             return cantidades;
         }
